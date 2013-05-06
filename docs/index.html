@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fries &mdash; Documentation</title>
+  <meta name="description" content="Fries: Prototype Android apps using HTML, CSS and JavaScript.">
+  <meta name="author" content="Jaune Sarmiento">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="shortcut icon" href="favicon.ico"/>
+
+  <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" type="text/css">-->
+
+  <link rel="stylesheet" href="../lib/css/base.css">
+  <link rel="stylesheet" href="../lib/css/iscroll.css">
+  <link rel="stylesheet" href="../lib/css/action-bars.css">
+  <link rel="stylesheet" href="../lib/css/chevrons.css">
+  <link rel="stylesheet" href="../lib/css/tabs.css">
+  <link rel="stylesheet" href="../lib/css/content.css">
+  <link rel="stylesheet" href="../lib/css/buttons.css">
+  <link rel="stylesheet" href="../lib/css/lists.css">
+
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/docs.css">
+  <link rel="stylesheet" href="css/prettify.css">
+
+  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+  <script src="./lib/js/iscroll.js"></script>
+  <script src="js/prettify.js"></script>
+  <script src="js/docs.js"></script>
+</head>
+<body>
+
+  <header class="action-bar outer-wrapper docs-header">
+    <div class="inner-wrapper">
+      <h1 class="title"><a href="http://jaunesarmiento.me/fries">Fries</a></h1>
+      <ul id="main-nav" class="actions pull-right">
+        <li class="nav-item"><a href="#getting-started">Getting started</a></li>
+        <li class="nav-item">
+          <a href="#components" class="toggle-spinner">Components</a>
+          <ul class="nav-components">
+            <li><a href="#action-bar">Action bars</a></li>
+            <li><a href="#tabs">Tabs</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#lists">Lists</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="#using-iscroll">iScroll</a></li>
+        <li class="nav-item"><a href="#page-setup">Page setup</a></li>
+        <li class="nav-item"><a href="https://github.com/jaunesarmiento/fries">Fork it on GitHub</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <header class="outer-wrapper docs-jumbo" id="top">
+    <div class="inner-wrapper">
+      <hgroup class="docs-header-text">
+          <h2 class="docs-header-subtitle">Fries lets you prototype Android apps using HTML, CSS, and JavaScript.</h2>
+          <a data-ignore="push" href="http://jaunesarmiento.github.com/fries/fries.zip" class="docs-button" onClick="_gaq.push(['_trackEvent', 'Downloads', 'v1.0']);">Download Fries</a>
+          <a data-ignore="push" href="http://jaunesarmiento.github.com/fries" class="docs-button" onClick="_gaq.push(['_trackEvent', 'View on GitHub', 'v1.0']);">View it on GitHub</a>
+      </hgroup>
+      <section class="social inner-wrapper">
+        <ul>
+          <li>
+            <a data-ignore="push" class="twitter-share-button" href="https://twitter.com/share" data-url="http://jaunesarmiento.github.com/fries/" data-text="Fries: Prototype Android apps using simple HTML, CSS, and JavaScript" data-via="jaunesarmiento">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </li>
+          <li>
+            <a data-ignore="push" class="twitter-follow-button" href="https://twitter.com/jaunesarmiento" data-show-count="true">Follow @jaunesarmiento</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <iframe width="107" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=watch&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+          </li>
+          <li>
+            <iframe width="95" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=fork&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </header>
+
+  <div class="outer-wrapper docs-content">
+    <div class="inner-wrapper">
+
+      <article class="docs" id="introduction">
+        <div class="section-header">
+            <h2 class="section-title">Introduction</h2>
+            <p class="section-description">Getting to know Fries</p>
+        </div>
+        <p>Fries is an awesome mobile prototyping framework for Android apps inspired by <a href="http://maker.github.io/ratchet/">Ratchet</a>. We all know that you can find loads of iOS prototyping tools out there, so this time let's give some love to Android.</p>
+      </article>
+
+      <article class="docs" id="getting-started">
+        <div class="section-header">
+          <h2 class="section-title">Getting started</h2>
+          <p class="section-description">What to do next after downloading</p>
+        </div>
+        <ol>
+          <li>
+            <h3>Create your pages</h3>
+            <p>Creating the markup for your pages is really easy. Just follow these docs on how to write them. You may also customize the styles to make the prototype your own.</p>
+          </li>
+          <li>
+            <h3>Stitch them up with push.js</h3>
+            <p>Similar to Ratchet, your pages should be pieced together using <a href="http://maker.github.io/ratchet/#push">push.js</a>. Push.js allows you to create interactive prototypes by dynamically loading HTML on the fly and inserting it to your prototype. Read more about push.js to understand how this works.</p>
+          </li>
+          <li>
+            <h3>Test them on your device</h3>
+            <p>To test your prototype on your device, serve it up on your local web server and load it up on your Android browser. You can also do this by installing a web server on your Android device and serving the files from there.</p>
+          </li>
+        </ol>
+      </article>
+
+      <article class="docs" id="components">
+        <div class="section-header">
+          <h2 class="section-title">Components</h2>
+          <p class="section-description">UI building blocks</p>
+        </div>
+        
+        <section id="action-bar" class="component">
+          <h3 class="component-title">Action bar</h3>
+          <p class="component-description">Action bars serve as your main navigation throughout your app. These hold the app icon, app title, action buttons, and can also hold tabs.</p>
+          <p class="component-description">App icons must be between 24px and 32px in height. It can have any width though as long as your prototype doesn't break its layout.</p>
+
+<pre class="prettyprint">
+&lt;header class="action-bar"&gt;
+  &lt;a href="#" class="app-icon action"&gt;
+    &lt;i class="icon-home"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  &lt;h1 class="title"&gt;Title&lt;/h1&gt;
+&lt;/header&gt;
+</pre>
+        </section>
+
+
+        <section id="action-bar-with-up-button" class="component">
+          <h3 class="component-title">Action bar with Up button</h3>
+          <p class="component-description">Adding the Up button means that the current screen is not at the top level.</p>
+
+<pre class="prettyprint">
+&lt;header class="action-bar"&gt;
+  &lt;a href="#" class="app-icon action up"&gt;
+    &lt;i class="chevron"&gt;&lt;/i&gt;
+    &lt;i class="icon-home"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  &lt;h1 class="title"&gt;Title&lt;/h1&gt;
+&lt;/header&gt;
+</pre>
+        </section>
+
+
+        <section id="action-bar-with-subtitle" class="component">
+          <h3 class="component-title">Action bar with subtitles</h3>
+          <p class="component-description">You can also create an action bar with a title and a subtitle</p>
+
+<pre class="prettyprint">
+&lt;header class="action-bar"&gt;
+  &lt;a href="#" class="app-icon action"&gt;
+    &lt;i class="icon-home"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  &lt;h2 class="title"&gt;Title &lt;span class="subtitle"&gt;Subtitle&lt;/span&gt;&lt;/h2&gt;
+&lt;/header&gt;
+</pre>
+        </section>
+
+
+        <section id="action-buttons" class="component">
+          <h3 class="component-title">Action buttons</h3>
+          <p class="component-description">Action bars can also have buttons in them. Currently, you can only add a maximum of two (2) buttons to the action bar.</p>
+
+<pre class="prettyprint">
+&lt;header class="action-bar"&gt;
+  &lt;a href="#" class="app-icon action"&gt;
+    &lt;i class="icon-home"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  &lt;h1 class="title"&gt;Action Buttons&lt;/h1&gt;
+  &lt;ul class="actions pull-right"&gt;
+    &lt;li&gt;&lt;a href="#" class="action"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" class="action"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/header&gt;
+</pre>
+        </section>
+
+
+        <section id="tabs" class="component">
+          <h3 class="component-title">Tabs</h3>
+          <p class="component-description">Tabs are usually used to navigate between multiple screens.</p>
+
+<pre class="prettyprint">
+&lt;nav class="tab-fixed"&gt;
+  &lt;ul class="tab-inner"&gt;
+    &lt;li class="active"&gt;&lt;a href="#item1"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#item2"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#item3"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
+
+        </section>
+
+
+
+        <section id="buttons" class="component">
+          <h3 class="component-title">Buttons</h3>
+          <p class="component-description">Buttons come in two sizes and supports all button states.</p>
+
+<pre class="prettyprint">
+&lt;div class="inset content"&gt;
+  &lt;a href="#" class="button-normal"&gt;Normal&lt;/a&gt;
+  &lt;a href="#" class="button-small"&gt;Small&lt;/a&gt;
+  &lt;a href="#" class="button-normal focused"&gt;Focused Normal&lt;/a&gt;
+  &lt;a href="#" class="button-small focused"&gt;Focused Small&lt;/a&gt;
+  &lt;a href="#" class="button-normal active"&gt;Pressed Normal&lt;/a&gt;
+  &lt;a href="#" class="button-small active"&gt;Pressed Small&lt;/a&gt;
+  &lt;a href="#" class="button-normal focused disabled"&gt;Focused Disabled&lt;/a&gt;
+  &lt;a href="#" class="button-small focused disabled"&gt;Focused Disabled Small&lt;/a&gt;
+  &lt;a href="#" class="button-normal disabled"&gt;Disabled&lt;/a&gt;
+  &lt;a href="#" class="button-small disabled"&gt;Disabled Small&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+        <section id="lists" class="component">
+          <h3 class="component-title">Lists</h3>
+          <p class="component-description">Lists can be used to organize your data.</p>
+
+<pre class="prettyprint">
+&lt;div class="content"&gt;
+  &lt;ul class="list inset"&gt;
+    &lt;li class="list-divider"&gt;Single Line List&lt;/li&gt;
+    &lt;li class="list-item-single-line"&gt;List item number one&lt;/li&gt;
+    &lt;li class="list-item-single-line"&gt;Second list item&lt;/li&gt;
+    &lt;li class="list-item-single-line"&gt;This is the third item and this is a very long line.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+        <section id="two-line-lists" class="component">
+          <h3 class="component-title">2-Line Lists</h3>
+
+<pre class="prettyprint">
+&lt;div class="content"&gt;
+  &lt;ul class="list inset"&gt;
+    &lt;li class="list-divider"&gt;2 Line List&lt;/li&gt;
+    &lt;li class="list-item-two-lines"&gt;
+      &lt;h3&gt;First Item&lt;/h3&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li class="list-item-two-lines"&gt;
+      &lt;h3&gt;Second Item&lt;/h3&gt;
+      &lt;p&gt;Another list item's description.&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <section id="multi-line-lists" class="component">
+          <h3 class="component-title">Multi Line Lists</h3>
+
+<pre class="prettyprint">
+&lt;div class="content"&gt;
+  &lt;ul class="list inset"&gt;
+    &lt;li class="list-divider"&gt;Multi Line List&lt;/li&gt;
+    &lt;li class="list-item-multi-line"&gt;
+      &lt;h3&gt;Multi Line List Item&lt;/h3&gt;
+      &lt;p&gt;Suspendisse potenti. Mauris accumsan consequat urna ut ornare. Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh. Integer congue felis et diam hendrerit imperdiet. Sed pellentesque, ipsum nec vehicula molestie.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li class="list-item-multi-line"&gt;
+      &lt;h3&gt;Second Multi Line List Item&lt;/h3&gt;
+      &lt;p&gt;Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh.&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+      </article>
+
+
+      <article class="docs component" id="using-iscroll">
+        
+        <div class="section-header">
+          <h2 class="section-title">iScroll</h2>
+          <p class="section-description">Usage and notes</p>
+        </div>
+        <p>Fries uses <a href="http://cubiq.org/iscroll-4">iScroll 4</a> for its scroll bars and it is really easy to use.</p>
+        <p>Just add the "scroll" id to the container that you want to attach iScroll to and voila, a sexy scroll bar in your prototype.</p>
+        
+        <section id="iscroll">
+          <h3 class="component-title">Using iScroll in lists</h3>
+          <p class="component-description">You must wrap your lists in <code>&lt;div id="scroll" class="content"&gt;</code> to attach iScroll to it.</p>
+
+<pre class="prettyprint">
+&lt;div id="scroll" class="content"&gt;
+  &lt;ul class="list inset"&gt;
+    &lt;li class="list-divider"&gt;Single Line List&lt;/li&gt;
+    &lt;li class="list-item-single-line"&gt;List item number one&lt;/li&gt;
+    &lt;li class="list-item-single-line"&gt;Second list item&lt;/li&gt;
+    &lt;li class="list-item-single-line"&gt;This is the third item and this is a very long line but it was not so long after all.&lt;/li&gt;
+    &lt;li class="list-divider"&gt;2 Line List&lt;/li&gt;
+    &lt;li class="list-item-two-lines"&gt;
+      &lt;h3&gt;First Item&lt;/h3&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li class="list-item-two-lines"&gt;
+      &lt;h3&gt;Second Item&lt;/h3&gt;
+      &lt;p&gt;Another list item's description.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li class="list-divider"&gt;Multi Line List&lt;/li&gt;
+    &lt;li class="list-item-multi-line"&gt;
+      &lt;h3&gt;Multi Line List Item&lt;/h3&gt;
+      &lt;p&gt;Suspendisse potenti. Mauris accumsan consequat urna ut ornare. Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh. Integer congue felis et diam hendrerit imperdiet. Sed pellentesque, ipsum nec vehicula molestie.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li class="list-item-multi-line"&gt;
+      &lt;h3&gt;Second Multi Line List Item&lt;/h3&gt;
+      &lt;p&gt;Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh.&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+        </section>
+      </article>
+
+
+      <article class="docs" id="page-setup">
+        <div class="section-header">
+          <h2 class="section-title">Page setup</h2>
+          <p class="section-description">Oh yes, I copied this from Ratchet. I'm so evil.</p>
+        </div>
+        <p>Since Fries is purely based on Ratchet, the page setup goes the same.</p>
+        <ol>
+          <li>
+            <h3>Fixed bars come first</h3>
+            <p>All fixed bars and tabs (<code>.action-bar</code>, <code>.tab-fixed</code>) should always be the first thing in the <code>&lt;body&gt;</code> of the page. This is really important!</p>
+          </li>
+          <li>
+            <h3>Everything else goes in <code>.content</code></h3>
+            <p>Anything that's not an <code>.action-bar</code> or a <code>.tab-fixed</code> should be put in a <code>div</code> with the class "content". Put this div after the bars in the <code>&lt;body&gt;</code> tag. The <code>.content</code> div is what actually scrolls in a Fries prototype.</p>
+          </li>
+          <li>
+            <h3>Don't forget your meta tags</h3>
+            <p>The meta tags are included in the template.html that comes with your Fries. Make sure they're in your HTML so Fries works.</p>
+          </li>
+        </ol>
+      </article>
+
+
+      <article class="docs" id="credits">
+        <section id="thanks" class="component">
+<pre class="prettyprint">
+&lt;div class="splash"&gt;
+  &lt;h1&gt;Thank you!&lt;/h1&gt;
+  &lt;p&gt;Check back again for updates&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+        </section>
+
+        <div class="section-header">
+          <h2 class="section-title">Credits</h2>
+          <p class="section-description">About the author and special thanks</p>
+        </div>
+        <p>Fries is deep-fried and made crispy by <a href="http://jaunesarmiento.me">Jaune Sarmiento</a>. He was inspired by <a href="http://maker.github.io/ratchet/">Ratchet</a> to craft this awesome framework.</p>
+        <p>Follow Jaune on Twitter to stay up-to-date.</p>
+        
+        <a data-ignore="push" class="twitter-follow-button" href="https://twitter.com/jaunesarmiento" data-show-count="true">Follow @jaunesarmiento</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </article>
+    </div>
+  </div>
+
+  <div class="galaxy galaxy-fixed">
+    <div class="galaxy-content">
+      <div id="galaxy-window" class="galaxy-window">
+
+        <div class="splash">
+          <h1>Fries</h1>
+          <p>Scroll down to see me in action</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

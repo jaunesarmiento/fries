@@ -1,0 +1,89 @@
+[class*="action-bar"] {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.action-bar {
+  border-bottom: 2px solid #1f1f1f;
+  background-color: #222;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.action-bar .title,
+.action-bar .subtitle,
+.action-bar .app-icon {
+  float: left;
+  display: inline-block;
+}
+
+.action-bar .title {
+  display: inline-block;
+  margin-left: 1px;
+  font-weight: normal;
+  color: #f0f0f0;
+}
+
+.action-bar h1.title {
+  font-size: 18px;
+  line-height: 48px;
+}
+
+.action-bar h2.title {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 8px 0 4px;
+}
+
+.action-bar .subtitle {
+  color: #f3f3f3;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.action-bar .app-icon {
+  position: relative;
+  padding: 8px 0;
+  margin-left: 16px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+.action-bar .app-icon.up {
+  padding-left: 16px;
+  margin-left: 0;
+}
+
+.action-bar .app-icon img {
+  float: right;
+}
+
+ul.actions,
+ul.actions li {
+  display: inline-block;
+}
+
+ul.actions {
+  list-style: none;
+}
+
+.action {
+  display: inline-block;
+  padding: 8px;
+}
+.action:active {
+  background-color: rgba(51, 181, 229, 0.5);
+}
+
+.action [class*="icon-"] {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 24px;
+  color: #999;
+  text-align: center;
+}

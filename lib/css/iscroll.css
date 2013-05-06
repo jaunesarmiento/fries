@@ -1,0 +1,9 @@
+#scroll > div {
+  width: 5px !important;
+}
+
+#scroll > div div {
+  border: none !important;
+  border-radius: 0 !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+}
