@@ -1,5 +1,7 @@
 $(function() {
 
+  window.debug = true;
+
   var scroller;
   var $win;
   var $doc;
@@ -25,7 +27,7 @@ $(function() {
     $doc = $(document);
     $bod = $(document.body);
 
-    $toggleSpinner = $('.toggle-spinner');
+    $toggleSpinner = $('.toggle-nav');
     $navComponents = $('.nav-components');
     
     galaxy = galaxy || $('.galaxy');
@@ -39,6 +41,7 @@ $(function() {
 
     checkDesktopContent();
     calculateScroll();
+    checkActionOverflow();
 
     if (!eventListeners) addEventListeners();
   }
@@ -72,19 +75,16 @@ $(function() {
       e.stopPropagation();
       e.preventDefault();
       $navComponents.toggleClass('active');
-    })
+    });
 
     $doc.on('click', function () {
       $navComponents.removeClass('active');
-    })
-
-    // Hacky fix for parts of the header magically disappearing
-    $('.nav-item a').on('click', function (e) {
-      window.scrollTo(window.pageXOffset, window.pageYOffset - 1);
     });
 
     $(window).on('scroll', calculateScroll);
     $(window).on('scroll', attachIScroll);
+    // For documentation purposes. Remove this on production
+    $(window).on('scroll', checkActionOverflow);
   }
 
   var checkDesktopContent = function () {
@@ -104,17 +104,6 @@ $(function() {
     // Save scrollTop value
     var contentSectionItem;
     var currentTop = $win.scrollTop();
-
-    // If page is scrolled to bottom near footers
-    /*
-    if(pageHeight - currentTop < footerHeight + contentPadding + 1400) {
-      galaxy[0].className = "galaxy galaxy-bottom";
-      galaxy[0].setAttribute('style','')
-    } else {
-      galaxy[0].className = "galaxy galaxy-fixed"
-      galaxy[0].setAttribute('style','')
-    }
-    */
 
     // Injection of components into phone
     for (var l = contentSection.length; l--;) {

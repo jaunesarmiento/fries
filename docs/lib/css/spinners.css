@@ -1,0 +1,46 @@
+.spinner {
+  position: absolute;
+  display: none;
+  z-index: -1;
+  padding: 0;
+  line-height: 1.1;
+  background-color: #222;
+  background-clip: padding-box;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.spinner.active {
+  display: block;
+}
+
+.spinner li {
+  margin: 0;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #555;
+}
+.spinner li:last-child {
+  border-bottom: none;
+}
+.spinner li:hover,
+.spinner li:active {
+  background: rgba(51, 181, 229, 0.5);
+}
+.spinner li a {
+  float: left;
+  display: block;
+  padding: 17px 15px 16px;
+  white-space: nowrap;
+  width: 200px;
+  box-sizing: border-box;
+  color: #f0f0f0 !important;
+}
+
+.action-bar.fixed-top .spinner {
+  top: 48px;
+}
+
+.action-overflow .spinner {
+  right: 10px;
+}

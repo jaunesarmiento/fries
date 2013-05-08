@@ -54,8 +54,15 @@ ul.actions li a:active { color: #0099cc; }
   height: 48px;
 }
 
+.logo {
+  margin-top: 8px;
+}
+
 .title a {
   color: #fff;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .docs-header ul {
@@ -120,7 +127,7 @@ ul.nav-components li a {
   box-sizing: border-box;
 }
 
-.toggle-spinner:after {
+.toggle-nav:after {
   content: '';
   position: absolute;
   right: 0;
@@ -138,6 +145,7 @@ ul.nav-components li a {
 
 .docs-jumbo {
   height: 500px;
+  padding-bottom: 40px;
 }
 
 .docs-header-subtitle {
@@ -229,7 +237,7 @@ ul.nav-components li a {
 .twitter-share-button,
 .twitter-share-button:hover,
 .twitter-share-button:active {
-  padding: 0;
+  padding: 0 !important;
   border: none;
   border-radius: 0;
   background: none !important;
@@ -377,6 +385,10 @@ ul.nav-components li a {
     width: auto;
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  .docs-jumbo {
+    padding-bottom: 150px;
   }
 
   .docs-header .title {

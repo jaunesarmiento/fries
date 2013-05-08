@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fries &mdash; Documentation</title>
+  <title>Fries</title>
   <meta name="description" content="Fries: Prototype Android apps using HTML, CSS and JavaScript.">
   <meta name="author" content="Jaune Sarmiento">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <link rel="shortcut icon" href="favicon.ico"/>
+  <link rel="shortcut icon" href="favicon.png"/>
 
   <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" type="text/css">-->
 
-  <link rel="stylesheet" href="../lib/css/base.css">
-  <link rel="stylesheet" href="../lib/css/iscroll.css">
-  <link rel="stylesheet" href="../lib/css/action-bars.css">
-  <link rel="stylesheet" href="../lib/css/chevrons.css">
-  <link rel="stylesheet" href="../lib/css/tabs.css">
-  <link rel="stylesheet" href="../lib/css/content.css">
-  <link rel="stylesheet" href="../lib/css/buttons.css">
-  <link rel="stylesheet" href="../lib/css/lists.css">
+  <link rel="stylesheet" href="./lib/css/base.css">
+  <link rel="stylesheet" href="./lib/css/iscroll.css">
+  <link rel="stylesheet" href="./lib/css/action-bars.css">
+  <link rel="stylesheet" href="./lib/css/chevrons.css">
+  <link rel="stylesheet" href="./lib/css/tabs.css">
+  <link rel="stylesheet" href="./lib/css/content.css">
+  <link rel="stylesheet" href="./lib/css/buttons.css">
+  <link rel="stylesheet" href="./lib/css/lists.css">
+  <link rel="stylesheet" href="./lib/css/forms.css">
+  <link rel="stylesheet" href="./lib/css/spinners.css">
 
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/docs.css">
@@ -29,16 +31,33 @@
   <script src="./lib/js/iscroll.js"></script>
   <script src="js/prettify.js"></script>
   <script src="js/docs.js"></script>
+
+  <script src="./lib/js/action-bars.js"></script>
+  <script src="./lib/js/spinners.js"></script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39427411-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 </head>
-<body>
+<body ontouchstart="">
 
   <header class="action-bar outer-wrapper docs-header">
     <div class="inner-wrapper">
-      <h1 class="title"><a href="http://jaunesarmiento.me/fries">Fries</a></h1>
+      <h1 class="title"><a href="http://jaunesarmiento.me/fries/"><img class="logo" src="images/fries-logo.png" /> Fries</a></h1>
       <ul id="main-nav" class="actions pull-right">
         <li class="nav-item"><a href="#getting-started">Getting started</a></li>
         <li class="nav-item">
-          <a href="#components" class="toggle-spinner">Components</a>
+          <a href="#components" class="toggle-nav">Components</a>
           <ul class="nav-components">
             <li><a href="#action-bar">Action bars</a></li>
             <li><a href="#tabs">Tabs</a></li>
@@ -48,7 +67,7 @@
         </li>
         <li class="nav-item"><a href="#using-iscroll">iScroll</a></li>
         <li class="nav-item"><a href="#page-setup">Page setup</a></li>
-        <li class="nav-item"><a href="https://github.com/jaunesarmiento/fries">Fork it on GitHub</a></li>
+        <li class="nav-item"><a href="https://github.com/jaunesarmiento/fries/">Fork it on GitHub</a></li>
       </ul>
     </div>
   </header>
@@ -57,13 +76,13 @@
     <div class="inner-wrapper">
       <hgroup class="docs-header-text">
           <h2 class="docs-header-subtitle">Fries lets you prototype Android apps using HTML, CSS, and JavaScript.</h2>
-          <a data-ignore="push" href="http://jaunesarmiento.github.com/fries/fries.zip" class="docs-button" onClick="_gaq.push(['_trackEvent', 'Downloads', 'v1.0']);">Download Fries</a>
-          <a data-ignore="push" href="http://jaunesarmiento.github.com/fries" class="docs-button" onClick="_gaq.push(['_trackEvent', 'View on GitHub', 'v1.0']);">View it on GitHub</a>
+          <a data-ignore="push" href="https://github.com/jaunesarmiento/fries/archive/master.zip" class="docs-button" onClick="_gaq.push(['_trackEvent', 'Downloads', 'v1.0']);">Download Fries</a>
+          <a data-ignore="push" href="https://github.com/jaunesarmiento/fries/" class="docs-button" onClick="_gaq.push(['_trackEvent', 'View on GitHub', 'v1.0']);">View it on GitHub</a>
       </hgroup>
       <section class="social inner-wrapper">
         <ul>
           <li>
-            <a data-ignore="push" class="twitter-share-button" href="https://twitter.com/share" data-url="http://jaunesarmiento.github.com/fries/" data-text="Fries: Prototype Android apps using simple HTML, CSS, and JavaScript" data-via="jaunesarmiento">Tweet</a>
+            <a data-ignore="push" class="twitter-share-button" href="https://twitter.com/share" data-url="http://jaunesarmiento.me/fries/" data-text="Fries: Prototype Android apps using simple HTML, CSS, and JavaScript" data-via="jaunesarmiento">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </li>
           <li>
@@ -170,20 +189,42 @@
 
         <section id="action-buttons" class="component">
           <h3 class="component-title">Action buttons</h3>
-          <p class="component-description">Action bars can also have buttons in them. Currently, you can only add a maximum of two (2) buttons to the action bar.</p>
+          <p class="component-description">Action bars can also have buttons in them.</p>
 
 <pre class="prettyprint">
-&lt;header class="action-bar"&gt;
+&lt;header class="action-bar fixed-top"&gt;
   &lt;a href="#" class="app-icon action"&gt;
     &lt;i class="icon-home"&gt;&lt;/i&gt;
   &lt;/a&gt;
   &lt;h1 class="title"&gt;Action Buttons&lt;/h1&gt;
   &lt;ul class="actions pull-right"&gt;
-    &lt;li&gt;&lt;a href="#" class="action"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#" class="action"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" class="action" title="Search"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" class="action" title="Settings"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/header&gt;
 </pre>
+        </section>
+
+        <section id="action-overflows" class="component">
+          <h3 class="component-title">Action overflows</h3>
+          <p class="component-description">You can only add a maximum of two (2) action buttons to the action bar when the device width is less than 480 pixels. This is where action overflows come in.</p>
+          <p class="component-description">Action overflows automatically convert action buttons into a <a href="#spinners">Spinner</a> when there are more than two buttons in your action bar.</p>
+
+<pre class="prettyprint">
+&lt;header class="action-bar fixed-top"&gt;
+  &lt;a href="#" class="app-icon action"&gt;
+    &lt;i class="icon-home"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  &lt;h1 class="title"&gt;Action Buttons&lt;/h1&gt;
+  &lt;ul class="actions pull-right"&gt;
+    &lt;li&gt;&lt;a href="#" class="action" title="Search"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" class="action" title="Copy"&gt;&lt;i class="icon-copy"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" class="action" title="Cut"&gt;&lt;i class="icon-scissors"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" class="action" title="Settings"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/header&gt;
+</pre>
+
         </section>
 
 
@@ -298,7 +339,15 @@
           <p class="section-description">Usage and notes</p>
         </div>
         <p>Fries uses <a href="http://cubiq.org/iscroll-4">iScroll 4</a> for its scroll bars and it is really easy to use.</p>
-        <p>Just add the "scroll" id to the container that you want to attach iScroll to and voila, a sexy scroll bar in your prototype.</p>
+        <p>Just add the "scroll" id to the container that you want to attach iScroll to and voila, a sexy scroll bar in your prototype.<p>
+
+<pre class="prettyprint informational">
+// Attaches iScroll to element with id "scroll"
+scroller = new iScroll('scroll', {
+  fadeScrollbar: true,
+  hideScrollbar: true
+});
+</pre>
         
         <section id="iscroll">
           <h3 class="component-title">Using iScroll in lists</h3>
@@ -387,9 +436,18 @@
     <div class="galaxy-content">
       <div id="galaxy-window" class="galaxy-window">
 
+        <!--
         <div class="splash">
           <h1>Fries</h1>
           <p>Scroll down to see me in action</p>
+        </div>
+        -->
+        <div class="inset content">
+          <form class="form">
+
+            <input type="text" class="input-text holo-dark" />
+
+          </form>
         </div>
 
       </div>
