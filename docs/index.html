@@ -18,10 +18,9 @@
   <link rel="stylesheet" href="./lib/css/content.css">
   <link rel="stylesheet" href="./lib/css/buttons.css">
   <link rel="stylesheet" href="./lib/css/lists.css">
-  <link rel="stylesheet" href="./lib/css/forms.css">
   <link rel="stylesheet" href="./lib/css/spinners.css">
-
-  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="./lib/css/icomoon.css">
+  
   <link rel="stylesheet" href="css/docs.css">
   <link rel="stylesheet" href="css/prettify.css">
 
@@ -208,7 +207,8 @@
         <section id="action-overflows" class="component">
           <h3 class="component-title">Action overflows</h3>
           <p class="component-description">You can only add a maximum of two (2) action buttons to the action bar when the device width is less than 480 pixels. This is where action overflows come in.</p>
-          <p class="component-description">Action overflows automatically convert action buttons into a <a href="#spinners">Spinner</a> when there are more than two buttons in your action bar.</p>
+          <p class="component-description">Action overflows automatically convert action buttons into a <a href="#spinners">Spinner</a> when there are more than two buttons in your action bar. Fries will automatically use the value of the button's <code>title</code> attribute to generate a Spinner item. So make sure that you add a <code>title</code> to your action buttons.</p>
+
 
 <pre class="prettyprint">
 &lt;header class="action-bar fixed-top"&gt;
@@ -436,10 +436,12 @@ scroller = new iScroll('scroll', {
     <div class="galaxy-content">
       <div id="galaxy-window" class="galaxy-window">
 
+        
         <div class="splash">
           <h1>Fries</h1>
           <p>Scroll down to see me in action</p>
-        </div>        
+        </div>
+        
 
       </div>
     </div>

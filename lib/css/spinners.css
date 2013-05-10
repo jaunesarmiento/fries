@@ -1,17 +1,24 @@
 .spinner {
   position: absolute;
-  display: none;
   z-index: -1;
   padding: 0;
   line-height: 1.1;
   background-color: #222;
-  background-clip: padding-box;
+  background-clip: border-box;
   border-radius: 2px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all ease-out 0.1s;
+          transition: all ease-out 0.1s;
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+  opacity: 0;
 }
 
 .spinner.active {
   display: block;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  opacity: 1;
 }
 
 .spinner li {
@@ -38,9 +45,11 @@
 }
 
 .action-bar.fixed-top .spinner {
-  top: 48px;
+  top: 46px;
 }
 
 .action-overflow .spinner {
   right: 10px;
 }
+
+
