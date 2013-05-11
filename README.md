@@ -10,6 +10,18 @@ let's give some love to Android.
 Read the [docs] to see it in action.
 
 
+## Development Roadmap
+
+Fries aims to make prototyping Android apps fast and easy. In the long run, these are 
+the following features and components that I think should be added to Fries:
+
+* Modals
+* Form Elements
+* Menu Drawer (a la Facebook)
+* Loading Indicator
+* Custom Scroller (iScroll is great but Fries aims to be as close to an Android app as possible)
+
+
 ## Browser Compatibility
 
 Coming soon as Fries is currently being deep fried in most modern mobile browsers.
