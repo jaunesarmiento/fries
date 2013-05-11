@@ -107,31 +107,31 @@ ul.actions li {
   padding: 22px 22px 21px 21px;
   float: left;
 }
-.action-overflow-icon span {
+.action-overflow-icon i {
   position: relative;
   z-index: 0;
 }
-.action-overflow-icon span,
-.action-overflow-icon span:before,
-.action-overflow-icon span:after {
+.action-overflow-icon i,
+.action-overflow-icon i:before,
+.action-overflow-icon i:after {
   display: block;
   width: 5px;
   height: 5px;
   background: #999;
 }
-.action-overflow-icon span:before,
-.action-overflow-icon span:after {
+.action-overflow-icon i:before,
+.action-overflow-icon i:after {
   position: absolute;
   content: '';
   left: 0;
 }
-.action-overflow-icon span:before {
+.action-overflow-icon i:before {
   top: -9px;
 }
-.action-overflow-icon span:after {
+.action-overflow-icon i:after {
   top: 9px;
 }
 
-.action-overflow-icon:active span {
+.action-overflow-icon:active i {
   
 };

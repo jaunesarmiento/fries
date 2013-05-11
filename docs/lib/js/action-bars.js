@@ -25,7 +25,7 @@
               overflowList = document.createElement('ol'), // This goes inside overflowListItem
               overflowListItem = document.createElement('li'),
               overflowButton = document.createElement('a'),
-              overflowIcon = document.createElement('span');
+              overflowIcon = document.createElement('i');
 
           overflowList.setAttribute('reversed', 'reversed');
           overflowList.classList.add('action-overflow-list');
