@@ -20,6 +20,8 @@ the following features and components that I think should be added to Fries:
 * Menu Drawer (a la Facebook)
 * Loading Indicator
 * Custom Scroller (iScroll is great but Fries aims to be as close to an Android app as possible)
+* Typography
+* Holo Light Theme
 
 
 ## Browser Compatibility
