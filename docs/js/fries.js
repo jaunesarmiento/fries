@@ -14,7 +14,10 @@
     // Clean up the existing action overflows
     while (c--) cleanUp[c].remove();
 
-    if (window.innerWidth <= 480) {
+    // Note: debug variable is to true for docs purposes only!
+    // Remove it on when you're using Fries on your prototype
+    var debug = true;
+    if (window.innerWidth <= 480 || debug == true) {
       
       // Iterate over all action bars
       while (a--) {
