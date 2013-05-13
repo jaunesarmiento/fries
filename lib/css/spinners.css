@@ -1,3 +1,31 @@
+.form-spinner .toggle-spinner {
+  position: relative;
+  display: block;
+  height: 48px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: right;
+  padding: 16px 20px 12px 40px;
+  border-bottom: 1px solid #333;
+  color: #f2f2f2;
+}
+.form-spinner .toggle-spinner:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 0;
+  top: 35px;
+  margin-left: -4px;
+  border-right: 12px solid rgba(0, 0, 0, 0);
+  border-top: 12px solid #777;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 .spinner {
   position: absolute;
   z-index: -1;
@@ -7,26 +35,27 @@
   background-clip: border-box;
   border-radius: 2px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  visibility: hidden;
   opacity: 0;
   -webkit-transition: all ease-out .1s;
           transition: all ease-out .1s;
   -webkit-transform: scale(.8, .8) translateY(-20px);
           transform: scale(.8, .8) translateY(-20px);
+  list-style: none;
 }
 
 .spinner.active {
-  visibility: visible;
   opacity: 1;
   -webkit-transform: scale(1, 1) translateY(0);
           transform: scale(1, 1) translateY(0);
+  z-index: 99;
 }
 
 .spinner li {
   margin: 0;
   float: left;
   width: 100%;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #333;
+  text-align: left;
 }
 .spinner li:last-child {
   border-bottom: none;
@@ -43,6 +72,7 @@
   width: 200px;
   box-sizing: border-box;
   color: #f0f0f0 !important;
+  font-weight: normal;
 }
 
 .action-bar.fixed-top .spinner,
@@ -51,4 +81,13 @@
 }
 .action-overflow .spinner {
   right: 10px;
+}
+
+.form-spinner {
+  position: relative;
+  margin-left: 10px;
+}
+
+.form-spinner .spinner {
+  right: 0;
 }
