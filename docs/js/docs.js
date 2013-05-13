@@ -42,6 +42,7 @@ $(function() {
     checkDesktopContent();
     calculateScroll();
     checkActionOverflow();
+    attachSpinnerEvents();
 
     if (!eventListeners) addEventListeners();
   }
@@ -83,8 +84,8 @@ $(function() {
 
     $(window).on('scroll', calculateScroll);
     $(window).on('scroll', attachIScroll);
-    // For documentation purposes. Remove this on production
     $(window).on('scroll', checkActionOverflow);
+    $(window).on('scroll', attachSpinnerEvents);
   }
 
   var checkDesktopContent = function () {

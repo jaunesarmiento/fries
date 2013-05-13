@@ -64,8 +64,6 @@
           actionBars[a].querySelector('.actions').appendChild(overflowListItem);
         }
       }
-
-      attachSpinnerEvents();
     }
     else {
       // Iterate over all action bars
@@ -79,9 +77,6 @@
       }
     }
   }
-  
-  window.addEventListener('resize', checkActionOverflow);
-  window.addEventListener('load', checkActionOverflow);
 
 }();
 
@@ -96,18 +91,21 @@
       i = spinners.length;
 
     while (i--) {
+
       var s = spinners[i];
-      
+
+      s.removeEventListener('click');
       s.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         
+        var target = e.target;
         if (e.target.nodeName === 'I') {
-          e.target.parentNode.nextSibling.classList.toggle('active');  
-          return;
+          target = e.target.parentNode;
         }
 
-        e.target.nextSibling.classList.toggle('active');
+        var spinner = target.parentNode.querySelectorAll('.spinner')[0];
+        spinner.classList.toggle('active');
       });
     }
 
@@ -118,7 +116,5 @@
       while (o--) els[o].classList.remove('active');
     });
   }
-  
-  attachSpinnerEvents();
 
 }();
