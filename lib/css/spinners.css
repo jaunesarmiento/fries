@@ -7,9 +7,10 @@
   font-size: 14px;
   text-transform: uppercase;
   text-align: right;
-  padding: 16px 20px 12px 40px;
+  padding: 14px 20px 6px 40px;
   border-bottom: 1px solid #333;
   color: #f2f2f2;
+  outline: none;
 }
 .form-spinner .toggle-spinner:after {
   content: '';
@@ -17,7 +18,7 @@
   right: 0;
   width: 0;
   height: 0;
-  top: 35px;
+  top: 36px;
   margin-left: -4px;
   border-right: 12px solid rgba(0, 0, 0, 0);
   border-top: 12px solid #777;
@@ -28,7 +29,7 @@
 
 .spinner {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   padding: 0;
   line-height: 1.1;
   background-color: #222;
@@ -89,5 +90,6 @@
 }
 
 .form-spinner .spinner {
+  margin-top: -1px;
   right: 0;
 }
