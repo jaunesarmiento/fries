@@ -1,0 +1,125 @@
+input,
+select,
+textarea {
+  font-family: Roboto, sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+	display: block;
+	outline: none;
+  border: none;
+	border-bottom: 1px solid #333;
+	background: transparent;
+	color: #fff;
+  height: 48px;
+	padding: 10px 5px 0;
+	margin: 0 0 8px 0;
+	font-size: 16px;
+  box-sizing: border-box;
+  -webkit-transition: border ease-out 0.2s;
+     -moz-transition: border ease-out 0.2s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+	border-bottom: 1px solid #037ea7;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+}
+
+legend,
+label {
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #595959;
+  line-height: 18px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 5px 3px;
+  margin-top: 10px;
+  color: #ccc;
+  box-sizing: border-box;
+}
+
+.form-actions {
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+}
+
+/* Flexible form */
+.form-flex {
+
+}
+
+.form-flex .control-group {
+  margin: 0 48px 0 0;
+}
+.form-flex .control-group .control-label,
+.form-flex .control-group .controls {
+  whitespace: nowrap;
+}
+.form-flex .control-group .control-label {
+  width: auto;
+  border: none;
+  -webkit-box-flex: 1;
+     -moz-box-flex: 1;
+          box-flex: 1;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: initial;
+  text-align: left;
+}
+.form-flex .control-group .controls {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+          box-orient: horizontal;
+}
+
+.form-flex .span1 {
+  -webkit-box-flex: 1;
+     -moz-box-flex: 1;
+          box-flex: 1;
+}
+.form-flex .span2 {
+  -webkit-box-flex: 2;
+     -moz-box-flex: 2;
+          box-flex: 2;
+}
+.form-flex .span3 {
+  -webkit-box-flex: 3;
+     -moz-box-flex: 3;
+          box-flex: 3;
+}
+
+
+/* To make the form elements look pretty on desktop */
+@media (min-width: 768px) {
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"] {
+    margin: 0;
+    padding: 18px 5px 10px;
+  }
+  
+}

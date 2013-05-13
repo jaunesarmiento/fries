@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fries: Flexible Forms</title>
+
+  <meta name="description" content="Fries: Forms">
+  <meta name="author" content="Jaune Sarmiento">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="shortcut icon" href="favicon.png"/>
+
+  <!-- Comment this out if you have Roboto on your local machine -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" type="text/css">
+
+  <link rel="stylesheet" href="../lib/css/base.css">
+  <link rel="stylesheet" href="../lib/css/iscroll.css">
+  <link rel="stylesheet" href="../lib/css/action-bars.css">
+  <link rel="stylesheet" href="../lib/css/chevrons.css">
+  <link rel="stylesheet" href="../lib/css/tabs.css">
+  <link rel="stylesheet" href="../lib/css/content.css">
+  <link rel="stylesheet" href="../lib/css/buttons.css">
+  <link rel="stylesheet" href="../lib/css/lists.css">
+  <link rel="stylesheet" href="../lib/css/spinners.css">
+  <link rel="stylesheet" href="../lib/css/icomoon.css">
+
+  <link rel="stylesheet" href="../lib/css/forms.css">
+
+  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="../lib/js/iscroll.js"></script>
+  <script src="../lib/js/action-bars.js"></script>
+  <script src="../lib/js/spinners.js"></script>
+
+</head>
+<body ontouchstart="">
+
+  <header class="action-bar fixed-top">
+    <a href="#" class="app-icon action">
+      <i class="icon-home"></i>
+    </a>
+    <h1 class="title">Fries: Flexible Forms</h1>
+  </header>
+
+  <div class="content inset">
+    <form class="form-flex">
+      <h1>Profile Information</h1>
+      <div class="control-group">
+        <label>Full Name</label>
+        <div class="controls">
+          <input type="text" placeholder="Full Name">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label>Address</label>
+        <div class="controls">
+          <input type="text" placeholder="Address" class="span2">
+          <div class="form-spinner">
+          	<a href="#" class="toggle-spinner">Home</a>
+          	<ul reversed="reversed" class="spinner">
+          		<li class="spinner-item"><a href="#">Work</a></li>
+          		<li class="spinner-item"><a href="#">Secondary</a></li>
+          	</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label>Phone Number</label>
+        <div class="controls">
+          <input type="number" placeholder="Phone Number" class="span2">
+          <div class="form-spinner">
+            <a href="#" class="toggle-spinner">Main</a>
+            <ul reversed="reversed" class="spinner">
+              <li class="spinner-item"><a href="#">Work</a></li>
+              <li class="spinner-item"><a href="#">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    window.onload = function () {
+      checkActionOverflow();
+      attachSpinnerEvents();
+    }
+  </script>
+</body>
+</html>
