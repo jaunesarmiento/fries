@@ -1,4 +1,5 @@
-[class*="button"] {
+[class*="btn"] {
+  font-family: Roboto, sans-serif;
   border: none;
   padding: 11px 36px 10px;
   background: #474747;
@@ -11,14 +12,15 @@
   font-size: 16px;
   line-height: 14px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin-bottom: 10px;
+  vertical-align: middle;
 }
 
-[class*="button"]:not(.disabled):hover,
-[class*="button"].hover,
-[class*="button"]:not(.disabled):focus,
-[class*="button"].focused {
+[class*="btn"]:hover,
+[class*="btn"].hover,
+[class*="btn"]:focus,
+[class*="btn"].focused {
   outline: none;
   background: #1f5366;
   -webkit-box-shadow: inset 0 0 1px 2pt #037ea7, 0 2px 3px rgba(0,0,0,0.5);
@@ -26,9 +28,8 @@
           box-shadow: inset 0 0 1px 2pt #037ea7, 0 2px 3px rgba(0,0,0,0.5);
 }
 
-[class*="button"]:not(.disabled):active,
-[class*="button"]:active,
-[class*="button"].active {
+[class*="btn"]:active,
+[class*="btn"].active {
   background: #2c94bb;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 3px rgba(0,0,0,0.5), 0 0 2px 2pt rgba(51, 181, 229, 0.6);
      -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 3px rgba(0,0,0,0.5), 0 0 2px 2pt rgba(51, 181, 229, 0.6);
@@ -37,16 +38,25 @@
   padding: 11px 36px 10px;
 }
 
-[class*="button"]:disabled,
-[class*="button"].disabled {
+[class*="btn"]:disabled,
+[class*="btn"].disabled,
+.btn[disabled],
+.btn-small[disabled] {
   opacity: 0.3;
 }
 
-[class*="button"] + [class*="button"] {
+[class*="btn"] + [class*="btn"] {
   margin-left: 3px;
 }
 
-.button-small {
+.btn-small {
   font-size: 12px;
 }
 
+.btn-block {
+  width: 100%;
+}
+
+.btn-block + .btn-block {
+  margin-left: 0;
+}
