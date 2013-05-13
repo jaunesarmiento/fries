@@ -1,5 +1,5 @@
 [class*="button"] {
-  /*display: inline-block;*/
+  border: none;
   padding: 11px 36px 10px;
   background: #474747;
   border-radius: 2px;
