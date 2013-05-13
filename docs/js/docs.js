@@ -114,6 +114,9 @@ $(function() {
         $bod.find('.component.active').removeClass('active');
         contentSectionItem = $(contentSection[l])
         contentSectionItem.addClass('active')
+
+        console.log(contentSectionItem);
+
         if(contentSectionItem.attr('id')) {
           galaxy.attr("id", contentSectionItem.attr('id') + "InPhone");
         } else {

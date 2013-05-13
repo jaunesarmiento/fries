@@ -10,16 +10,17 @@
 
   <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" type="text/css">-->
 
-  <link rel="stylesheet" href="../lib/css/base.css">
-  <link rel="stylesheet" href="../lib/css/iscroll.css">
-  <link rel="stylesheet" href="../lib/css/action-bars.css">
-  <link rel="stylesheet" href="../lib/css/chevrons.css">
-  <link rel="stylesheet" href="../lib/css/tabs.css">
-  <link rel="stylesheet" href="../lib/css/content.css">
-  <link rel="stylesheet" href="../lib/css/buttons.css">
-  <link rel="stylesheet" href="../lib/css/lists.css">
-  <link rel="stylesheet" href="../lib/css/spinners.css">
-  <link rel="stylesheet" href="../lib/css/icomoon.css">
+  <link rel="stylesheet" href="./lib/css/base.css">
+  <link rel="stylesheet" href="./lib/css/iscroll.css">
+  <link rel="stylesheet" href="./lib/css/action-bars.css">
+  <link rel="stylesheet" href="./lib/css/chevrons.css">
+  <link rel="stylesheet" href="./lib/css/tabs.css">
+  <link rel="stylesheet" href="./lib/css/content.css">
+  <link rel="stylesheet" href="./lib/css/forms.css">
+  <link rel="stylesheet" href="./lib/css/buttons.css">
+  <link rel="stylesheet" href="./lib/css/lists.css">
+  <link rel="stylesheet" href="./lib/css/spinners.css">
+  <link rel="stylesheet" href="./lib/css/icomoon.css">
   
   <link rel="stylesheet" href="css/docs.css">
   <link rel="stylesheet" href="css/prettify.css">
@@ -27,7 +28,7 @@
   <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
-  <script src="../lib/js/iscroll.js"></script>
+  <script src="./lib/js/iscroll.js"></script>
   <script src="js/prettify.js"></script>
   <script src="js/fries.js"></script>
   <script src="js/docs.js"></script>
@@ -60,6 +61,7 @@
             <li><a href="#tabs">Tabs</a></li>
             <li><a href="#buttons">Buttons</a></li>
             <li><a href="#lists">Lists</a></li>
+            <li><a href="#forms">Forms</a></li>
           </ul>
         </li>
         <li class="nav-item"><a href="#using-iscroll">iScroll</a></li>
@@ -243,7 +245,6 @@
         </section>
 
 
-
         <section id="buttons" class="component">
           <h3 class="component-title">Buttons</h3>
           <p class="component-description">Buttons come in two sizes and supports all button states.</p>
@@ -327,6 +328,77 @@
 </pre>
 
         </section>
+
+
+        <section id="forms" class="component">
+          <h3 class="component-title">Forms</h3>
+          <p class="component-description">The default style for the form component is at block level. All elements are sitting on its own line including the buttons.</p>
+<pre class="prettyprint">
+&lt;div class="content inset"&gt;
+  &lt;form&gt;
+    &lt;label&gt;Email&lt;/label&gt;
+    &lt;input type="email" name="email" placeholder="Email" autocomplete="off"&gt;
+
+    &lt;label&gt;Password&lt;/label&gt;
+    &lt;input type="password" name="password" placeholder="Password"&gt;      
+
+    &lt;label&gt;Full Name&lt;/label&gt;
+    &lt;input type="text" name="firstname" placeholder="First Name" autocomplete="off"&gt;
+    &lt;input type="text" name="lastname" placeholder="Last Name" autocomplete="off"&gt;
+
+    &lt;div class="form-actions"&gt;
+      &lt;input type="submit" class="btn btn-block" value="Submit"&gt;&lt;/input&gt;
+      &lt;button type="button" class="btn btn-block"&gt;Cancel&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+        <section id="flexible-forms" class="component">
+          <h3 class="component-title">Flexible Forms</h3>
+          <p class="component-description">Flexible forms utilize the layout mode <a href="http://www.w3.org/TR/css3-flexbox/" target="_blank">flexbox</a> to fill out each elements parent container either growing to fill unused space or shrinking to avoid overflowing the parent. You can use this form layout by adding the <code>form-flex</code> class to the <code>&lt;form&gt;</code> tag.</p>
+          <p class="component-description">In a Fries prototype, elements inside a <code>flex-group</code> container are flexible by default.</p>
+<pre class="prettyprint">
+&lt;div class="content inset"&gt;
+  &lt;form class="form-flex"&gt;
+    &lt;div class="flex-group"&gt;
+      &lt;input type="text" placeholder="Full Name"&gt;
+    &lt;/div&gt;
+    &lt;div class="flex-group"&gt;
+      &lt;input type="text" placeholder="Address" class="flex2"&gt;
+      &lt;div class="form-spinner"&gt;
+        &lt;a href="#" class="toggle-spinner"&gt;Home&lt;/a&gt;
+        &lt;ul class="spinner"&gt;
+          &lt;li class="spinner-item"&gt;&lt;a href="#"&gt;Work&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="spinner-item"&gt;&lt;a href="#"&gt;Secondary&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+
+          <p class="component-description">You can use the classes <code>flex1</code>, <code>flex2</code>, and <code>flex3</code> to tell how each form element <em>flexes</em> and just remove them if you want to fill the whole line.</p>
+<pre class="prettyprint informational js">
+&lt;div class="content inset"&gt;
+  &lt;form class="form-flex"&gt;
+    &lt;div class="flex-group"&gt;
+      &lt;input type="text" placeholder="Full Name"&gt;
+    &lt;/div&gt;
+    &lt;div class="flex-group"&gt;
+      &lt;input type="text" placeholder="Flex 1" class="flex1"&gt;
+      &lt;input type="text" placeholder="Flex 2" class="flex2"&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+
+          <p class="component-description">Check out more examples of the flexible form <a href="/examples/forms-flex.html">here</a>.</p>
+
+        </section>
+
       </article>
 
 
