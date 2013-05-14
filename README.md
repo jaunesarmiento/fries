@@ -63,3 +63,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [Jacob Thornton]: http://github.com/fat
 [iScroll 4]: http://cubiq.org/iscroll-4
 [Matteo Spinelli]: http://cubiq.org/
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/5442e4f5cc5951efb12361a41734c6d5 "githalytics.com")](http://githalytics.com/jaunesarmiento/fries)
