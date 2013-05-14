@@ -87,8 +87,6 @@ video {
 html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
-  background-color: #000;
-  padding-bottom: 1px;
 }
 
 /* Base styles
@@ -102,7 +100,7 @@ body {
   left: 0;
   font: 16px/1.6 "Roboto", sans-serif;
   color: #fff;
-  background-color: #000;
+  background-color: #fff;
 }
 
 /* Universal link styling */
