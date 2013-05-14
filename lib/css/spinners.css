@@ -78,7 +78,7 @@
 
 .action-bar.fixed-top .spinner,
 .action-bar.fixed-top .spinner.active {
-  top: 48px;
+  top: 46px;
 }
 .action-overflow .spinner {
   right: 10px;
