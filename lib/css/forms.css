@@ -2,22 +2,23 @@ input,
 select,
 textarea {
   font-family: Roboto, sans-serif;
+  font-weight: normal;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"] {
-	display: block;
-	outline: none;
+  display: block;
+  outline: none;
   border: none;
-	border-bottom: 1px solid #333;
-	background: transparent;
-	color: #fff;
+  border-bottom: 1px solid #333;
+  background: transparent;
+  color: #fff;
   height: 48px;
-	padding: 10px 5px 0;
-	margin: 0 0 8px 0;
-	font-size: 16px;
+  padding: 10px 5px 0;
+  margin: 0 0 8px 0;
+  font-size: 16px;
   box-sizing: border-box;
   -webkit-transition: border ease-out 0.2s;
      -moz-transition: border ease-out 0.2s;
@@ -30,7 +31,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="number"]:focus {
-	border-bottom: 1px solid #037ea7;
+  border-bottom: 1px solid #037ea7;
 }
 
 input[type="number"] {
@@ -63,48 +64,34 @@ input[type="number"] {
   width: 100%;
 }
 
+input + input {
+  margin-left: 5px;
+}
+
 /* Flexible form */
 .form-flex {
-
+  width: 100%;
 }
 
-.form-flex .control-group {
-  margin: 0 48px 0 0;
-}
-.form-flex .control-group .control-label,
-.form-flex .control-group .controls {
-  whitespace: nowrap;
-}
-.form-flex .control-group .control-label {
-  width: auto;
-  border: none;
-  -webkit-box-flex: 1;
-     -moz-box-flex: 1;
-          box-flex: 1;
-  font-size: 16px;
-  font-weight: normal;
-  text-transform: initial;
-  text-align: left;
-}
-.form-flex .control-group .controls {
+.form-flex .flex-group {
+  margin: 0;
   display: -webkit-box;
   display: -moz-box;
   display: box;
   -webkit-box-orient: horizontal;
           box-orient: horizontal;
 }
-
-.form-flex .span1 {
+.form-flex .flex-group .flex1 {
   -webkit-box-flex: 1;
      -moz-box-flex: 1;
           box-flex: 1;
 }
-.form-flex .span2 {
+.form-flex .flex-group .flex2 {
   -webkit-box-flex: 2;
      -moz-box-flex: 2;
           box-flex: 2;
 }
-.form-flex .span3 {
+.form-flex .flex-group .flex3 {
   -webkit-box-flex: 3;
      -moz-box-flex: 3;
           box-flex: 3;
