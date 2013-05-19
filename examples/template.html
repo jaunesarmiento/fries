@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Required meta viewport tag. Do not modify this! -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  
   <title>Fries Template</title>
 
-  <meta name="description" content="Fries Template">
-  <meta name="author" content="Jaune Sarmiento">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-
   <link rel="shortcut icon" href="favicon.png"/>
-
-  <!-- Comment this out if you have Roboto on your local machine -->
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" type="text/css">
 
   <link rel="stylesheet" href="../lib/css/base.css">
   <link rel="stylesheet" href="../lib/css/iscroll.css">
@@ -23,32 +22,36 @@
   <link rel="stylesheet" href="../lib/css/lists.css">
   <link rel="stylesheet" href="../lib/css/spinners.css">
   <link rel="stylesheet" href="../lib/css/icomoon.css">
-
-  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-  <script src="../lib/js/iscroll.js"></script>
-  <script src="../lib/js/action-bars.js"></script>
-  <script src="../lib/js/spinners.js"></script>
-
+  <link rel="stylesheet" href="../lib/css/stack.css">
+  <link rel="stylesheet" href="../lib/css/sliders.css">
 </head>
 <body ontouchstart="">
 
-  <header class="action-bar fixed-top">
-    <a href="#" class="app-icon action">
-      <i class="icon-home"></i>
-    </a>
-    <h1 class="title">Fries Template</h1>
-    <ul class="actions pull-right">
-      <li><a href="#" class="action" title="Search"><i class="icon-search"></i></a></li>
-      <li><a href="#" class="action" title="Copy"><i class="icon-copy"></i></a></li>
-      <li><a href="#" class="action" title="Cut"><i class="icon-scissors"></i></a></li>
-      <li><a href="#" class="action" title="Settings"><i class="icon-settings"></i></a></li>
-    </ul>
-  </header>
+  <!-- All your pages must be wrapped in a div.page so that stack.js works -->
+  <div class="page">
 
-  <div class="content inset">
-    <h1>Add anything here</h1>
+    <header class="action-bar fixed-top">
+      <a href="#" class="app-icon action">
+        <i class="icon-home"></i>
+      </a>
+      
+      <h1 class="title">Title</h1>
+
+      <!-- Add action buttons here -->
+
+    </header>
+
+    <div class="content">
+
+      <!-- Add anything here -->
+
+    </div>
   </div>
 
+  <!-- Scripts at the bottom -->
+  <script src="../lib/js/stack.js"></script>
+  <script src="../lib/js/action-bars.js"></script>
+  <script src="../lib/js/spinners.js"></script>
+  <script src="../lib/js/tabs.js"></script>
 </body>
 </html>

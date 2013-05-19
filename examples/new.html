@@ -26,39 +26,29 @@
 <body ontouchstart="">
 
   <div class="page">
-
     <header class="action-bar fixed-top">
-      <a href="#" class="app-icon action">
+      <a href="#" class="app-icon action up" data-transition="push" onClick="window.history.go(-1);">
+        <i class="chevron"></i>
         <i class="icon-home"></i>
       </a>
-      <h1 class="title">Fries: Forms</h1>
+      <h1 class="title">Fries and PhoneGap</h1>
     </header>
 
-    <div class="content inset">
-      <form>
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Email" class="input-text input-block">
+    <div class="content">
+      <div class="inset">
+        <form class="form-flex">
+          <h1>New Message</h1>
 
-        <label>Password</label>
-        <input type="password" name="password" placeholder="Password" class="input-text input-block">      
+          <label>Message</label>
+          <div class="flex-group">
+            <input type="text" class="input-text input-block" placeholder="Full Name">
+          </div>
 
-        <label>Full Name</label>
-        <input type="text" name="firstname" placeholder="First Name" class="input-text input-block">
-        <input type="text" name="lastname" placeholder="Last Name" class="input-text input-block">
-
-        <label>Phone Number</label>
-        <input type="tel" name="tel" placeholder="Phone Number" class="input-text input-block">
-
-        <label>Birthday</label>
-        <input type="date" name="birthday" placeholder="Birthday" class="input-text input-block">
-
-        <div class="form-actions">
-          <input type="submit" class="btn btn-block" value="Submit"></input>
-          <button type="button" class="btn btn-block">Cancel</button>
-        </div>
-      </form>
+          <button class="btn btn-block">Submit</button>
+          <button class="btn btn-block">Cancel</button>
+        </form>
+      </div>
     </div>
-
   </div>
 
 </body>
