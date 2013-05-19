@@ -5,6 +5,12 @@ We all know that you can find loads of iOS prototyping tools out there, so this 
 let's give some love to Android.
 
 
+### Update!
+
+A work in progress [version 1.0.0] is now available. Check out its own branch to
+see the changes coming to Fries.
+
+
 ## Getting Started
 
 Read the [docs] to see it in action.
@@ -63,5 +69,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [Jacob Thornton]: http://github.com/fat
 [iScroll 4]: http://cubiq.org/iscroll-4
 [Matteo Spinelli]: http://cubiq.org/
+[version 1.0.0]: https://github.com/jaunesarmiento/fries/tree/wip-1.0.0
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/5442e4f5cc5951efb12361a41734c6d5 "githalytics.com")](http://githalytics.com/jaunesarmiento/fries)
