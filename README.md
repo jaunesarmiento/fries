@@ -51,6 +51,14 @@ Now with all that said, head on over to the [tutorial] on how to setup your firs
 Fries app.
 
 
+## Performance
+
+Surprisingly, Fries works well with PhoneGap. I didn't expect the CSS transitions
+to be this fast. Check out this [test video] that I made to show how a Fries app looks
+on PhoneGap. Although there are still glitches (like the black lines that appear on
+pop screen transition), I think Fries still does great for an HTML5 mobile app.
+
+
 ## Development Roadmap
 
 Fries aims to make Android apps fast and easy using just HTML, CSS and JavaScript. 
@@ -93,5 +101,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [Jacob Thornton]: http://github.com/fat
 [Matteo Spinelli]: http://cubiq.org/
 [changelog]: https://github.com/jaunesarmiento/fries/blob/wip-1.0.0/changelog.txt
+[test video]: http://www.youtube.com/watch?v=BpcLDI6c9Cc
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/5442e4f5cc5951efb12361a41734c6d5 "githalytics.com")](http://githalytics.com/jaunesarmiento/fries)
