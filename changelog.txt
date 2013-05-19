@@ -1,0 +1,17 @@
+changelog.txt
+
+May 19, 2013 changes:
+- Modified meta viewport tag
+- Changed position of .content and .tab-fixed to absolute, by default (fixed positioning is only needed on the docs I think)
+- Added box-sizing for .content
+- Fixed the size of action buttons
+- Modified js code to prevent it from attaching multiple event handlers
+- Removed .inset class on lists. This is moved to content.css
+- Added box-sizing for forms, .content
+- Added push & pop page transitions
+- Added .fixed-bottom class to support action bars at the bottom of the page
+- .content now adjusts to action bars with .fixed-bottom
+- Removed iScroll dependency
+- Not using input[type=*] selectors to style input elements anymore. Input elements are now styled using classes (.input-text, etc)
+- Reworked tabs. Added tab content transition and active tab highlighting
+- Modified the size of the action overflow icon
