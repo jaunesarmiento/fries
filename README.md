@@ -6,7 +6,7 @@ We all know that you can find loads of iOS development tools out there,
 so this time let's give some love to Android.
 
 
-# What's New In Version 1.0.0
+__What's New In Version 1.0.0__
 
 The initial push of Fries was generally made to see how the community would react
 to something like this. And I've seen great feedback so I think Fries needed a
@@ -76,7 +76,7 @@ I'd like to thank [Dave Gamache], [Connor Sears], and [Jacob Thornton] for a won
 
 ## License
 
-__The MIT License (MIT)__ Copyright (c) 2013 [Jaune Sarmiento]
+__The MIT License (MIT)__ Copyright (c) 2013 Jaune Sarmiento
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -86,13 +86,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 [Ratchet]: http://maker.github.io/ratchet
-[Push.js]: http://maker.github.io/ratchet/#push
 [Jaune Sarmiento]: http://jaunesarmiento.me
 [docs]: http://jaunesarmiento.me/fries
 [Dave Gamache]: http://github.com/dhgamache
 [Connor Sears]: http://github.com/connors
 [Jacob Thornton]: http://github.com/fat
-[iScroll 4]: http://cubiq.org/iscroll-4
 [Matteo Spinelli]: http://cubiq.org/
+[changelog]: https://github.com/jaunesarmiento/fries/blob/wip-1.0.0/changelog.txt
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/5442e4f5cc5951efb12361a41734c6d5 "githalytics.com")](http://githalytics.com/jaunesarmiento/fries)
