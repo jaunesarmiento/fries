@@ -6,7 +6,7 @@ We all know that you can find loads of iOS development tools out there,
 so this time let's give some love to Android.
 
 
-__What's New In Version 1.0.0__
+### What's New In Version 1.0.0
 
 The initial push of Fries was generally made to see how the community would react
 to something like this. And I've seen great feedback so I think Fries needed a
