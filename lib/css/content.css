@@ -1,11 +1,11 @@
-.content {
+.page {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: auto;
-  background-color: #111;
+  width: 100%;
+  box-sizing: border-box;
   -webkit-transition-property: top, bottom;
           transition-property: top, bottom;
   -webkit-transition-duration: .2s, .2s;
@@ -13,21 +13,57 @@
   -webkit-transition-timing-function: linear, linear;
           transition-timing-function: linear, linear;
   -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
 }
 
-.action-bar + .tab-fixed + .content {
+/* Wrapper to be used around all content not in .action-bar and .tab */
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  background-color: #111;
+  color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Hack to force all relatively and absolutely positioned elements still render while scrolling
+   Note: This is a bug for "-webkit-overflow-scrolling: touch" */
+.content > * {
+  -webkit-transform: translateZ(0px);
+          transform: translateZ(0px);
+}
+
+.action-bar + .tab-fixed + .content,
+.action-bar + .tab-fixed + .action-bar + .content {
   top: 96px;
 }
 
-.tab-fixed + .content,
 .action-bar ~ .content {
   top: 48px;
 }
 
-.inset {
-  padding: 16px;
+.action-bar.fixed-bottom ~ .content {
+  bottom: 48px;
 }
 
-.scroll {
-  overflow: auto;
+.inset {
+  padding: 15px;
+}
+
+.flex {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+          box-orient: horizontal;
+}
+
+.flex > * {
+  -webkit-box-flex: 1;
+          box-flex: 1;
 }

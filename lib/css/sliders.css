@@ -1,0 +1,12 @@
+.slider,
+.slider > li {
+  width: 100%;
+}
+
+.slider {
+
+}
+
+.slider > ul {
+  list-style: none;
+}

@@ -3,6 +3,7 @@
   display: block;
   height: 18px;
   left: 3px;
+  -webkit-backface-visibility: hidden;
 }
 
 .chevron:before,

@@ -1,8 +1,8 @@
-[class*="tab-"] {
-  position: fixed;
+.tab-fixed {
+  position: absolute;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1;
   height: 48px;
   box-sizing: border-box;
   background-color: #333;
@@ -54,20 +54,64 @@ ul.tab-inner li:last-child a {
   background-color: rgba(51, 181, 229, 0.6);
 }
 .tab-fixed ul.tab-inner li:active a {
-  border-right-color: rgba(0, 0, 0, 0);
+/*  border-right-color: rgba(0, 0, 0, 0);*/
 }
 
-.tab-fixed ul.tab-inner li.active {
+.tab-fixed ul.tab-inner li.active a {
   border-bottom: 5px solid #33b5e5;
 }
 
 .tab-fixed ul.tab-inner li a {
-  margin: 11px 0 12px;
-  padding-top: 5px;
-  border-right: 1px solid #424242;
+  position: relative;
+/*   padding: 11px 0 12px;
+  margin-top: 5px;
+border-right: 1px solid #424242;*/
   font-weight: bold;
+  height: 48px;
+  box-sizing: border-box;
+  line-height: 52px;
 }
 
+.tab-fixed ul.tab-inner li a:after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 24px;
+  top: 13px;
+  right: 0;
+  background-color: #424242;
+}
+.tab-fixed ul.tab-inner li:last-child a:after,
+.tab-fixed ul.tab-inner li:active a:after {
+  background-color: transparent;
+}
+
+
+
+.tab-slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.tab-item {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: -webkit-transform 0.1s ease-out;
+          transition:         transform 0.1s ease-out;
+}
+
+.tab-item.active,
+.tab-item.in-transition {
+  display: inline-block;
+}
+
+
+/*
 .tab-scrollable {
   z-index: 9;
   top: 48px;
@@ -89,21 +133,15 @@ ul.tab-inner li:last-child a {
 
 .tab-scrollable:before {
   left: 0;
-  background: -moz-linear-gradient(left,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-  background: linear-gradient(to right,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%); /* W3C */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.)), color-stop(100%,rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to right,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
 }
 .tab-scrollable:after {
   right: 0;
-  background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.2))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* IE10+ */
-  background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* W3C */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.2)));
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%);
+  background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%);
 }
 
 .tab-scrollable ul.tab-inner {
@@ -122,3 +160,4 @@ ul.tab-inner li:last-child a {
 .tab-scrollable ul.tab-inner li:active a  {
   color: #fff;
 }
+*/

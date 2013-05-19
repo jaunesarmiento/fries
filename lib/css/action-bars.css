@@ -3,8 +3,16 @@
   right: 0;
   left: 0;
   z-index: 10;
+  width: 100%;
   height: 48px;
   box-sizing: border-box;
+}
+
+.action-bar.fixed-top {
+  top: 0;
+}
+.action-bar.fixed-bottom {
+  bottom: 0;
 }
 
 .action-bar {
@@ -28,19 +36,19 @@
 }
 
 .action-bar h1.title {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 48px;
 }
 
 .action-bar h2.title {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
   padding: 8px 0 4px;
 }
 
 .action-bar .subtitle {
   color: #f3f3f3;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 200;
 }
 
@@ -67,12 +75,35 @@ ul.actions li {
 }
 
 ul.actions {
-  float: right;
   list-style: none;
+}
+
+ul.actions.flex {
+  width: 100%;
+  display: -webkit-box;
+  display:         box;
+  -webkit-box-orient: horizontal;
+          box-orient: horizontal;
 }
 
 ul.actions li {
   float: left;
+}
+ul.actions.flex > li {
+  float: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+ul.actions.flex > li.action-overflow {
+  width: 48px;
+  display: initial;
+}
+
+ul.actions li .action {
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
 }
 
 .action {
@@ -89,7 +120,7 @@ ul.actions li {
   width: 32px;
   height: 32px;
   line-height: 32px;
-  font-size: 24px;
+  font-size: 18px;
   color: #999;
   text-align: center;
 }
@@ -100,12 +131,11 @@ ul.actions li {
      -moz-user-select: none;
 }
 .action-overflow-hidden {
-  display: none;
+  display: none !important;
 }
 .action-overflow-icon {
   cursor: pointer;
-  padding: 22px 22px 21px 21px;
-  float: left;
+  padding: 21px 22px 20px 21px;
 }
 .action-overflow-icon i {
   position: relative;
@@ -126,10 +156,10 @@ ul.actions li {
   left: 0;
 }
 .action-overflow-icon i:before {
-  top: -9px;
+  top: -8px;
 }
 .action-overflow-icon i:after {
-  top: 9px;
+  top: 8px;
 }
 
 .action-overflow-icon:active i {

@@ -2,10 +2,11 @@
   display: block;
   list-style: none;
 }
-
+/*
 .list.inset {
   padding: 0 20px;
 }
+*/
 
 .list li {
   border-top: 1px solid #424242;
@@ -18,10 +19,11 @@
   border-top: none;
   border-bottom: 2px solid #595959;
   line-height: 18px;
-  font-size: 10px;
-  font-weight: normal;
+  font-size: 11px;
+  font-weight: bold;
   text-transform: uppercase;
   padding: 5px 5px 3px;
+  margin-top: 5px;
   color: #ccc;
 }
 

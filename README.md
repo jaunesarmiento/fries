@@ -1,51 +1,82 @@
 # Fries
 
-Fries is an awesome mobile prototyping framework for Android apps inspired by [Ratchet]. 
-We all know that you can find loads of iOS prototyping tools out there, so this time 
-let's give some love to Android.
+Fries is an awesome mobile development framework (yes, not just for prototyping!) 
+for Android apps using just HTML, CSS, and Javascript and was inspired by [Ratchet].
+We all know that you can find loads of iOS development tools out there, 
+so this time let's give some love to Android.
+
+
+# What's New In Version 1.0.0
+
+The initial push of Fries was generally made to see how the community would react
+to something like this. And I've seen great feedback so I think Fries needed a
+major overhaul. A lot of things were missing in the previous version and
+version 1.0.0 is a huge step from that.
+
+Here's a list of new things in version 1.0.0:
+
+* Fries is now optimized for PhoneGap.
+* Added Android-like page transitions using `stack.js` (based on Ratchet's push.js).
+Since push.js is optimized for iOS-like transitions, I found it unsuitable to be
+used in Fries. `stack.js` mimics the page transitions in Android using CSS3 transforms
+and oh, did I mention it works smoothly?
+* Your pages should now be wrapped in `.page` class for `stack.js` to work.
+* Added bottom-positioned action bars and evenly spaced out action buttons using flex-box layout mode.
+* Not using input[type=*] selectors to style input elements anymore. Input elements 
+are now styled using classes (.input-text, etc). This was done so that the form elements
+can still be styled easily using custom CSS.
+* Reworked tabs. Added tab content transition and active tab highlighting. Added `tabs.js`.
+* Removed iScroll dependency, sadly. iScroll works like the native iOS so again, 
+I found it unsuitable for Fries. You can still use it if you want to though.
+* Reworked `action-bars.js` and `spinner.js` as the previous versions attach multiple
+event handlers causing unexpected results.
+
+See the [changelog] to see the changes in detail.
 
 
 ## Getting Started
 
-Read the [docs] to see it in action.
+Fries is now optimized to run as a PhoneGap app. I found it hard to optimize on the mobile
+browser because of a few reasons:
+
+* There's no way to remove the browser's navigation bar except by adding a few pixels
+of padding on the bottom of the page. (Correct me if I'm wrong)
+* Adobe Edge Inspect (which I use for testing) renders differently from the mobile
+browser.
+* It appears that there's an issue with the mobile browser's line-height property.
+If you check out the examples on your Android device's mobile browser, the text are
+slightly off-center vertically.
+
+Now with all that said, head on over to the [tutorial] on how to setup your first
+Fries app.
 
 
 ## Development Roadmap
 
-Fries aims to make prototyping Android apps fast and easy. In the long run, these are 
-the following features and components that I think should be added to Fries:
+Fries aims to make Android apps fast and easy using just HTML, CSS and JavaScript. 
+In the long run, these are the following features and components that I think 
+should be added to Fries:
 
+* Scrollable Tabs
 * Modals
-* Form Elements
-* Shelf (a la Facebook or Path style menu)
+* Other Form Elements
+* Shelf Menus (a la Facebook or Path style menu)
 * Loading Indicator
 * Custom Scroller (iScroll is great but Fries aims to be as close to an Android app as possible)
 * Typography
-* Holo Light Theme
-
-
-## Browser Compatibility
-
-Coming soon as Fries is currently being deep fried in most modern mobile browsers.
-
-
-## Other Notes
-
-Fries uses [Push.js], also from Ratchet, to piece together all pages for the prototype.
-You might want to read about it before using Fries.
+* Theming using LESS or SASS
+* Automatic resizing of the action bars and tabs on landscape view. In a typical
+Android app, the action bars and tabs resizes to 40px from the default 48px.
 
 
 ## Special Thanks
 
 I'd like to thank [Dave Gamache], [Connor Sears], and [Jacob Thornton] for a wonderful job on [Ratchet].
-Also, Fries' scroll bars are made using [iScroll 4] by [Matteo Spinelli]. Kudos to you guys.
 
 
 ## License
 
-__The MIT License (MIT)__
-
-Copyright (c) 2013 [Jaune Sarmiento]
+__The MIT License (MIT)__ Copyright (c) 2013 [Jaune Sarmiento]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
