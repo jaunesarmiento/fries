@@ -10,27 +10,10 @@ textarea {
   font-weight: normal;
 }
 
-input[type="password"] {
+input[type="password"].input-text {
   font-family: monospace;
 }
 
-/*
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="tel"],
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="range"],
-input[type="search"],
-input[type="time"],
-input[type="url"],
-input[type="week"]
-*/
 .input-text {
   display: block;
   outline: none;
@@ -50,27 +33,6 @@ input[type="week"]
   vertical-align: middle;
 }
 
-.input-text.input-block {
-  
-}
-
-/*
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="range"]:focus,
-input[type="search"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="week"]:focus
-*/
 .input-text:focus {
   border-bottom: 1px solid #037ea7;
 }
@@ -93,15 +55,6 @@ label {
 .form-actions {
   margin-top: 20px;
 }
-
-/*
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"] {
-  width: 100%;
-}
-*/
 
 [class*="flex"].input-text + [class*="flex"].input-text {
   margin-left: 10px;
@@ -143,12 +96,6 @@ input[type="number"] {
 /* To make the form elements look pretty on desktop */
 @media (min-width: 768px) {
   
-  /*
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="number"]
-  */
   .input-text {
     margin: 0;
     padding: 18px 5px 10px;
