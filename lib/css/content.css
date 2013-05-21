@@ -24,6 +24,7 @@
   bottom: 0;
   left: 0;
   overflow: auto;
+  overflow-x: hidden; /* Not sure if this is really required here */
   background-color: #111;
   color: #fff;
   box-sizing: border-box;
@@ -42,7 +43,8 @@
   top: 96px;
 }
 
-.action-bar ~ .content {
+.action-bar ~ .content,
+.tab-fixed ~ .content  {
   top: 48px;
 }
 
