@@ -115,14 +115,40 @@ ul.actions li .action {
   z-index: 1;
 }
 
+.action.page-action {
+  position: relative;
+}
+.action.page-action:after {
+  position: absolute;
+  content: '';
+  right: -1px;
+  top: 12px;
+  width: 1px;
+  height: 24px;
+  background-color: #333;
+}
+
 .action [class*="icon-"] {
+  float: left;
   display: inline-block;
   width: 32px;
   height: 32px;
   line-height: 32px;
-  font-size: 18px;
+  font-size: 32px;
   color: #999;
   text-align: center;
+}
+
+.action .action-title {
+  float: left;
+  display: inline-block;
+  margin: 0 25px 0 5px;
+  height: 32px;
+  color: #999;
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 32px;
+  font-weight: bold;
 }
 
 .action-overflow {
@@ -161,7 +187,3 @@ ul.actions li .action {
 .action-overflow-icon i:after {
   top: 8px;
 }
-
-.action-overflow-icon:active i {
-  
-};
