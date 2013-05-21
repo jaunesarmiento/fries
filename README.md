@@ -30,8 +30,7 @@ can still be styled easily using custom CSS.
 I found it unsuitable for Fries. You can still use it if you want to though.
 * Reworked `action-bars.js` and `spinner.js` as the previous versions attach multiple
 event handlers causing unexpected results.
-
-See the [changelog] to see the changes in detail.
+* Fries now uses the official Android icons. Thanks to [Tobias Bieniek] for this [awesome icon font].
 
 
 ## Getting Started
@@ -80,6 +79,7 @@ Android app, the action bars and tabs resizes to 40px from the default 48px.
 ## Special Thanks
 
 I'd like to thank [Dave Gamache], [Connor Sears], and [Jacob Thornton] for a wonderful job on [Ratchet].
+The conversion of the official Android icons was done in [IcoMoon].
 
 
 ## License
@@ -93,6 +93,12 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
+## Attribution
+
+Portions of this page are modifications based on work created and [shared by the Android Open Source Project](http://code.google.com/policies.html) and used according to terms described in the [Creative Commons 2.5 Attribution License](http://creativecommons.org/licenses/by/2.5/).
+
+
+
 [Ratchet]: http://maker.github.io/ratchet
 [Jaune Sarmiento]: http://jaunesarmiento.me
 [docs]: http://jaunesarmiento.me/fries
@@ -100,8 +106,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [Connor Sears]: http://github.com/connors
 [Jacob Thornton]: http://github.com/fat
 [Matteo Spinelli]: http://cubiq.org/
-[demo project]: 
+[Tobias Bieniek]: https://github.com/Turbo87/
+[awesome icon font]: https://github.com/Turbo87/Android-Action-Bar-Icon-Pack-Font
+[demo project]: https://github.com/jaunesarmiento/HelloFries
 [changelog]: https://github.com/jaunesarmiento/fries/blob/wip-1.0.0/changelog.txt
 [test video]: http://www.youtube.com/watch?v=BpcLDI6c9Cc
+[IcoMoon]: http://icomoon.io/
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/5442e4f5cc5951efb12361a41734c6d5 "githalytics.com")](http://githalytics.com/jaunesarmiento/fries)
