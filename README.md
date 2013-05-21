@@ -47,7 +47,7 @@ browser.
 If you check out the examples on your Android device's mobile browser, the text are
 slightly off-center vertically.
 
-Now with all that said, head on over to the [tutorial] on how to setup your first
+Now with all that said, head on over to the [demo project] to see how to setup your first
 Fries app.
 
 
@@ -100,6 +100,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [Connor Sears]: http://github.com/connors
 [Jacob Thornton]: http://github.com/fat
 [Matteo Spinelli]: http://cubiq.org/
+[demo project]: 
 [changelog]: https://github.com/jaunesarmiento/fries/blob/wip-1.0.0/changelog.txt
 [test video]: http://www.youtube.com/watch?v=BpcLDI6c9Cc
 
