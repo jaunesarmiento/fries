@@ -1,7 +1,0 @@
-/* Hack to visually show that the spinners can't be clicked when inactive */
-.spinner {
-  cursor: arrow;
-}
-.spinner.active {
-  cursor: pointer;
-}
