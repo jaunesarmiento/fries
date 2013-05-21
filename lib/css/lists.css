@@ -11,10 +11,6 @@
   color: #fff;
 }
 
-.list > li a.list-item:active {
-  background-color: rgba(51, 181, 229, 0.6);
-}
-
 .list > li.list-divider {
   border-top: none;
   border-bottom: 2px solid #595959;
@@ -29,6 +25,11 @@
 
 .list-divider + li {
   border-top: none;
+}
+
+.list > li > a {
+  display: block;
+  color: inherit;
 }
 
 .list-item-single-line,
