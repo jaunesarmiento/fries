@@ -6,6 +6,8 @@
   height: 48px;
   box-sizing: border-box;
   background-color: #333;
+  -webkit-backface-visibility: hidden;
+  display: block;
 }
 
 .action-bar ~ [class*="tab-"] {
@@ -20,8 +22,7 @@
 .tab-fixed ul.tab-inner,
 .tab-scrollable ul.tab-inner {
   display: -webkit-box;
-  display: -moz-box;
-  display: box;
+  display:         box;
   -webkit-box-orient: horizontal;
           box-orient: horizontal;
   list-style: none;
@@ -41,6 +42,10 @@ ul.tab-inner li:last-child a {
   border-right-width: 0;
 }
 
+.tab-fixed ul.tab-inner {
+  width: 100%;
+}
+
 .tab-fixed ul.tab-inner li {
   whitespace: nowrap;
   overflow: hidden;
@@ -53,9 +58,6 @@ ul.tab-inner li:last-child a {
 .tab-fixed ul.tab-inner li:active {
   background-color: rgba(51, 181, 229, 0.6);
 }
-.tab-fixed ul.tab-inner li:active a {
-/*  border-right-color: rgba(0, 0, 0, 0);*/
-}
 
 .tab-fixed ul.tab-inner li.active a {
   border-bottom: 5px solid #33b5e5;
@@ -63,15 +65,18 @@ ul.tab-inner li:last-child a {
 
 .tab-fixed ul.tab-inner li a {
   position: relative;
-/*   padding: 11px 0 12px;
-  margin-top: 5px;
-border-right: 1px solid #424242;*/
   font-weight: bold;
   height: 48px;
   box-sizing: border-box;
   line-height: 52px;
 }
 
+/** 
+ * Note: There seems to be a bug where a strange gap appears
+ * between the tabs. This could only be visible on the desktop
+ * version, but it's still annoying when testing. And it appears
+ * to only happen on Chrome.
+ */
 .tab-fixed ul.tab-inner li a:after {
   position: absolute;
   content: '';
@@ -86,7 +91,11 @@ border-right: 1px solid #424242;*/
   background-color: transparent;
 }
 
-
+[class|="tab"] ul.tab-inner li a [class*="icon-"],
+[class|=" tab"] ul.tab-inner li a [class*="icon-"] {
+  font-size: 28px;
+  line-height: 48px;
+}
 
 .tab-slider {
   position: absolute;
@@ -110,8 +119,10 @@ border-right: 1px solid #424242;*/
   display: inline-block;
 }
 
-
-/*
+/**
+ * Scrollable Tabs
+ * The lines from here are still on the works.
+ */
 .tab-scrollable {
   z-index: 9;
   top: 48px;
@@ -160,4 +171,3 @@ border-right: 1px solid #424242;*/
 .tab-scrollable ul.tab-inner li:active a  {
   color: #fff;
 }
-*/
