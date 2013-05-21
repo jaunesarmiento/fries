@@ -2,20 +2,20 @@
   display: block;
   list-style: none;
 }
-/*
-.list.inset {
-  padding: 0 20px;
-}
-*/
 
-.list li {
+.list > li {
   border-top: 1px solid #424242;
   line-height: 38px;
   padding: 5px;
   box-sizing: border-box;
+  color: #fff;
 }
 
-.list li.list-divider {
+.list > li a.list-item:active {
+  background-color: rgba(51, 181, 229, 0.6);
+}
+
+.list > li.list-divider {
   border-top: none;
   border-bottom: 2px solid #595959;
   line-height: 18px;
@@ -66,6 +66,7 @@
   font-weight: normal;
   line-height: 40px;
   height: 32px;
+  color: #fff;
 }
 .list-item-multi-line p {
   font-size: 12px;
