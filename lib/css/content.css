@@ -1,19 +1,12 @@
 .page {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
-  box-sizing: border-box;
-  -webkit-transition-property: top, bottom;
-          transition-property: top, bottom;
-  -webkit-transition-duration: .2s, .2s;
-          transition-duration: .2s, .2s;
-  -webkit-transition-timing-function: linear, linear;
-          transition-timing-function: linear, linear;
-  -webkit-overflow-scrolling: touch;
   -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
 }
 
 /* Wrapper to be used around all content not in .action-bar and .tab */
@@ -33,10 +26,13 @@
 
 /* Hack to force all relatively and absolutely positioned elements still render while scrolling
    Note: This is a bug for "-webkit-overflow-scrolling: touch" */
+   /*
+.page > *,
 .content > * {
-  -webkit-transform: translateZ(0px);
-          transform: translateZ(0px);
+  -webkit-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
 }
+*/
 
 .action-bar + .tab-fixed + .content,
 .action-bar + .tab-fixed + .action-bar + .content {

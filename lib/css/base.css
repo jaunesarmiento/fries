@@ -103,8 +103,6 @@ body {
   font: 16px/1.6 "Roboto", sans-serif;
   color: #fff;
   background-color: #000;
-  -webkit-transform: translateZ(0px);
-          transform: translateZ(0px);
 }
 
 /* Universal link styling */
