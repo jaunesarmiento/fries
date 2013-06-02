@@ -1,0 +1,196 @@
+@import "variables", "utilities";
+
+.action-bar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: $bar-height;
+  box-sizing: border-box;
+
+  border-bottom: 2px solid darken($action-bar-background-color, 5%);
+  background-color: $action-bar-background-color;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+
+  .title,
+  .subtitle,
+  .app-icon {
+    float: left;
+    display: inline-block;
+  }
+
+  .title {
+    margin-left: 1px;
+    font-weight: normal;
+    color: $text-color;
+  }
+
+  h1.title {
+    font-size: $base-font-size;
+    line-height: $bar-height;
+  }
+
+  h2.title {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px 0 4px;
+  }
+
+  .subtitle {
+    color: $secondary-text-color;
+    font-size: 12px;
+    font-weight: 200;
+  }
+
+  .app-icon {
+    position: relative;
+    padding: 8px 0;
+    margin-left: 16px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+
+    img {
+      float: right;
+    }
+  }
+  .app-icon.up {
+    padding-left: 16px;
+    margin-left: 0;
+  }
+
+  &.fixed-top {
+    top: 0;
+  }
+  &.fixed-bottom {
+    bottom: 0;
+  }
+}
+
+
+ul.actions,
+ul.actions li {
+  display: inline-block;
+}
+
+ul.actions {
+  list-style: none;
+
+  li .action {
+    width: 48px;
+    height: 48px;
+    box-sizing: border-box;
+  }
+
+  &.flex {
+    @include flexbox;
+
+    > li {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    > li.action-overflow {
+      display: initial;
+      width: 48px;
+    }
+  }
+}
+
+
+.action {
+  display: inline-block;
+  padding: 8px;
+
+  [class*="icon-"],
+  .action-title {
+    float: left;
+    display: inline-block;
+  }
+
+  [class*="icon-"] {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 32px;
+    color: $action-bar-icons-color;
+    text-align: center;
+  }
+
+  .action-title {
+    margin: 0 25px 0 5px;
+    height: 32px;
+    color: $action-bar-icons-color;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 32px;
+  }
+
+  &:active {
+    background-color: $background-highlight-color;
+    z-index: 1;
+  }
+
+  &.page-action {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      right: -1px;
+      top: 12px;
+      width: 1px;
+      height: 24px;
+      background-color: lighten($action-bar-background-color, 10%);
+    }
+  }
+}
+
+
+.action-overflow {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.action-overflow-hidden {
+  display: none !important;
+}
+
+.action-overflow-icon {
+  cursor: pointer;
+  padding: 21px 22px 20px 21px;
+
+  i,
+  i:before,
+  i:after {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: $action-bar-icons-color;
+  }
+
+  i {
+    position: relative;
+    z-index: 0;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      left: 0;
+    }
+
+    &:before {
+      top: -8px;
+    }
+    &:after {
+      top: 8px;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@import "variables", "utilities";
+
+form {
+  width: 100%;
+  box-sizing: border-box;
+
+  &.form-flex {
+
+    .flex-group {
+      @include flexbox;
+
+      margin: 0;
+
+      .flex1 {
+        @include box-flex(1);
+      }
+
+      .flex2 {
+        @include box-flex(2);
+      }
+
+      .flex3 {
+        @include box-flex(3);
+      }
+
+      > :nth-child(n) {
+        margin-left: 10px;
+      }
+
+      > :first-child {
+        margin-left: 0;
+      }
+    }
+
+  }
+}
+
+[class*="flex"].input-text + [class*="flex"].input-text {
+  margin-left: 10px;
+}
+
+.input-text {
+  display: block;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $gray-dark;
+  padding: 10px 5px 0;
+  margin: 0 0 8px 0;
+  width: 100%;
+  height: $bar-height;
+  background: transparent;
+  color: $text-color;
+  font-size: 14px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  -webkit-transition: border ease-out 0.2s;
+     -moz-transition: border ease-out 0.2s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: $base-font-family;
+  font-weight: normal;
+
+  &:focus {
+    border-bottom: 1px solid $secondary-color;
+  }
+
+  &[type="password"] {
+    font-family: $mono-font-family;
+  }
+}
+
+.form-legend,
+.block-label {
+  display: block;
+  padding: 5px 5px 3px;
+  margin-top: 10px;
+  width: 100%;
+  border-bottom: 2px solid $divider-color-thick;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: darken($text-color, 20%);
+  box-sizing: border-box;
+}
+
+.form-actions {
+  margin-top: 20px;
+}

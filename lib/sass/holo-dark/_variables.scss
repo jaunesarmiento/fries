@@ -1,0 +1,42 @@
+$sans-font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-font-family: Georgia, "Times New Roman", Times, serif;
+$mono-font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+$primary-color: #33b5e5;
+$secondary-color: #2c94bb;
+
+$black: #000;
+$gray-darker: #222;
+$gray-dark: #333;
+$gray: #555;
+$gray-light: #999;
+$gray-lighter: #eee;
+$white: #fff;
+
+
+$background-color: #111;
+$text-color: $white;
+$secondary-text-color: darken($text-color, 20%);
+
+$background-highlight-color: rgba(51, 181, 229, 0.5);
+
+$base-font-size: 16px;
+$base-font-family: $sans-font-family;
+$base-line-height: 1.6em;
+$alt-font-family: $serif-font-family;
+
+
+$bar-height: 48px;
+
+$action-bar-background-color: $gray-darker;
+$action-bar-icons-color: $gray-light;
+$tab-bar-background-color: $gray-dark;
+$tab-bar-icons-color: $white;
+$spinner-background-color: $gray-darker;
+
+$primary-button-color: #424242;
+$primary-button-hover-color: #1f5366;
+$primary-button-active-color: $secondary-color;
+
+$divider-color: $primary-button-color;
+$divider-color-thick: lighten($divider-color, 9%);
