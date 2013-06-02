@@ -79,7 +79,8 @@ Android app, the action bars and tabs resizes to 40px from the default 48px.
 ## Special Thanks
 
 I'd like to thank [Dave Gamache], [Connor Sears], and [Jacob Thornton] for a wonderful job on [Ratchet].
-The conversion of the official Android icons was done in [IcoMoon].
+The conversion of the official Android icons was done in [IcoMoon]. And the Fries logo was done by
+my good friend Jeffrey Viloria.
 
 
 ## License
