@@ -1,5 +1,12 @@
 changelog.txt
 
+June 3, 2013 changes:
+- Added SASS styles
+- Updated examples
+- Form legends are now styled using .form-legend class
+- Input labels are now styled using .block-label class
+
+
 May 19, 2013 changes:
 - Modified meta viewport tag
 - Changed position of .content and .tab-fixed to absolute, by default (fixed positioning is only needed on the docs I think)
