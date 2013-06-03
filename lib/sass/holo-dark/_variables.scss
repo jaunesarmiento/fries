@@ -2,9 +2,6 @@ $sans-font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif-font-family: Georgia, "Times New Roman", Times, serif;
 $mono-font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 
-$primary-color: #33b5e5;
-$secondary-color: #2c94bb;
-
 $black: #000;
 $gray-darker: #222;
 $gray-dark: #333;
@@ -13,18 +10,30 @@ $gray-light: #999;
 $gray-lighter: #eee;
 $white: #fff;
 
+$android-blue: #33b5e5;
+$android-blue-dark: #0099cc;
+$android-purple: #aa66cc;
+$android-purple-dark: #9933cc;
+$android-green: #99cc00;
+$android-green-dark: #669900;
+$android-orange: #ffbb33;
+$android-orange-dark: #ff8800;
+$android-red: #ff4444;
+$android-red-dark: #cc0000;
+
+$primary-color: $android-blue;
+$secondary-color: $android-blue-dark;
 
 $background-color: #111;
 $text-color: $white;
 $secondary-text-color: darken($text-color, 20%);
 
-$background-highlight-color: rgba(51, 181, 229, 0.5);
+$background-highlight-color: rgba(51, 181, 229, 0.6);
 
 $base-font-size: 16px;
 $base-font-family: $sans-font-family;
 $base-line-height: 1.6em;
 $alt-font-family: $serif-font-family;
-
 
 $bar-height: 48px;
 

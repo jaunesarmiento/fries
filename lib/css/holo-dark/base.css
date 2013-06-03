@@ -105,7 +105,7 @@ a {
   /* Removes the dark touch outlines on links */ }
 
 .selectable:active {
-  background-color: rgba(51, 181, 229, 0.5); }
+  background-color: rgba(51, 181, 229, 0.6); }
 
 .pull-right {
   float: right !important; }

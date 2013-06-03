@@ -55,7 +55,7 @@
       .tab-fixed ul.tab-inner li:last-child a {
         border-right-width: 0; }
       .tab-fixed ul.tab-inner li:active {
-        background-color: rgba(51, 181, 229, 0.5); }
+        background-color: rgba(51, 181, 229, 0.6); }
       .tab-fixed ul.tab-inner li.active a {
         border-bottom: 5px solid #33b5e5; }
       .tab-fixed ul.tab-inner li:last-child a:after, .tab-fixed ul.tab-inner li:active a:after {

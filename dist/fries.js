@@ -104,6 +104,20 @@
 
       // Wrap the input element in span.input-pretty if we haven't yet
       if (!el.parentNode.classList.contains('input-pretty')) {
+
+        if (el.classList.contains('flex1')) {
+          wrapper.classList.add('flex1');
+          el.classList.remove('flex1');
+        } 
+        else if (el.classList.contains('flex2')) {
+          wrapper.classList.add('flex2');
+          el.classList.remove('flex2');
+        } 
+        else if (el.classList.contains('flex3')) {
+          wrapper.classList.add('flex3');
+          el.classList.remove('flex3');
+        }
+
         wrapper.classList.add('input-pretty');
         el.parentNode.insertBefore(wrapper, el);
         el.parentNode.removeChild(el);

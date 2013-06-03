@@ -49,7 +49,7 @@ form {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal; }
   .input-text:focus {
-    border-bottom: 1px solid #2c94bb; }
+    border-bottom: 1px solid #0099cc; }
   .input-text[type="password"] {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
 
@@ -72,7 +72,8 @@ form {
 
 .input-pretty {
   position: relative;
-  display: block; }
+  display: block;
+  margin-bottom: 8px; }
   .input-pretty:before, .input-pretty:after {
     position: absolute;
     content: '';
@@ -88,4 +89,4 @@ form {
   .input-pretty:after {
     right: 0; }
   .input-pretty.focus:before, .input-pretty.focus:after {
-    background: #2c94bb; }
+    background: #0099cc; }

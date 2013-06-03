@@ -95,7 +95,7 @@ ul.actions {
     text-transform: uppercase;
     line-height: 32px; }
   .action:active {
-    background-color: rgba(51, 181, 229, 0.5);
+    background-color: rgba(51, 181, 229, 0.6);
     z-index: 1; }
   .action.page-action {
     position: relative; }

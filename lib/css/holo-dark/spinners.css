@@ -44,7 +44,7 @@
       border-bottom-left-radius: 2px;
       border-bottom-right-radius: 2px; }
     .spinner li:hover, .spinner li:active {
-      background-color: rgba(51, 181, 229, 0.5); }
+      background-color: rgba(51, 181, 229, 0.6); }
   .spinner.active {
     opacity: 1;
     z-index: 99;

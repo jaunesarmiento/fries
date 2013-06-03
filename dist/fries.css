@@ -95,7 +95,7 @@ ul.actions {
     text-transform: uppercase;
     line-height: 32px; }
   .action:active {
-    background-color: rgba(51, 181, 229, 0.5);
+    background-color: rgba(51, 181, 229, 0.6);
     z-index: 1; }
   .action.page-action {
     position: relative; }
@@ -246,7 +246,7 @@ a {
   /* Removes the dark touch outlines on links */ }
 
 .selectable:active {
-  background-color: rgba(51, 181, 229, 0.5); }
+  background-color: rgba(51, 181, 229, 0.6); }
 
 .pull-right {
   float: right !important; }
@@ -278,7 +278,7 @@ a {
     box-shadow: inset 0 0 1px 2pt #037ea7, 0 2px 3px rgba(0, 0, 0, 0.5); }
   [class*="btn"]:active, [class*="btn"].active {
     padding: 11px 36px 10px;
-    background: #2c94bb;
+    background: #0099cc;
     border: none;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 3px rgba(0, 0, 0, 0.5), 0 0 2px 2pt rgba(51, 181, 229, 0.6);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 3px rgba(0, 0, 0, 0.5), 0 0 2px 2pt rgba(51, 181, 229, 0.6);
@@ -401,7 +401,7 @@ form {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal; }
   .input-text:focus {
-    border-bottom: 1px solid #2c94bb; }
+    border-bottom: 1px solid #0099cc; }
   .input-text[type="password"] {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
 
@@ -424,7 +424,8 @@ form {
 
 .input-pretty {
   position: relative;
-  display: block; }
+  display: block;
+  margin-bottom: 8px; }
   .input-pretty:before, .input-pretty:after {
     position: absolute;
     content: '';
@@ -440,7 +441,7 @@ form {
   .input-pretty:after {
     right: 0; }
   .input-pretty.focus:before, .input-pretty.focus:after {
-    background: #2c94bb; }
+    background: #0099cc; }
 
 @font-face {
   font-family: 'icomoon';
@@ -1004,7 +1005,7 @@ you can use the generic selector below, but it's slower:
       border-bottom-left-radius: 2px;
       border-bottom-right-radius: 2px; }
     .spinner li:hover, .spinner li:active {
-      background-color: rgba(51, 181, 229, 0.5); }
+      background-color: rgba(51, 181, 229, 0.6); }
   .spinner.active {
     opacity: 1;
     z-index: 99;
@@ -1188,7 +1189,7 @@ you can use the generic selector below, but it's slower:
       .tab-fixed ul.tab-inner li:last-child a {
         border-right-width: 0; }
       .tab-fixed ul.tab-inner li:active {
-        background-color: rgba(51, 181, 229, 0.5); }
+        background-color: rgba(51, 181, 229, 0.6); }
       .tab-fixed ul.tab-inner li.active a {
         border-bottom: 5px solid #33b5e5; }
       .tab-fixed ul.tab-inner li:last-child a:after, .tab-fixed ul.tab-inner li:active a:after {
