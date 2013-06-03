@@ -7,6 +7,7 @@ June 3, 2013 changes:
 - Form legends are now styled using .form-legend class
 - Input labels are now styled using .block-label class
 - Updated examples
+- Moved fonts to dist folder
 
 May 19, 2013 changes:
 - Modified meta viewport tag
