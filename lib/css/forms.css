@@ -102,3 +102,34 @@ label {
   }
   
 }
+
+
+.input-pretty {
+  position: relative;
+  display: block;
+}
+
+.input-pretty:before,
+.input-pretty:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  height: 5px;
+  width: 1px;
+  background: #333;
+  -webkit-transition: background ease-out 0.2s;
+     -moz-transition: background ease-out 0.2s;
+          transition: background ease-out 0.2s;
+}
+
+.input-pretty:before {
+  left: 0;
+}
+.input-pretty:after {
+  right: 0;
+}
+
+.input-pretty.focus:before,
+.input-pretty.focus:after {
+  background: #037ea7;
+}

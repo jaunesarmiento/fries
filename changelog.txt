@@ -1,5 +1,9 @@
 changelog.txt
 
+June 3, 2013 changes:
+- Added GruntJS to automate tests and other stuff
+- Added .input-pretty for input elements which styles them to look like the default Android text field
+
 May 19, 2013 changes:
 - Modified meta viewport tag
 - Changed position of .content and .tab-fixed to absolute, by default (fixed positioning is only needed on the docs I think)
