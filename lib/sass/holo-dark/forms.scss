@@ -86,3 +86,38 @@ form {
 .form-actions {
   margin-top: 20px;
 }
+
+.input-pretty {
+  position: relative;
+  display: block;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    height: 5px;
+    width: 1px;
+    background: $gray-dark;
+    -webkit-transition: background ease-out 0.2s;
+       -moz-transition: background ease-out 0.2s;
+            transition: background ease-out 0.2s;  
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  &.focus {
+
+    &:before,
+    &:after {
+      background: $secondary-color;
+    }
+
+  }
+}
