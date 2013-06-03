@@ -1,0 +1,47 @@
+.page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #111111;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0); }
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  box-sizing: border-box; }
+
+.action-bar + .tab-fixed + .content,
+.action-bar + .tab-fixed + .action-bar + .content {
+  top: 96px; }
+
+.action-bar ~ .content,
+.tab-fixed ~ .content {
+  top: 48px; }
+
+.action-bar.fixed-bottom ~ .content {
+  bottom: 48px; }
+
+.inset {
+  padding: 15px; }
+
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  width: 100%; }
+  .flex > * {
+    -webkit-box-flex: 1;
+    box-flex: 1; }
