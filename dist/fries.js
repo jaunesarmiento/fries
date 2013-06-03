@@ -1,4 +1,164 @@
-(function(){
+(function () {
+
+  // Action overflow
+  var checkActionOverflow = function () {
+
+    var actionBars = document.querySelectorAll('.action-bar'),
+        a = actionBars.length,
+        cleanUp = document.querySelectorAll('.action-overflow'),
+        c = cleanUp.length;
+
+    // Clean up the existing action overflows
+    while (cleanUp && c--) cleanUp[c].parentNode.removeChild(cleanUp[c]);
+
+    // Do this only when the screen width is below or equal to 480 pixels
+    if (window.innerWidth <= 480) {
+      
+      // Iterate over all action bars
+      while (a--) {
+        var actions = actionBars[a].querySelector('.actions'),
+            actionButtons = actionBars[a].querySelectorAll('.actions .action');
+      
+        if (actionButtons.length > 2 && actions.getAttribute('data-overflow') !== "false") {
+
+          // Maintain the first item then replace the rest with an action overflow
+          var first = actionButtons[0],
+              i = actionButtons.length,
+              overflowList = document.createElement('ol'), // This goes inside overflowListItem
+              overflowListItem = document.createElement('li'),
+              overflowButton = document.createElement('a'),
+              overflowIcon = document.createElement('i');
+
+          // Reverse the list since we're iterating it backwards
+          overflowList.setAttribute('reversed', 'reversed');
+
+          overflowList.classList.add('action-overflow-list');
+          overflowList.classList.add('spinner');
+
+          // Hide the overflow
+          for (var x = 1; x < i; x++) {
+            actionButtons[x].parentNode.classList.add('action-overflow-hidden');
+
+            var li = document.createElement('li'),
+                anchor = document.createElement('a');
+
+            anchor.innerHTML = actionButtons[x].getAttribute('title');
+            anchor.setAttribute('href', actionButtons[x].getAttribute('href'));
+
+            // Copy over all stack-related data attributes
+            anchor.setAttribute('data-transition', actionButtons[x].getAttribute('data-transition'));
+            anchor.setAttribute('data-timeout', actionButtons[x].getAttribute('data-timeout'));
+            anchor.setAttribute('data-ignore', actionButtons[x].getAttribute('data-ignore'));
+
+            li.classList.add('spinner-item');
+            li.appendChild(anchor);
+            overflowList.appendChild(li);
+          }
+
+          // Add the action overflow button
+          overflowButton.classList.add('action');
+          overflowButton.classList.add('action-overflow-icon');
+          overflowButton.classList.add('toggle-spinner');
+          overflowButton.appendChild(overflowIcon);
+
+          overflowListItem.classList.add('action-overflow');
+          overflowListItem.appendChild(overflowButton);
+          overflowListItem.appendChild(overflowList);
+
+          actionBars[a].querySelector('.actions').appendChild(overflowListItem);
+        }
+      }
+      
+    }
+    else {
+      // Iterate over all action bars
+
+      while (a--) {
+        var ab = actionBars[a].querySelectorAll('.actions .action'),
+            l = ab.length;
+
+        // Un-overflow the action buttons
+        while (l--) {
+          ab[l].parentNode.classList.remove('action-overflow-hidden');
+        }
+      }
+    }
+  };
+
+  // Attach the event handlers
+  window.addEventListener('load', checkActionOverflow, false);
+  window.addEventListener('resize', checkActionOverflow, false);
+  window.addEventListener('popstate', checkActionOverflow, false);
+
+}());;(function(){
+
+  // Checks whether the event target is a .toggle-spinner button
+  var findTarget = function (target) {
+    var i, toggles = document.querySelectorAll('.toggle-spinner');
+    for (; target && target !== document; target = target.parentNode) {
+      for (i = toggles.length; i--;) { if (toggles[i] === target) return target; }
+    }
+  };
+
+  // Returns the event target if it's a .toggle-spinner button
+  var getTarget = function (e) {
+    var target = findTarget(e.target);
+    if (!target) return;
+    return target;
+  };
+
+  // Checks whether the event target is a .toggle-spinner button
+  var findSpinnerTarget = function (target) {
+    var i, toggles = document.querySelectorAll('.spinner-item');
+    for (; target && target !== document; target = target.parentNode) {
+      for (i = toggles.length; i--;) { if (toggles[i] === target) return target; }
+    }
+  };
+
+  // Returns the event target if it's a spinner item
+  var getSpinnerTarget = function (e) {
+    var target = findSpinnerTarget(e.target);
+    if (!target) return;
+    return target;
+  };
+
+  // Event handler to show/hide the spinner
+  var handleTouch = function (e) {
+    var target = getTarget(e);
+    if (!target) return;
+    showSpinner(target);
+  };
+
+  var showSpinner = function(target) {
+    var spinner = target.parentNode.querySelectorAll('.spinner')[0];
+    
+    if (!spinner.classList.contains('active')) spinner.style.display = 'block';
+
+    setTimeout(function () { 
+      spinner.classList.toggle('active');
+      spinner.addEventListener('webkitTransitionEnd', popEnd);
+    }, 20); // Might be better to get the timeout from the CSS transition
+    
+    function popEnd () {
+      if (!spinner.classList.contains('active')) spinner.style.display = 'none';
+    }
+  };
+
+  // Attach event handler to close the spinner unless target is a spinner item
+  document.addEventListener('touchend', function (e) {
+    if (!getSpinnerTarget(e) && !getTarget(e)) {
+      var spinners = document.querySelectorAll('.spinner'),
+          i = spinners.length;
+      while (i--) {
+        spinners[i].classList.remove('active');
+      }
+    }
+  });
+
+  // Attach the event handler
+  window.addEventListener('touchend', handleTouch, false);
+
+}());;(function(){
 
   var isScrolling;
   var maxCacheLength = 20;
@@ -299,4 +459,66 @@
   window.addEventListener('touchmove', function () { isScrolling = true; });
   window.addEventListener('click', handleTouch); // Using touchend causes page flickers during animation
   window.addEventListener('popstate', handlePopState);
+}());;(function () {
+  var getTarget = function (target) {
+    var i, tabs = document.querySelectorAll('.tab-fixed li a');
+    for (; target && target !== document; target = target.parentNode) {
+      for (i = tabs.length; i--;) { if (tabs[i] === target) return target; }
+    }
+  };
+
+  window.addEventListener('touchend', function (e) {
+    var activeTab;
+    var activeBody;
+    var targetBody;
+    var targetTab;
+    var className     = 'active';
+    var classSelector = '.' + className;
+    var targetAnchor  = getTarget(e.target);
+
+    if (!targetAnchor) return;
+
+    targetTab = targetAnchor.parentNode;
+    activeTab = targetTab.parentNode.querySelector(classSelector);
+
+    // Highlight the target tab
+    if (activeTab) activeTab.classList.remove(className);
+    targetTab.classList.add(className);
+
+    // If the target body doesn't exist, don't do anything
+    targetBody = document.querySelector(targetAnchor.hash);
+    if (!targetBody) return;
+
+    // Set the target body as active
+    activeBody = targetBody.parentNode.querySelector(classSelector);
+    if (activeBody) activeBody.classList.remove(className);
+    targetBody.classList.add(className);
+
+    // Look for the index of the target and active bodies
+    var sliderItems = document.querySelectorAll('.tab-item'),
+        s = sliderItems.length;
+    while (s--) {
+      // Show the hidden bodies and set their initial position
+      sliderItems[s].classList.add('in-transition');
+      sliderItems[s].style.left = (s * 100) + "%";
+      if (sliderItems[s] == targetBody) targetIndex = s;
+      if (sliderItems[s] == activeBody) activeIndex = s;
+    }
+    
+    // Slide the active body into position
+    s = sliderItems.length;
+    setTimeout(function () {
+      while (s--) {
+        sliderItems[s].style.webkitTransform = 'translateX('+ ((targetIndex === 0) ? 0 : '-' + (targetIndex * 100)) +'%)';
+        sliderItems[s].addEventListener('webkitTransitionEnd', slideEnd);
+      }
+    }, 50); // To account for lag when adding the .in-transition class
+
+    function slideEnd (e) {
+      // Hide the inactive bodies
+      e.target.classList.remove('in-transition');
+    }
+
+  });
+
 }());

@@ -2,10 +2,11 @@ changelog.txt
 
 June 3, 2013 changes:
 - Added SASS styles
-- Updated examples
+- Added GruntJS to automate tests and other stuff
+- Added .input-pretty for input elements which styles them to look like the default Android text field
 - Form legends are now styled using .form-legend class
 - Input labels are now styled using .block-label class
-
+- Updated examples
 
 May 19, 2013 changes:
 - Modified meta viewport tag
