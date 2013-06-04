@@ -32,14 +32,13 @@
   .action-bar .app-icon {
     position: relative;
     padding: 8px 0;
-    margin-left: 16px;
+    margin-left: 10px;
     font-size: 24px;
     line-height: 24px;
     text-align: center; }
     .action-bar .app-icon img {
       float: right; }
   .action-bar .app-icon.up {
-    padding-left: 16px;
     margin-left: 0; }
   .action-bar.fixed-top {
     top: 0; }
@@ -86,6 +85,9 @@ ul.actions {
     font-size: 32px;
     color: #999999;
     text-align: center; }
+  .action .icon-up-button {
+    width: 10px;
+    font-size: 48px; }
   .action .action-title {
     margin: 0 25px 0 5px;
     height: 32px;

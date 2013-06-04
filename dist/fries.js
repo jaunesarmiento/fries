@@ -89,6 +89,7 @@
   window.addEventListener('load', checkActionOverflow, false);
   window.addEventListener('resize', checkActionOverflow, false);
   window.addEventListener('popstate', checkActionOverflow, false);
+  window.addEventListener('push', checkActionOverflow, false);
 
 }());;(function() {
 
@@ -390,26 +391,22 @@
     if (/push/.test(transition)) {
       contents.classList.add(transition);
       container.classList.add('fade');
-      contents.addEventListener('webkitAnimationEnd', pushEnd);
-
-      function pushEnd() {
-        contents.removeEventListener('webkitAnimationEnd', pushEnd);
+      contents.addEventListener('webkitAnimationEnd', function () {
+        contents.removeEventListener('webkitAnimationEnd');
         contents.classList.remove(transition);
         container.parentNode.removeChild(container);
         if (callback) callback();
-      }
+      });
     }
 
     if (/pop/.test(transition)) {
       contents.style.opacity = 1;
       container.classList.add('pop');
-      container.addEventListener('webkitAnimationEnd', popEnd);
-
-      function popEnd(){
-        container.removeEventListener('webkitAnimationEnd', popEnd);
+      container.addEventListener('webkitAnimationEnd', function () {
+        container.removeEventListener('webkitAnimationEnd');
         container.parentNode.removeChild(container);
         if (callback) callback();
-      }
+      });
     }
 
   };
@@ -509,7 +506,7 @@
   // Attach event handlers
   window.addEventListener('touchstart', function () { isScrolling = false; });
   window.addEventListener('touchmove', function () { isScrolling = true; });
-  window.addEventListener('click', handleTouch); // Using touchend causes page flickers during animation
+  window.addEventListener('touchend', handleTouch);
   window.addEventListener('popstate', handlePopState);
 }());;(function () {
   var getTarget = function (target) {
@@ -520,6 +517,7 @@
   };
 
   window.addEventListener('touchend', function (e) {
+
     var activeTab;
     var activeBody;
     var targetBody;

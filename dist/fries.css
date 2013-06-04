@@ -32,14 +32,13 @@
   .action-bar .app-icon {
     position: relative;
     padding: 8px 0;
-    margin-left: 16px;
+    margin-left: 10px;
     font-size: 24px;
     line-height: 24px;
     text-align: center; }
     .action-bar .app-icon img {
       float: right; }
   .action-bar .app-icon.up {
-    padding-left: 16px;
     margin-left: 0; }
   .action-bar.fixed-top {
     top: 0; }
@@ -86,6 +85,9 @@ ul.actions {
     font-size: 32px;
     color: #999999;
     text-align: center; }
+  .action .icon-up-button {
+    width: 10px;
+    font-size: 48px; }
   .action .action-title {
     margin: 0 25px 0 5px;
     height: 32px;
@@ -467,7 +469,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-back, .icon-accept, .icon-cancel, .icon-chevron-up, .icon-chevron-down, .icon-forward, .icon-chevron-right, .icon-chevron-left, .icon-refresh, .icon-information, .icon-help, .icon-search, .icon-settings, .icon-vote-down, .icon-heart, .icon-star-half, .icon-vote-up, .icon-star-full, .icon-star-empty, .icon-cloud, .icon-folder, .icon-calendar, .icon-tags, .icon-add-tag, .icon-sort-by-size, .icon-grid, .icon-view-as-list, .icon-attachment, .icon-new-image, .icon-new-event, .icon-new-attachment, .icon-new-message, .icon-new, .icon-merge, .icon-import-export, .icon-calendar-event, .icon-mail, .icon-edit, .icon-trash, .icon-cut, .icon-copy, .icon-backspace, .icon-clipboard, .icon-image, .icon-read, .icon-remove, .icon-save, .icon-select-all, .icon-split, .icon-undo, .icon-unread, .icon-add-group, .icon-add-person, .icon-cc-bcc, .icon-chat, .icon-forward-2, .icon-slideshow, .icon-rotate-right, .icon-rotate-left, .icon-globe, .icon-crop, .icon-location-marker, .icon-map, .icon-direction, .icon-share, .icon-send, .icon-reply-all, .icon-reply, .icon-person, .icon-group, .icon-add-to-queue, .icon-download, .icon-fast-forward, .icon-full-screen, .icon-pin, .icon-next, .icon-pause, .icon-pause-2, .icon-play, .icon-play-2, .icon-previous, .icon-repeat, .icon-replay, .icon-return-from-full-screen, .icon-brightness-high, .icon-brightness-auto, .icon-bluetooth-searching, .icon-bluetooth-connected, .icon-bluetooth, .icon-brightness, .icon-battery, .icon-add-alarm, .icon-alarm, .icon-key, .icon-upload, .icon-stop, .icon-shuffle, .icon-rewind, .icon-brightness-medium, .icon-call, .icon-camera, .icon-dashboard, .icon-dial, .icon-hang-up, .icon-power-auto, .icon-power-none, .icon-power, .icon-location-target, .icon-location-off, .icon-location-searching, .icon-microphone, .icon-microphone-off, .icon-clock, .icon-camera-video-rotate, .icon-camera-rotate, .icon-storage, .icon-locked, .icon-storage-sd, .icon-screen-lock-portrait, .icon-screen-rotate, .icon-screen-lock-landscape, .icon-call-volume, .icon-unlocked, .icon-new-account, .icon-signal, .icon-signal-2, .icon-usb, .icon-mouse, .icon-smartphone, .icon-fries, .icon-video, .icon-volume-off, .icon-volume-adjust, .icon-airplane, .icon-airplane-2, .icon-alert, .icon-alert-2, .icon-laptop, .icon-desktop, .icon-joystick, .icon-headphones, .icon-headphones-mic, .icon-keyboard {
+.icon-back, .icon-accept, .icon-cancel, .icon-chevron-up, .icon-chevron-down, .icon-forward, .icon-chevron-right, .icon-chevron-left, .icon-refresh, .icon-information, .icon-help, .icon-search, .icon-settings, .icon-vote-down, .icon-heart, .icon-star-half, .icon-vote-up, .icon-star-full, .icon-star-empty, .icon-cloud, .icon-folder, .icon-calendar, .icon-tags, .icon-add-tag, .icon-sort-by-size, .icon-grid, .icon-view-as-list, .icon-attachment, .icon-new-image, .icon-new-event, .icon-new-attachment, .icon-new-message, .icon-new, .icon-merge, .icon-import-export, .icon-calendar-event, .icon-mail, .icon-edit, .icon-trash, .icon-cut, .icon-copy, .icon-backspace, .icon-clipboard, .icon-image, .icon-read, .icon-remove, .icon-save, .icon-select-all, .icon-split, .icon-undo, .icon-unread, .icon-add-group, .icon-add-person, .icon-cc-bcc, .icon-chat, .icon-forward-2, .icon-slideshow, .icon-rotate-right, .icon-rotate-left, .icon-globe, .icon-crop, .icon-location-marker, .icon-map, .icon-direction, .icon-share, .icon-send, .icon-reply-all, .icon-reply, .icon-person, .icon-group, .icon-add-to-queue, .icon-download, .icon-fast-forward, .icon-full-screen, .icon-pin, .icon-next, .icon-pause, .icon-pause-2, .icon-play, .icon-play-2, .icon-previous, .icon-repeat, .icon-replay, .icon-return-from-full-screen, .icon-brightness-high, .icon-brightness-auto, .icon-bluetooth-searching, .icon-bluetooth-connected, .icon-bluetooth, .icon-brightness, .icon-battery, .icon-add-alarm, .icon-alarm, .icon-key, .icon-upload, .icon-stop, .icon-shuffle, .icon-rewind, .icon-brightness-medium, .icon-call, .icon-camera, .icon-dashboard, .icon-dial, .icon-hang-up, .icon-power-auto, .icon-power-none, .icon-power, .icon-location-target, .icon-location-off, .icon-location-searching, .icon-microphone, .icon-microphone-off, .icon-clock, .icon-camera-video-rotate, .icon-camera-rotate, .icon-storage, .icon-locked, .icon-storage-sd, .icon-screen-lock-portrait, .icon-screen-rotate, .icon-screen-lock-landscape, .icon-call-volume, .icon-unlocked, .icon-new-account, .icon-signal, .icon-signal-2, .icon-usb, .icon-mouse, .icon-smartphone, .icon-fries, .icon-video, .icon-volume-off, .icon-volume-adjust, .icon-airplane, .icon-airplane-2, .icon-alert, .icon-alert-2, .icon-laptop, .icon-desktop, .icon-joystick, .icon-headphones, .icon-headphones-mic, .icon-keyboard, .icon-up-button {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -905,6 +907,9 @@ you can use the generic selector below, but it's slower:
 
 .icon-keyboard:before {
   content: "\e0f5"; }
+
+.icon-up-button:before {
+  content: "\e00a"; }
 
 .list {
   display: block;
