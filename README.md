@@ -6,6 +6,12 @@ We all know that you can find loads of iOS development tools out there,
 so this time let's give some love to Android.
 
 
+### Update: June 11, 2013
+I won't be accepting pull requests to version `1.0.0` as its features are already 
+pretty much set in stone. Please have a look at branch `wip-1.0.1` and contribute there.
+And please follow the [Contributing] guide that I made.
+
+
 ### What's New In Version 1.0.0
 
 The initial push of Fries was generally made to see how the community would react
@@ -112,5 +118,6 @@ Portions of this page are modifications based on work created and [shared by the
 [changelog]: https://github.com/jaunesarmiento/fries/blob/wip-1.0.0/changelog.txt
 [test video]: http://www.youtube.com/watch?v=BpcLDI6c9Cc
 [IcoMoon]: http://icomoon.io/
+[Contributing]: https://github.com/jaunesarmiento/fries/wiki/Contributing-to-Fries
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/5442e4f5cc5951efb12361a41734c6d5 "githalytics.com")](http://githalytics.com/jaunesarmiento/fries)
