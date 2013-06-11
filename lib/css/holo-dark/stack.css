@@ -10,6 +10,9 @@
   -moz-animation: pop 0.2s;
   animation: pop 0.2s; }
 
+.page.hidden {
+  display: hidden; }
+
 @-webkit-keyframes push {
   from {
     opacity: 0;

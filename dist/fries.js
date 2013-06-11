@@ -267,6 +267,10 @@
     e.preventDefault();
     
     if (!target) return;
+    if (target.getAttribute('data-stack-method') == 'pop') {
+      window.history.go(-1);
+      return;
+    }
 
     doXHR({
       url: target.getAttribute('href'),
@@ -394,7 +398,7 @@
       contents.addEventListener('webkitAnimationEnd', function () {
         contents.removeEventListener('webkitAnimationEnd');
         contents.classList.remove(transition);
-        container.parentNode.removeChild(container);
+        if (container.parentNode) container.parentNode.removeChild(container);
         if (callback) callback();
       });
     }
@@ -402,6 +406,11 @@
     if (/pop/.test(transition)) {
       contents.style.opacity = 1;
       container.classList.add('pop');
+
+      setTimeout(function () {
+        container.classList.add('hidden'); // To prevent the page from being visible after the transition
+      }, 190);
+
       container.addEventListener('webkitAnimationEnd', function () {
         container.removeEventListener('webkitAnimationEnd');
         container.parentNode.removeChild(container);

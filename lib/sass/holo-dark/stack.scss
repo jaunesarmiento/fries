@@ -17,6 +17,10 @@
   }
 }
 
+.page.hidden {
+  display: hidden;
+}
+
 @-webkit-keyframes push {
   from {
     opacity: 0;
