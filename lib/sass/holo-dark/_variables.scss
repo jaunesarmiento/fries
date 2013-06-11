@@ -39,8 +39,11 @@ $bar-height: 48px;
 
 $action-bar-background-color: $gray-darker;
 $action-bar-icons-color: $gray-light;
+$action-bar-border-bottom-color: darken($action-bar-background-color, 5%);
+
 $tab-bar-background-color: $gray-dark;
 $tab-bar-icons-color: $white;
+
 $spinner-background-color: $gray-darker;
 
 $primary-button-color: #424242;

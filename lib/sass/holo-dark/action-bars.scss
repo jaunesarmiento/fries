@@ -7,9 +7,9 @@
   z-index: 10;
   width: 100%;
   height: $bar-height;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 
-  border-bottom: 2px solid darken($action-bar-background-color, 5%);
+  border-bottom: 2px solid $action-bar-border-bottom-color;
   background-color: $action-bar-background-color;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 
@@ -79,7 +79,7 @@ ul.actions {
   li .action {
     width: 48px;
     height: 48px;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
   }
 
   &.flex {

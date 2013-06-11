@@ -2,7 +2,7 @@
 
 form {
   width: 100%;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 
   &.form-flex {
 
@@ -40,6 +40,7 @@ form {
 }
 
 .input-text {
+  @include box-sizing(border-box);
   display: block;
   outline: none;
   border: none;
@@ -51,10 +52,10 @@ form {
   background: transparent;
   color: $text-color;
   font-size: 14px;
-  box-sizing: border-box;
   vertical-align: middle;
   -webkit-transition: border ease-out 0.2s;
      -moz-transition: border ease-out 0.2s;
+          transition: border ease-out 0.2s;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: $base-font-family;
   font-weight: normal;
@@ -70,6 +71,8 @@ form {
 
 .form-legend,
 .block-label {
+  @include box-sizing(border-box);
+
   display: block;
   padding: 5px 5px 3px;
   margin-top: 10px;
@@ -80,7 +83,6 @@ form {
   line-height: 18px;
   text-transform: uppercase;
   color: darken($text-color, 20%);
-  box-sizing: border-box;
 }
 
 .form-actions {

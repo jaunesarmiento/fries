@@ -5,6 +5,8 @@
   z-index: 10;
   width: 100%;
   height: 48px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-bottom: 2px solid #151515;
   background-color: #222222;
@@ -54,6 +56,8 @@ ul.actions {
   ul.actions li .action {
     width: 48px;
     height: 48px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; }
   ul.actions.flex {
     display: -webkit-box;

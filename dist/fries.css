@@ -5,6 +5,8 @@
   z-index: 10;
   width: 100%;
   height: 48px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-bottom: 2px solid #151515;
   background-color: #222222;
@@ -54,6 +56,8 @@ ul.actions {
   ul.actions li .action {
     width: 48px;
     height: 48px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; }
   ul.actions.flex {
     display: -webkit-box;
@@ -258,6 +262,9 @@ a {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin-bottom: 10px;
   padding: 11px 36px 10px;
   background: #424242;
@@ -267,7 +274,6 @@ a {
   font-size: 16px;
   font-weight: 200;
   line-height: 14px;
-  box-sizing: border-box;
   vertical-align: middle;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 3px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 3px rgba(0, 0, 0, 0.5);
@@ -321,10 +327,12 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   overflow: auto;
-  overflow-x: hidden;
-  box-sizing: border-box; }
+  overflow-x: hidden; }
 
 .action-bar + .tab-fixed + .content,
 .action-bar + .tab-fixed + .action-bar + .content {
@@ -354,6 +362,8 @@ a {
 
 form {
   width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
   form.form-flex .flex-group {
     display: -webkit-box;
@@ -384,6 +394,9 @@ form {
   margin-left: 10px; }
 
 .input-text {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   outline: none;
   border: none;
@@ -395,10 +408,10 @@ form {
   background: transparent;
   color: white;
   font-size: 14px;
-  box-sizing: border-box;
   vertical-align: middle;
   -webkit-transition: border ease-out 0.2s;
   -moz-transition: border ease-out 0.2s;
+  transition: border ease-out 0.2s;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal; }
@@ -409,6 +422,9 @@ form {
 
 .form-legend,
 .block-label {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   padding: 5px 5px 3px;
   margin-top: 10px;
@@ -418,8 +434,7 @@ form {
   font-weight: bold;
   line-height: 18px;
   text-transform: uppercase;
-  color: #cccccc;
-  box-sizing: border-box; }
+  color: #cccccc; }
 
 .form-actions {
   margin-top: 20px; }
@@ -915,11 +930,13 @@ you can use the generic selector below, but it's slower:
   display: block;
   list-style: none; }
   .list > li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     padding: 5px;
     border-top: 1px solid #424242;
     line-height: 38px;
-    color: white;
-    box-sizing: border-box; }
+    color: white; }
     .list > li.list-divider {
       border-top: none;
       border-bottom: 2px solid #595959;
@@ -999,6 +1016,8 @@ you can use the generic selector below, but it's slower:
       padding: 17px 15px 16px;
       white-space: nowrap;
       width: 200px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
       box-sizing: border-box;
       color: white;
       font-weight: normal; }
@@ -1043,6 +1062,9 @@ you can use the generic selector below, but it's slower:
   margin-left: 10px;
   min-width: 100px; }
   .form-spinner .toggle-spinner {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     position: relative;
     display: block;
     padding: 14px 20px 6px 40px;
@@ -1052,7 +1074,6 @@ you can use the generic selector below, but it's slower:
     text-align: right;
     color: white;
     border-bottom: 1px solid #3c3c3c;
-    box-sizing: border-box;
     vertical-align: middle;
     outline: none; }
     .form-spinner .toggle-spinner:after {
@@ -1153,7 +1174,6 @@ you can use the generic selector below, but it's slower:
   z-index: 1;
   height: 48px;
   background: #333333;
-  box-sizing: border-box;
   -webkit-backface-visibility: hidden; }
   .tab-fixed ul.tab-inner {
     display: -webkit-box;
@@ -1172,6 +1192,9 @@ you can use the generic selector below, but it's slower:
       overflow: hidden;
       text-align: center; }
       .tab-fixed ul.tab-inner li a {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         position: relative;
         display: block;
         height: 48px;
@@ -1181,8 +1204,7 @@ you can use the generic selector below, but it's slower:
         text-overflow: ellipsis;
         font-size: 11px;
         font-weight: bold;
-        line-height: 52px;
-        box-sizing: border-box; }
+        line-height: 52px; }
         .tab-fixed ul.tab-inner li a:after {
           position: absolute;
           content: '';

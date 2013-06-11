@@ -5,6 +5,12 @@
           border-radius: $radius;
 }
 
+@mixin box-sizing($value: border-box) {
+  -webkit-box-sizing: $value;
+     -moz-box-sizing: $value;
+          box-sizing: $value;
+}
+
 // TODO: Implement a multi box-shadow mixin
 @mixin box-shadow($top, $left, $blur, $color, $inset: "") {
   -webkit-box-shadow: $top $left $blur $color #{$inset};

@@ -14,7 +14,6 @@
   z-index: 1;
   height: 48px;
   background: #333333;
-  box-sizing: border-box;
   -webkit-backface-visibility: hidden; }
   .tab-fixed ul.tab-inner {
     display: -webkit-box;
@@ -33,6 +32,9 @@
       overflow: hidden;
       text-align: center; }
       .tab-fixed ul.tab-inner li a {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         position: relative;
         display: block;
         height: 48px;
@@ -42,8 +44,7 @@
         text-overflow: ellipsis;
         font-size: 11px;
         font-weight: bold;
-        line-height: 52px;
-        box-sizing: border-box; }
+        line-height: 52px; }
         .tab-fixed ul.tab-inner li a:after {
           position: absolute;
           content: '';

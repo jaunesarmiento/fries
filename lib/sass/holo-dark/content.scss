@@ -11,11 +11,11 @@
 
 .content {
   @include absolute-position(0, 0, 0, 0);
-
+  @include box-sizing(border-box);
+  
   width: 100%;
   overflow: auto;
   overflow-x: hidden;
-  box-sizing: border-box;
 }
 
 .action-bar + .tab-fixed + .content,

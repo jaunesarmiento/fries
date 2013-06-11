@@ -33,6 +33,8 @@
       padding: 17px 15px 16px;
       white-space: nowrap;
       width: 200px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
       box-sizing: border-box;
       color: white;
       font-weight: normal; }
@@ -77,6 +79,9 @@
   margin-left: 10px;
   min-width: 100px; }
   .form-spinner .toggle-spinner {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     position: relative;
     display: block;
     padding: 14px 20px 6px 40px;
@@ -86,7 +91,6 @@
     text-align: right;
     color: white;
     border-bottom: 1px solid #3c3c3c;
-    box-sizing: border-box;
     vertical-align: middle;
     outline: none; }
     .form-spinner .toggle-spinner:after {

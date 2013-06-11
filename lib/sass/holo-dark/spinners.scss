@@ -38,7 +38,7 @@
       padding: 17px 15px 16px;
       white-space: nowrap;
       width: 200px;
-      box-sizing: border-box;
+      @include box-sizing(border-box);
       color: $text-color;
       font-weight: normal;
     }
@@ -111,6 +111,7 @@
   min-width: 100px;
 
   .toggle-spinner {
+    @include box-sizing(border-box);
     position: relative;
     display: block;
     padding: 14px 20px 6px 40px;
@@ -118,11 +119,8 @@
     font-size: 14px;
     text-transform: uppercase;
     text-align: right;
-    
     color: $text-color;
     border-bottom: 1px solid lighten($spinner-background-color, 10%);
-    
-    box-sizing: border-box;
     vertical-align: middle;
     outline: none;
 

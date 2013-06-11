@@ -1,5 +1,7 @@
 form {
   width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
   form.form-flex .flex-group {
     display: -webkit-box;
@@ -30,6 +32,9 @@ form {
   margin-left: 10px; }
 
 .input-text {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   outline: none;
   border: none;
@@ -41,10 +46,10 @@ form {
   background: transparent;
   color: white;
   font-size: 14px;
-  box-sizing: border-box;
   vertical-align: middle;
   -webkit-transition: border ease-out 0.2s;
   -moz-transition: border ease-out 0.2s;
+  transition: border ease-out 0.2s;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal; }
@@ -55,6 +60,9 @@ form {
 
 .form-legend,
 .block-label {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   padding: 5px 5px 3px;
   margin-top: 10px;
@@ -64,8 +72,7 @@ form {
   font-weight: bold;
   line-height: 18px;
   text-transform: uppercase;
-  color: #cccccc;
-  box-sizing: border-box; }
+  color: #cccccc; }
 
 .form-actions {
   margin-top: 20px; }
