@@ -1022,6 +1022,8 @@ you can use the generic selector below, but it's slower:
       font-size: 14px; }
     .list > li.list-item-two-lines {
       height: 64px; }
+    .list > li.list-item-multi-line p {
+      margin-bottom: 15px; }
     .list > li.list-item-two-lines h3, .list > li.list-item-multi-line h3 {
       font-size: 16px;
       font-weight: normal;
@@ -1029,7 +1031,6 @@ you can use the generic selector below, but it's slower:
       height: 32px;
       color: white; }
     .list > li.list-item-two-lines p, .list > li.list-item-multi-line p {
-      height: 16px;
       font-size: 12px;
       line-height: 12px;
       text-overflow: ellipsis;

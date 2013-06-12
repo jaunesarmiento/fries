@@ -50,6 +50,12 @@
       height: 64px; // Might be better to include this in variables.scss
     }
 
+    &.list-item-multi-line {
+      p {
+        margin-bottom: 15px;
+      }
+    }
+
     &.list-item-two-lines,
     &.list-item-multi-line {
       h3 {
@@ -61,7 +67,6 @@
       }
 
       p {
-        height: 16px;
         font-size: 12px;
         line-height: 12px;
         text-overflow: ellipsis;
