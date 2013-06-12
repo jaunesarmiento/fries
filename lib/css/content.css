@@ -22,6 +22,8 @@
   color: #fff;
   box-sizing: border-box;
   width: 100%;
+  text-wrap:normal;
+  overflow-wrap:break-word;
 }
 
 /* Hack to force all relatively and absolutely positioned elements still render while scrolling
