@@ -16,6 +16,9 @@
   width: 100%;
   overflow: auto;
   overflow-x: hidden;
+  overflow-wrap:break-word;
+  
+  text-wrap:normal;
 }
 
 .action-bar + .tab-fixed + .content,
