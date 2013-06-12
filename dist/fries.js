@@ -267,7 +267,7 @@
     if (!target) return;
     else e.preventDefault();
 
-    if (target.getAttribute('data-stack-method') == 'pop') {
+    if (target.getAttribute('data-transition') == 'pop') {
       window.history.go(-1);
       return;
     }
