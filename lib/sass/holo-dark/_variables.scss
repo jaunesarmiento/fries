@@ -48,7 +48,7 @@ $spinner-background-color: $gray-darker;
 
 $primary-button-color: #424242;
 $primary-button-hover-color: #1f5366;
-$primary-button-active-color: $secondary-color;
+$primary-button-active-color: rgba($secondary-color, 0.8);
 
 $divider-color: $primary-button-color;
 $divider-color-thick: lighten($divider-color, 9%);
