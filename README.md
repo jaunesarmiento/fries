@@ -25,6 +25,35 @@ Check out the [changelog] before doing any of these. As they might already been 
 the current development branch.
 
 
+## Breaking changes
+
+Here are some breaking changes that you might want to take a look at before upgrading to version `1.0.1`.
+
+__Up Button__
+
+Since version `1.0.1`, Fries no longer uses the CSS up/back chevron for its Up Button. Please
+use the following markup to use the up button in your inner pages:
+
+    <a href="index.html" class="app-icon action up" data-transition="pop">
+      <i class="icon-up-button"></i>
+      <i class="icon-fries"></i><!-- Or replace this with your app icon -->
+    </a>
+
+Consider the following:
+
+* The `href` attribute is now just a fallback for when `stack.js` fails to load so that your app
+won't break when pressing the up button.
+* Fries now uses `<i class="icon-up-button></i>` instead of the previous `<i class="chevron"></i>`.
+* The `data-transition="pop"` attribute tells `stack.js` to pop the browser history thus performing a
+`popstate` event. `data-transition="push"` still works the same.
+
+
+__Font icons__
+
+The `lib/fonts/` directory where the Android font icons are is moved to `dist/fonts/`. You might want
+to update `icomoon.css` so it points to the correct directory unless you're starting from scratch.
+
+
 ## Contributing to Fries
 
 If you plan on contributing to Fries. Kindly read the [contributing guide] first before doing anything.
