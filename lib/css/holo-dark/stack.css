@@ -11,7 +11,7 @@
   animation: pop 0.2s; }
 
 .page.hidden {
-  display: hidden; }
+  display: none; }
 
 @-webkit-keyframes push {
   from {
