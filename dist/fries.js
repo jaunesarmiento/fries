@@ -264,9 +264,9 @@
 	var handleTouch = function (e) {
     var target = getTarget(e);
 
-    e.preventDefault();
-    
     if (!target) return;
+    else e.preventDefault();
+
     if (target.getAttribute('data-stack-method') == 'pop') {
       window.history.go(-1);
       return;
@@ -340,7 +340,6 @@
     if (!options.container) options.container = document.querySelector('.page');
 
     if (xhr && xhr.readyState < 4) {
-      console.log('xhr.readyState is ' + xhr.readyState + '. Aborting XHR');
       xhr.onreadystatechange = function () {};
       xhr.abort();
     }
@@ -536,6 +535,8 @@
     var targetAnchor  = getTarget(e.target);
 
     if (!targetAnchor) return;
+
+    e.preventDefault();
 
     targetTab = targetAnchor.parentNode;
     activeTab = targetTab.parentNode.querySelector(classSelector);
