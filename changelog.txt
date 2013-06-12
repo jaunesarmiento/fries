@@ -1,5 +1,13 @@
 changelog.txt
 
+June 12, 2013 changes:
+- Adding data-transition="pop" to links now pops the history stack (works like back button) regardless of the href attribute. Just add a fallback href so when stack.js fails, it will still go to the desired page
+- Added initial styles and an example for on/off switches
+- Added a global box-sizing: border-box
+- Changed background color of primary button's active state to rgba() value with 80% opacity
+- Stack.js now only calls event.preventDefault() when the target is valid
+- Modified tabs.js so that it doesn't add the anchor hash to the address bar
+
 June 3, 2013 changes:
 - Added SASS styles
 - Added GruntJS to automate tests and other stuff
