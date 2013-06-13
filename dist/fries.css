@@ -408,7 +408,7 @@ form {
   outline: none;
   border: none;
   border-bottom: 1px solid #333333;
-  padding: 10px 5px 0;
+  padding: 10px 10px 0;
   margin: 0 0 8px 0;
   width: 100%;
   height: 48px;
@@ -427,8 +427,8 @@ form {
   .input-text[type="password"] {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
 
-.form-legend,
-.block-label {
+legend.form-legend,
+label.block-label {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -442,6 +442,9 @@ form {
   line-height: 18px;
   text-transform: uppercase;
   color: #cccccc; }
+
+label.inline-label {
+  display: block; }
 
 .form-actions {
   margin-top: 20px; }
@@ -522,6 +525,80 @@ form {
           content: 'Off';
           width: 100%;
           height: 100%; }
+
+.input-radio-wrapper {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+  .input-radio-wrapper .input-radio {
+    position: absolute;
+    left: -9999px; }
+    .input-radio-wrapper .input-radio:checked[disabled] + .input-radio-label .input-radio-button {
+      background: rgba(51, 51, 51, 0.8);
+      -webkit-box-shadow: 0 0 4px rgba(51, 51, 51, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      -moz-box-shadow: 0 0 4px rgba(51, 51, 51, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 4px rgba(51, 51, 51, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
+    .input-radio-wrapper .input-radio:checked + .input-radio-label .input-radio-button {
+      background: #33b5e5;
+      -webkit-box-shadow: 0 0 4px rgba(51, 181, 229, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      -moz-box-shadow: 0 0 4px rgba(51, 181, 229, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 4px rgba(51, 181, 229, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
+    .input-radio-wrapper .input-radio:active + .input-radio-label {
+      background: rgba(51, 181, 229, 0.5);
+      border-color: rgba(255, 255, 255, 0.8);
+      -webkit-box-shadow: 0 0 2px 7px rgba(51, 181, 229, 0.5);
+      -moz-box-shadow: 0 0 2px 7px rgba(51, 181, 229, 0.5);
+      box-shadow: 0 0 2px 7px rgba(51, 181, 229, 0.5); }
+    .input-radio-wrapper .input-radio[disabled] + .input-radio-label {
+      border-color: rgba(51, 51, 51, 0.8); }
+    .input-radio-wrapper .input-radio:focus[disabled] + .input-radio-label:before {
+      border-color: rgba(0, 153, 204, 0.6); }
+    .input-radio-wrapper .input-radio:focus + .input-radio-label:before {
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      border-radius: 20px;
+      position: absolute;
+      display: block;
+      content: '';
+      top: -4px;
+      left: -4px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #0099cc; }
+  .input-radio-wrapper .input-radio-label {
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    border-radius: 16px;
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #424242;
+    cursor: pointer;
+    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out; }
+    .input-radio-wrapper .input-radio-label:active {
+      background: rgba(51, 181, 229, 0.5);
+      border-color: rgba(255, 255, 255, 0.8);
+      -webkit-box-shadow: 0 0 2px 7px rgba(51, 181, 229, 0.5);
+      -moz-box-shadow: 0 0 2px 7px rgba(51, 181, 229, 0.5);
+      box-shadow: 0 0 2px 7px rgba(51, 181, 229, 0.5); }
+    .input-radio-wrapper .input-radio-label:focus {
+      outline: none; }
+    .input-radio-wrapper .input-radio-label .input-radio-button {
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      border-radius: 8px;
+      width: 8px;
+      height: 8px;
+      margin: 3px;
+      background: transparent; }
 
 @font-face {
   font-family: 'icomoon';
