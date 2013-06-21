@@ -329,19 +329,19 @@ label.inline-label {
 
       &[disabled] {
         + .input-checkbox-outer .input-checkbox-button {
-          background: rgba($gray-dark, 0.8);
+          background: transparent;
 
           &:before {
             border-color: rgba($gray-dark, 0.8);
           }
 
           &:after {
-            border-color: #111;
+            border-color: transparent;
           }
         }
       }
 
-      &:active {
+      &:active:not([disabled]) {
         + .input-checkbox-outer .input-checkbox-button {
           border-color: transparent;
 
@@ -353,7 +353,6 @@ label.inline-label {
             border-color: rgba($white, 0.5)
           }
         }
-
 
       }
 
