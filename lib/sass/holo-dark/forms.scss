@@ -312,6 +312,7 @@ label.inline-label {
 
 .input-checkbox-wrapper {
   
+  display: block;
   width: 32px;
   height: 32px;
   padding: 8px;
@@ -327,17 +328,21 @@ label.inline-label {
     &:checked {
 
       &[disabled] {
-        + .input-checkbox-label .input-checkbox-button {
+        + .input-checkbox-outer .input-checkbox-button {
           background: rgba($gray-dark, 0.8);
 
-          -webkit-box-shadow: 0 0 4px rgba($gray-dark, 0.8), inset 0 1px 0 rgba($white, 0.5);
-             -moz-box-shadow: 0 0 4px rgba($gray-dark, 0.8), inset 0 1px 0 rgba($white, 0.5);
-                  box-shadow: 0 0 4px rgba($gray-dark, 0.8), inset 0 1px 0 rgba($white, 0.5);
+          &:before {
+            border-color: rgba($gray-dark, 0.8);
+          }
+
+          &:after {
+            border-color: #111;
+          }
         }
       }
 
       &:active {
-        + .input-checkbox-label .input-checkbox-button {
+        + .input-checkbox-outer .input-checkbox-button {
           border-color: transparent;
 
           &:before {
@@ -352,7 +357,7 @@ label.inline-label {
 
       }
 
-      + .input-checkbox-label .input-checkbox-button {
+      + .input-checkbox-outer .input-checkbox-button {
         position: absolute;
         top: -9px;
         width: 10px;
@@ -395,7 +400,7 @@ label.inline-label {
       }
     }
 
-    &:active + .input-checkbox-label {
+    &:active + .input-checkbox-outer {
       background: rgba($primary-color, 0.5);
       border-color: rgba($white, 0.8);
 
@@ -404,19 +409,19 @@ label.inline-label {
               box-shadow: 0 0 2px 7px rgba($primary-color, 0.5);
     }
 
-    &[disabled] + .input-checkbox-label {
+    &[disabled] + .input-checkbox-outer {
       border-color: rgba($gray-dark, 0.8);
     }
 
     &:focus {
 
       &[disabled] {
-        + .input-checkbox-label:before {
+        + .input-checkbox-outer:before {
           border-color: rgba($secondary-color, 0.6);
         }
       }
 
-      + .input-checkbox-label:before {
+      + .input-checkbox-outer:before {
         position: absolute;
         display: block;
         content: '';
@@ -429,7 +434,7 @@ label.inline-label {
     }
   }
 
-  .input-checkbox-label {
+  .input-checkbox-outer {
 
     position: relative;
     display: block;
