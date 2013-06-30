@@ -499,10 +499,6 @@
       contents.style.opacity = 1;
       container.classList.add('pop');
 
-      setTimeout(function () {
-        container.classList.add('hidden'); // To prevent the page from being visible after the transition
-      }, 190);
-
       container.addEventListener('webkitAnimationEnd', function () {
         container.removeEventListener('webkitAnimationEnd');
         container.parentNode.removeChild(container);
