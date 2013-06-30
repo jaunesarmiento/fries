@@ -1,0 +1,79 @@
+@import "variables", "utilities";
+
+.dialog-overlay {
+  @include absolute-position(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+}
+
+.dialog {
+  @include border-radius(2px);
+
+  background-color: $spinner-background-color;
+
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
+  width: 85%;
+  margin: 50% auto;
+
+
+  .dialog-title-region {
+    height: 56px;
+    border-bottom: solid 2px $primary-color;
+    padding: 0 15px;
+
+    .title {
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 56px;
+    }
+  }
+
+  .dialog-content {
+    ul.list li {
+      padding: 5px 15px;
+    }
+  }
+
+  ul.dialog-actions {
+    list-style: none;
+    border-top: 1px solid $divider-color;
+    height: 48px;
+
+    li {
+      float: left;
+      display: inline-block;
+      width: 50%;
+      border-right: 1px solid $divider-color;
+
+      a {
+        display: block;
+        color: $text-color;
+        font-size: 12px;
+        height: 47px;
+        text-align: center;
+        line-height: $bar-height;
+
+        &:active {
+          background-color: $background-highlight-color;
+        }
+      }
+
+      &:first-child a {
+        // Fix for background-color overflowing when active
+        border-bottom-left-radius: 2px;
+      }
+
+      &:last-child {
+        border: none;
+
+        a {
+          // Fix for background-color overflowing when active
+          border-bottom-right-radius: 2px;
+        }
+      }
+    }
+  }
+}
