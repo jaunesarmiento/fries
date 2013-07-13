@@ -100,10 +100,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 ## Attribution
+**Official Android Icons**
 
 Portions of this page are modifications based on work created and [shared by the Android Open Source Project](http://code.google.com/policies.html) and used according to terms described in the [Creative Commons 2.5 Attribution License](http://creativecommons.org/licenses/by/2.5/).
 
+__Android Action Bar Icon Pack__
 
+By [Tobias Bieniek] (https://github.com/Turbo87/Android-Action-Bar-Icon-Pack-Font) also under Creative Commons 2.5 License
 
 [Ratchet]: http://maker.github.io/ratchet
 [Jaune Sarmiento]: http://jaunesarmiento.me
