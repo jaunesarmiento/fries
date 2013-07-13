@@ -1,4 +1,4 @@
-Fries [![Stories in Ready](http://badge.waffle.io/rallysoftware/waffle.io.png)](http://waffle.io/jaunesarmiento/fries)
+Fries [![Stories in Ready](http://badge.waffle.io/jaunesarmiento/fries.png)](http://waffle.io/jaunesarmiento/fries)
 ===
 
 Fries is an awesome mobile development framework (yes, not just for prototyping!) 
