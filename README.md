@@ -1,4 +1,5 @@
-# Fries
+Fries [![Stories in Ready](http://badge.waffle.io/jaunesarmiento/fries.png)](http://waffle.io/jaunesarmiento/fries)
+===
 
 Fries is an awesome mobile development framework (yes, not just for prototyping!) 
 for Android apps using just HTML, CSS, and Javascript and was inspired by [Ratchet].
