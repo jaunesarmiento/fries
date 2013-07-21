@@ -1,0 +1,181 @@
+@import "variables", "utilities";
+
+.dialogs {
+  @include absolute-position(0, 0, 0, 0);
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+
+  -webkit-transition: opacity 0.1s ease-out;
+     -moz-transition: opacity 0.1s ease-out;
+          transition: opacity 0.1s ease-out;
+
+  &.on {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.dialog {
+  @include border-radius(2px);
+
+  background-color: $spinner-background-color;
+
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
+  width: 85%;
+  margin: 50% auto;
+
+  // For animation purposes
+  opacity: 0;
+  -webkit-transform: scale3d(0.7, 0.7, 1);
+     -moz-transform: scale3d(0.7, 0.7, 1);
+          transform: scale3d(0.7, 0.7, 1);
+
+  .dialog-title-region {
+    height: 56px;
+    border-bottom: solid 2px $primary-color;
+    padding: 0 15px;
+
+    .title {
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 56px;
+    }
+  }
+
+  .dialog-content {
+    ul.list li {
+      padding: 5px 15px;
+    }
+  }
+
+  ul.dialog-actions {
+    list-style: none;
+    border-top: 1px solid $divider-color;
+    height: 48px;
+
+    li {
+      float: left;
+      display: inline-block;
+      width: 50%;
+      border-right: 1px solid $divider-color;
+
+      a {
+        display: block;
+        color: $text-color;
+        font-size: 12px;
+        height: 47px;
+        text-align: center;
+        line-height: $bar-height;
+
+        &:active {
+          background-color: $background-highlight-color;
+        }
+      }
+
+      &:first-child a {
+        // Fix for background-color overflowing when active
+        border-bottom-left-radius: 2px;
+      }
+
+      &:last-child {
+        border: none;
+
+        a {
+          // Fix for background-color overflowing when active
+          border-bottom-right-radius: 2px;
+        }
+      }
+    }
+  }
+
+  &.push {
+    -webkit-animation: push 0.2s;
+       -moz-animation: push 0.2s;
+            animation: push 0.2s;
+  }
+
+  &.pop {
+    -webkit-animation: pop 0.2s;
+       -moz-animation: pop 0.2s;
+            animation: pop 0.2s; 
+  }
+
+  &.on {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+       -moz-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+
+@-webkit-keyframes push {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 0.7, 1);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+}
+
+@-moz-keyframes push {
+  from {
+    opacity: 0;
+    -moz-transform: scale3d(0.7, 0.7, 1);
+  }
+  to {
+    opacity: 1;
+    -moz-transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes push {
+  from {
+    opacity: 0;
+    transform: scale3d(0.7, 0.7, 1);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes pop {
+  from {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 0.7, 1);
+  }
+}
+
+@-moz-keyframes pop {
+  from {
+    opacity: 1;
+    -moz-transform: scale3d(1, 1, 1);
+  }
+  to {
+    opacity: 0;
+    -moz-transform: scale3d(0.7, 0.7, 1);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.7, 0.7, 1);
+  }
+}
