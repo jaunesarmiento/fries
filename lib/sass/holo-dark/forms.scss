@@ -78,7 +78,7 @@ label.block-label {
   margin-top: 10px;
   width: 100%;
   border-bottom: 2px solid $divider-color-thick;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: bold;
   line-height: 18px;
   text-transform: uppercase;
@@ -108,7 +108,7 @@ label.inline-label {
     background: $gray-dark;
     -webkit-transition: background ease-out 0.2s;
        -moz-transition: background ease-out 0.2s;
-            transition: background ease-out 0.2s;  
+            transition: background ease-out 0.2s;
   }
 
   &:before {
@@ -136,8 +136,8 @@ label.inline-label {
 
   padding: 12px 0;
 
-  -webkit-user-select: none; 
-     -moz-user-select: none; 
+  -webkit-user-select: none;
+     -moz-user-select: none;
       -ms-user-select: none;
 
   .input-switch {
@@ -156,10 +156,10 @@ label.inline-label {
   }
 
   .input-switch-outer {
-    display: block; 
-    overflow: hidden; 
+    display: block;
+    overflow: hidden;
     cursor: pointer;
-    border: 0px solid #999999; 
+    border: 0px solid #999999;
     border-radius: 0px;
 
     .input-switch-inner {
@@ -177,7 +177,7 @@ label.inline-label {
         text-transform: uppercase;
         text-align: center;
         line-height: 24px;
-        background-color: $primary-button-color; 
+        background-color: $primary-button-color;
         color: $white;
 
         -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0,0,0,0.5);
@@ -208,8 +208,8 @@ label.inline-label {
   height: 32px;
   padding: 8px;
 
-  -webkit-user-select: none; 
-     -moz-user-select: none; 
+  -webkit-user-select: none;
+     -moz-user-select: none;
       -ms-user-select: none;
 
   .input-radio {
@@ -311,14 +311,14 @@ label.inline-label {
 }
 
 .input-checkbox-wrapper {
-  
+
   display: block;
   width: 32px;
   height: 32px;
   padding: 8px;
 
-  -webkit-user-select: none; 
-     -moz-user-select: none; 
+  -webkit-user-select: none;
+     -moz-user-select: none;
       -ms-user-select: none;
 
   .input-checkbox {
@@ -364,7 +364,7 @@ label.inline-label {
         height: 18px;
         border: solid #222;
         border-width: 0 6px 6px 0;
-          
+
           -webkit-transform: rotate(45deg);
              -moz-transform: rotate(45deg);
                   transform: rotate(45deg);

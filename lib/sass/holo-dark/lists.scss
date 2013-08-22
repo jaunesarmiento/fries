@@ -6,7 +6,7 @@
 
   > li {
     @include box-sizing(border-box);
-    
+
     padding: 5px;
     border-top: 1px solid $divider-color;
     line-height: 38px;
@@ -16,7 +16,7 @@
       border-top: none;
       border-bottom: 2px solid $divider-color-thick;
       line-height: 18px;
-      font-size: 11px;
+      font-size: 14px;
       font-weight: bold;
       text-transform: uppercase;
       padding: 5px 5px 3px;
