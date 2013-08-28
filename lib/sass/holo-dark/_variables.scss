@@ -1,6 +1,15 @@
+/**
+ * Fonts
+ */
+
 $sans-font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif-font-family: Georgia, "Times New Roman", Times, serif;
 $mono-font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+
+/**
+ * Colors
+ */
 
 $black: #000;
 $gray-darker: #222;
@@ -24,31 +33,101 @@ $android-red-dark: #cc0000;
 $primary-color: $android-blue;
 $secondary-color: $android-blue-dark;
 
+
+/**
+ * Base
+ */
+
 $background-color: #111;
 $text-color: $white;
 $secondary-text-color: darken($text-color, 20%);
 
 $background-highlight-color: rgba(51, 181, 229, 0.6);
 
-$base-font-size: 16px;
-$base-font-family: $sans-font-family;
-$base-line-height: 1.6em;
-$alt-font-family: $serif-font-family;
 
-$bar-height: 48px;
 
-$action-bar-background-color: $gray-darker;
-$action-bar-icons-color: $gray-light;
-$action-bar-border-bottom-color: darken($action-bar-background-color, 5%);
-
-$tab-bar-background-color: $gray-dark;
-$tab-bar-icons-color: $white;
-
-$spinner-background-color: $gray-darker;
+/**
+ * Buttons
+ */
 
 $primary-button-color: #424242;
 $primary-button-hover-color: #1f5366;
 $primary-button-active-color: rgba($secondary-color, 0.8);
 
+
+/**
+ * Dividers
+ */
+
 $divider-color: $primary-button-color;
 $divider-color-thick: lighten($divider-color, 9%);
+
+
+/**
+ * Typography
+ */
+
+$base-font-size: 16px;
+$base-font-family: $sans-font-family;
+$base-line-height: 1.67em;
+$alt-font-family: $serif-font-family;
+
+/**
+ * General Bars Styles
+ */
+
+$bar-height: 48px;
+$bar-height-landscape: 40px;
+
+
+/**
+ * Action Bars
+ */
+
+$action-bar-background-color: $gray-darker;
+$action-bar-icons-color: $gray-light;
+$action-bar-border-bottom-color: darken($action-bar-background-color, 5%);
+
+
+/**
+ * Tab Bar
+ */
+
+$tab-bar-background-color: $gray-dark;
+$tab-bar-icons-color: $white;
+$tab-bar-text-color: $text-color;
+
+
+/**
+ * Spinners
+ */
+
+$spinner-background-color: $gray-darker;
+$spinner-text-color: $text-color;
+
+
+/**
+ * Forms
+ */
+
+$input-text-background-color: transparent;
+$input-text-border-color: $gray-dark;
+$input-text-border-highlight-color: $secondary-color;
+$input-text-color: $text-color;
+
+$input-switch-background-color: $gray-dark;
+$input-switch-button-color: $primary-button-color;
+$input-switch-border-color: #999;
+$input-switch-text-color: $white;
+
+$form-legend-label-border-color: $divider-color-thick;
+$form-legend-label-text-color: darken($text-color, 20%);
+
+
+/**
+ * Dialogs
+ */
+
+$dialog-background-color: $gray-darker;
+$dialog-title-color: $primary-color;
+$dialog-text-color: $text-color;

@@ -44,13 +44,13 @@ form {
   display: block;
   outline: none;
   border: none;
-  border-bottom: 1px solid $gray-dark;
+  border-bottom: 1px solid $input-text-border-color;
   padding: 10px 10px 0;
   margin: 0 0 8px 0;
   width: 100%;
   height: $bar-height;
   background: transparent;
-  color: $text-color;
+  color: $input-text-color;
   font-size: 14px;
   vertical-align: middle;
   -webkit-transition: border ease-out 0.2s;
@@ -61,7 +61,7 @@ form {
   font-weight: normal;
 
   &:focus {
-    border-bottom: 1px solid $secondary-color;
+    border-bottom: 1px solid $input-text-border-highlight-color;
   }
 
   &[type="password"] {
@@ -77,12 +77,12 @@ label.block-label {
   padding: 5px 5px 3px;
   margin-top: 10px;
   width: 100%;
-  border-bottom: 2px solid $divider-color-thick;
+  border-bottom: 2px solid $form-legend-label-border-color;
   font-size: 14px;
   font-weight: bold;
   line-height: 18px;
   text-transform: uppercase;
-  color: darken($text-color, 20%);
+  color: $form-legend-label-text-color;
 }
 
 label.inline-label {
@@ -105,7 +105,7 @@ label.inline-label {
     bottom: 0;
     height: 5px;
     width: 1px;
-    background: $gray-dark;
+    background: $input-text-border-color;
     -webkit-transition: background ease-out 0.2s;
        -moz-transition: background ease-out 0.2s;
             transition: background ease-out 0.2s;
@@ -123,7 +123,7 @@ label.inline-label {
 
     &:before,
     &:after {
-      background: $secondary-color;
+      background: $input-text-border-highlight-color;
     }
 
   }
@@ -159,12 +159,12 @@ label.inline-label {
     display: block;
     overflow: hidden;
     cursor: pointer;
-    border: 0px solid #999999;
+    border: 0px solid $input-switch-border-color;
     border-radius: 0px;
 
     .input-switch-inner {
 
-      background: $gray-dark;
+      background: $input-switch-background-color;
 
       .input-switch-button {
         @include border-radius(2px);
@@ -177,8 +177,8 @@ label.inline-label {
         text-transform: uppercase;
         text-align: center;
         line-height: 24px;
-        background-color: $primary-button-color;
-        color: $white;
+        background-color: $input-switch-button-color;
+        color: $input-switch-text-color;
 
         -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0,0,0,0.5);
            -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.25), inset 0 2px 0 rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0,0,0,0.5);

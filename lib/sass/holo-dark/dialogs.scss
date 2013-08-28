@@ -1,4 +1,4 @@
-@import "variables", "utilities";
+@import "variables", "utilities", "animations";
 
 .dialogs {
   @include absolute-position(0, 0, 0, 0);
@@ -20,7 +20,7 @@
 .dialog {
   @include border-radius(2px);
 
-  background-color: $spinner-background-color;
+  background-color: $dialog-background-color;
 
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -37,12 +37,13 @@
 
   .dialog-title-region {
     height: 56px;
-    border-bottom: solid 2px $primary-color;
+    border-bottom: solid 2px $dialog-title-color;
     padding: 0 15px;
 
     .title {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: normal;
+      color: $dialog-title-color;
       line-height: 56px;
     }
   }
@@ -66,7 +67,7 @@
 
       a {
         display: block;
-        color: $text-color;
+        color: $dialog-text-color;
         font-size: 12px;
         height: 47px;
         text-align: center;
@@ -102,7 +103,7 @@
   &.pop {
     -webkit-animation: pop 0.2s;
        -moz-animation: pop 0.2s;
-            animation: pop 0.2s; 
+            animation: pop 0.2s;
   }
 
   &.on {
@@ -110,72 +111,5 @@
     -webkit-transform: scale3d(1, 1, 1);
        -moz-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1);
-  }
-}
-
-
-@-webkit-keyframes push {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.7, 0.7, 1);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-  }
-}
-
-@-moz-keyframes push {
-  from {
-    opacity: 0;
-    -moz-transform: scale3d(0.7, 0.7, 1);
-  }
-  to {
-    opacity: 1;
-    -moz-transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes push {
-  from {
-    opacity: 0;
-    transform: scale3d(0.7, 0.7, 1);
-  }
-  to {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@-webkit-keyframes pop {
-  from {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: scale3d(0.7, 0.7, 1);
-  }
-}
-
-@-moz-keyframes pop {
-  from {
-    opacity: 1;
-    -moz-transform: scale3d(1, 1, 1);
-  }
-  to {
-    opacity: 0;
-    -moz-transform: scale3d(0.7, 0.7, 1);
-  }
-}
-
-@keyframes pop {
-  from {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-  to {
-    opacity: 0;
-    transform: scale3d(0.7, 0.7, 1);
   }
 }
