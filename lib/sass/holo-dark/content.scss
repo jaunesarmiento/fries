@@ -6,18 +6,18 @@
   background-color: $background-color;
   width: 100%;
   -webkit-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate(0, 0, 0);
 }
 
 .content {
   @include absolute-position(0, 0, 0, 0);
   @include box-sizing(border-box);
-  
+
   width: 100%;
   overflow: auto;
   overflow-x: hidden;
   overflow-wrap:break-word;
-  
+
   text-wrap:normal;
 }
 
