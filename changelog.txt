@@ -1,40 +1,17 @@
 changelog.txt
 
-August 28, 2013 changes:
-- Added more variables
-- Added alleged fix for the reported layout issues on Samsung Galaxy S4 and S3
-running Android 4.2.2
-- Changed dialog title font size to 18px
-
-August 22, 2013 changes:
-- Fixed dialog implementation
-- Added dialog example
-- Added a better iconography example
-- Bug fixes
-- Added fonts to lib folder
-- Removed dist from the repository
-- Examples now use the files from lib folder
-- GruntJS should now be ran to view examples
-- Examples are now separated into each component
-- Changed list divider font size to 14px
-- Up buttons now require an href attribute
-
 June 12, 2013 changes:
-- Adding data-transition="pop" to links now pops the history stack (works like
-back button) regardless of the href attribute. Just add a fallback href so when
-stack.js fails, it will still go to the desired page
+- Adding data-transition="pop" to links now pops the history stack (works like back button) regardless of the href attribute. Just add a fallback href so when stack.js fails, it will still go to the desired page
 - Added initial styles and an example for on/off switches
 - Added a global box-sizing: border-box
-- Changed background color of primary button's active state to rgba() value with
-80% opacity
+- Changed background color of primary button's active state to rgba() value with 80% opacity
 - Stack.js now only calls event.preventDefault() when the target is valid
 - Modified tabs.js so that it doesn't add the anchor hash to the address bar
 
 June 3, 2013 changes:
 - Added SASS styles
 - Added GruntJS to automate tests and other stuff
-- Added .input-pretty for input elements which styles them to look like the
-default Android text field
+- Added .input-pretty for input elements which styles them to look like the default Android text field
 - Form legends are now styled using .form-legend class
 - Input labels are now styled using .block-label class
 - Updated examples
@@ -42,8 +19,7 @@ default Android text field
 
 May 19, 2013 changes:
 - Modified meta viewport tag
-- Changed position of .content and .tab-fixed to absolute, by default (fixed
-positioning is only needed on the docs I think)
+- Changed position of .content and .tab-fixed to absolute, by default (fixed positioning is only needed on the docs I think)
 - Added box-sizing for .content
 - Fixed the size of action buttons
 - Modified js code to prevent it from attaching multiple event handlers
@@ -53,7 +29,6 @@ positioning is only needed on the docs I think)
 - Added .fixed-bottom class to support action bars at the bottom of the page
 - .content now adjusts to action bars with .fixed-bottom
 - Removed iScroll dependency
-- Not using input[type=*] selectors to style input elements anymore. Input
-elements are now styled using classes (.input-text, etc)
+- Not using input[type=*] selectors to style input elements anymore. Input elements are now styled using classes (.input-text, etc)
 - Reworked tabs. Added tab content transition and active tab highlighting
 - Modified the size of the action overflow icon
