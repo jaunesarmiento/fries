@@ -131,3 +131,11 @@ $form-legend-label-text-color: darken($text-color, 20%);
 $dialog-background-color: $gray-darker;
 $dialog-title-color: $primary-color;
 $dialog-text-color: $text-color;
+
+
+/**
+ * Toasts
+ */
+
+$toast-background-color: rgba(66, 66, 66, 0.9);
+$toast-text-color: $white;

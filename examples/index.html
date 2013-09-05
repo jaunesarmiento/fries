@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../lib/css/holo-dark/action-bars.css" />
   <link rel="stylesheet" href="../lib/css/holo-dark/buttons.css" />
   <link rel="stylesheet" href="../lib/css/holo-dark/dialogs.css" />
+  <link rel="stylesheet" href="../lib/css/holo-dark/toasts.css" />
   <link rel="stylesheet" href="../lib/css/holo-dark/forms.css" />
   <link rel="stylesheet" href="../lib/css/holo-dark/lists.css" />
   <link rel="stylesheet" href="../lib/css/holo-dark/sliders.css" />
@@ -62,7 +63,7 @@
   }
   </style>
 </head>
-<body ontouchstart="">
+<body>
 
   <div class="page">
     <header class="action-bar fixed-top">
@@ -81,6 +82,7 @@
         <li class="list-item-single-line selectable"><a href="forms-and-page-actions.html" data-transition="push">Forms and Page Actions</a></li>
         <li class="list-item-single-line selectable"><a href="iconography.html" data-transition="push">Iconography</a></li>
         <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true" id="open-dialog">Dialogs</a></li>
+        <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true" id="show-toast">Toast Notifications</a></li>
       </ul>
 
       <div class="footnote">Copyright &copy; 2013. Jaune Sarmiento. Fries.</div>
@@ -130,10 +132,12 @@
     </div>
   </div>
 
+  <script src="../lib/js/utils.js"></script>
   <script src="../lib/js/forms.js"></script>
   <script src="../lib/js/spinners.js"></script>
   <script src="../lib/js/tabs.js"></script>
   <script src="../lib/js/dialogs.js"></script>
+  <script src="../lib/js/toasts.js"></script>
   <script src="../lib/js/action-bars.js"></script>
   <script src="../lib/js/stack.js"></script>
 
@@ -141,28 +145,38 @@
 
   <script type="text/javascript">
     var init = function () {
-
       // Make sure the dialog is in the DOM
       if (document.querySelector('#my-dialog')) {
         var dialog = new fries.Dialog({
           selector: '#my-dialog',
           callbackOk: function () {
-            alert('Pressed OK');
+            var toast = new fries.Toast({
+              content: "Pressed OK",
+              duration: fries.Toast.duration.SHORT
+            });
+
             this.hide(); // this refers to the dialog
           },
           callbackCancel: function () {
-            alert('Pressed Cancel');
+            var toast = new fries.Toast({
+              content: "Pressed Cancel",
+              duration: fries.Toast.duration.SHORT
+            });
+
             this.hide(); // this refers to the dialog
           }
         });
 
-        var d = document.querySelector('#open-dialog');
         document.querySelector('#open-dialog').addEventListener('touchend', function () {
           dialog.show();
         }, false);
       }
-    };
 
+      document.querySelector('#show-toast').addEventListener('touchend', function () {
+        var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
+
+      }, false);
+    };
 
     window.addEventListener('push', init, false);
     window.addEventListener('popstate', init, false);

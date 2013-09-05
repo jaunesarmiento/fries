@@ -1,0 +1,44 @@
+@import "variables", "utilities", "animations";
+
+.toast {
+  position: fixed;
+  width: 100%;
+
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+
+  -webkit-transition: opacity 0.25s ease-in;
+     -moz-transition: opacity 0.25s ease-in;
+          transition: opacity 0.25s ease-in;
+
+  &.on {
+    visibility: visible;
+  }
+
+  &.fade-in {
+    opacity: 1;
+  }
+
+  .toast-message {
+    display: inline-block;
+
+    @include border-radius(2px);
+
+    padding: 5px 16px 3px;
+    margin: 0 auto;
+    max-width: 80%;
+    height: 36px;
+
+    // Toasts always have a dark gray background color
+    background-color: $toast-background-color;
+
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
+       -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1) ,0 0 10px rgba(0, 0, 0, 0.6);
+
+    color: $toast-text-color;
+    font-size: 13px;
+    text-align: center;
+  }
+}

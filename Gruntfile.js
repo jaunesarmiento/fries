@@ -40,7 +40,8 @@ module.exports = function(grunt) {
           'lib/css/holo-dark/spinners.css': 'lib/sass/holo-dark/spinners.scss',
           'lib/css/holo-dark/stack.css': 'lib/sass/holo-dark/stack.scss',
           'lib/css/holo-dark/tabs.css': 'lib/sass/holo-dark/tabs.scss',
-          'lib/css/holo-dark/dialogs.css': 'lib/sass/holo-dark/dialogs.scss'
+          'lib/css/holo-dark/dialogs.css': 'lib/sass/holo-dark/dialogs.scss',
+          'lib/css/holo-dark/toasts.css': 'lib/sass/holo-dark/toasts.scss'
         }
       }
     },
