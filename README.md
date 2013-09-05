@@ -1,72 +1,65 @@
-Fries [![Stories in Ready](http://badge.waffle.io/jaunesarmiento/fries.png)](http://waffle.io/jaunesarmiento/fries)
-===
+# Fries v1.0.1
 
-Fries is an awesome mobile development framework (yes, not just for prototyping!) 
-for Android apps using just HTML, CSS, and Javascript and was inspired by [Ratchet].
-We all know that you can find loads of iOS development tools out there, 
-so this time let's give some love to Android.
+Fries is an awesome mobile UI framework for Android apps using just HTML, CSS, 
+and Javascript and is inspired by [Ratchet].
 
 
-## Version 1.0.1
+## Getting Started
 
-In the next few weeks I'm planning to release version `1.0.1` of Fries and here's the list
-of things that I want to be included in it:
-
-* SASS/SCSS support for easier theming
-* Theme customization examples
-* Automation of tasks using [Grunt]
-* Form Switches (checkboxes, radio, and on/off switches)
-* Textarea styling
-* Toast Notifications
-* Automatic resizing of the action bars to 40px on landscape orientation
-* Replace the CSS up/back chevron on the action bar with official Android up/back icon
-* A better documentation of each component
-
-Check out the [changelog] before doing any of these. As they might already been implemented on
-the current development branch.
+* [Download] Fries or clone the repository `git clone git@github.com:jaunesarmiento/fries.git`.
+* Head on over to the [documentation] to learn more about Fries' components and how to build your first prototype.
+* Check out the [examples] to learn how to piece together each component.
 
 
-## Breaking changes
+## What's new in v1.0.1
 
-Here are some breaking changes that you might want to take a look at before upgrading to version `1.0.1`.
-
-__Up Button__
-
-Since version `1.0.1`, Fries no longer uses the CSS up/back chevron for its Up Button. Please
-use the following markup to use the up button in your inner pages:
-
-    <a href="index.html" class="app-icon action up" data-transition="pop">
-      <i class="icon-up-button"></i>
-      <i class="icon-fries"></i><!-- Or replace this with your app icon -->
-    </a>
-
-Consider the following:
-
-* The `href` attribute is now just a fallback for when `stack.js` fails to load so that your app
-won't break when pressing the up button.
-* Fries now uses `<i class="icon-up-button></i>` instead of the previous `<i class="chevron"></i>`.
-* The `data-transition="pop"` attribute tells `stack.js` to pop the browser history thus performing a
-`popstate` event. `data-transition="push"` still works the same.
-
-
-__Font icons__
-
-The `lib/fonts/` directory where the Android font icons are is moved to `dist/fonts/`. You might want
-to update `icomoon.css` so it points to the correct directory unless you're starting from scratch.
+* Toast notifications
+* Dialogs
+* Checkboxes
+* Radio buttons
+* On/off toggle switches
+* Theming using LESS or SASS
+* Visual aesthetic improvements
+* Task automation using [Grunt]
+* and a whole lot of [bug fixes] and a few [breaking changes]
 
 
 ## Contributing to Fries
 
-If you plan on contributing to Fries. Kindly read the [contributing guide] first before doing anything.
-Also, please work on the `wip-1.0.1` branch and do your pull requests there as I'm not accepting any
-pull requests to version `1.0.0` anymore.
+If you plan to contributing to Fries. Kindly read the [contributing guide] first before doing anything.
 
 
+## Special Thanks
+
+I'd like to thank [Dave Gamache], [Connor Sears], and [Jacob Thornton] for a wonderful job on [Ratchet].
+The conversion of the official Android icons was done in [IcoMoon]. Also, thanks to [@aymanfarhat](https://github.com/aymanfarhat), 
+[@jadjoubran](https://github.com/jadjoubran), and [@Wolfr](https://github.com/Wolfr) who kept the issue discussion flowing.
+
+
+## License
+
+Fries is licensed under the [MIT License]. Copyright &copy; Jaune Sarmiento (http://jaunesarmiento.me) 2013.
+
+
+## Attribution
+**Official Android Icons**
+
+Portions of this page are modifications based on work created and [shared by the Android Open Source Project](http://code.google.com/policies.html) and used according to terms described in the [Creative Commons 2.5 Attribution License](http://creativecommons.org/licenses/by/2.5/).
+
+__Android Action Bar Icon Pack__
+
+By [Tobias Bieniek](https://github.com/Turbo87/Android-Action-Bar-Icon-Pack-Font) also under Creative Commons 2.5 License
+
+[Download]: https://github.com/jaunesarmiento/fries/archive/master.zip
 [Ratchet]: http://maker.github.io/ratchet
-[Jaune Sarmiento]: http://jaunesarmiento.me
-[demo project]: https://github.com/jaunesarmiento/HelloFries
-[changelog]: https://github.com/jaunesarmiento/fries/blob/wip-1.0.1/changelog.txt
+[documentation]: http://jaunesarmiento.me/fries
 [Grunt]: http://gruntjs.com/
-[Contributing guide]: https://github.com/jaunesarmiento/fries/wiki/Contributing-to-Fries
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/5442e4f5cc5951efb12361a41734c6d5 "githalytics.com")](http://githalytics.com/jaunesarmiento/fries)
+[examples]: https://github.com/jaunesarmiento/fries/tree/master/examples
+[bug fixes]: https://github.com/jaunesarmiento/fries/issues?labels=&page=1&state=closed
+[breaking changes]: https://github.com/jaunesarmiento/fries/wiki/Breaking-Changes
+[Dave Gamache]: http://github.com/dhgamache
+[Connor Sears]: http://github.com/connors
+[Jacob Thornton]: http://github.com/fat
+[IcoMoon]: http://icomoon.io
+[MIT License]: http://opensource.org/licenses/MIT
+[contributing guide]: https://github.com/jaunesarmiento/fries/wiki/Contributing-to-Fries
