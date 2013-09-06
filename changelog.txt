@@ -1,5 +1,64 @@
 changelog.txt
 
+September 6, 2013 changes:
+- Updated README to v1.0.1
+- Updated changelog.txt
+
+September 5, 2013 changes:
+- Found that the tab swiping is too buggy; removed it for now
+- Added Toast notifications
+- Added utility functions
+
+September 6, 2013 changes:
+- Updated this changelog
+
+September 5, 2013 changes:
+- Found that tab swiping was too buggy, removed tab swiping for now
+- Added Toast notifications
+
+August 30, 2013 changes:
+- Added initial implementation of tab swiping (page swipe)
+
+August 29, 2013 changes:
+- Added more variables to Holo Dark theme and updated the styles
+- Updated .gitignore
+
+August 28, 2013 changes:
+- Readded accidentally removed example
+- Added alleged fix for issue #31
+
+August 22, 2013 changes:
+- Fixed issue #58 where initCustomEvent has wrong parameter order
+- Changed list header font size to 22px
+- Fixed issue #61
+- Fixed dialog implementation
+- Added a 200ms timeout to triggerStateChange in stack.js to wait for content
+- Fixed issue where the up button ignores the href attribute
+- Updated the examples
+- Removed dist/ and lib/css/ folders. Run grunt to generate these
+- Moved fonts to lib/fonts/ and updated references in examples
+- Removed old examples
+- Fixes <a> and <input> button size incosistency
+- Fixed issue #62
+
+July 18, 2013 changes:
+- Added a list of available icons
+
+June 30, 2013 changes:
+- Changed the switch wrapper to a <label> so the tap area is larger
+- Added fingerblast.js as a dependency of the examples
+- Added initial implementation of dialogs
+- Updated Gruntfile to add the dialogs
+- Added font smoothing and anti-alisasing on webkit
+
+June 21, 2013 changes:
+- Fixed issue where blank href Spinners push a state to the browser, clashing
+with stack.js
+- Added initial implementation of checkboxes
+
+June 17, 2013 changes:
+- Added initial implementation of radio buttons
+
 June 12, 2013 changes:
 - Adding data-transition="pop" to links now pops the history stack (works like back button) regardless of the href attribute. Just add a fallback href so when stack.js fails, it will still go to the desired page
 - Added initial styles and an example for on/off switches
@@ -7,6 +66,8 @@ June 12, 2013 changes:
 - Changed background color of primary button's active state to rgba() value with 80% opacity
 - Stack.js now only calls event.preventDefault() when the target is valid
 - Modified tabs.js so that it doesn't add the anchor hash to the address bar
+- Fixed multi-line list styles
+- Fixed issue #20 where a long line of text does not wrap
 
 June 3, 2013 changes:
 - Added SASS styles
