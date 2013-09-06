@@ -6,7 +6,6 @@ a[class*="btn"] {
 
 [class*="btn"] {
   @include border-radius(2px);
-  @include box-sizing(border-box);
   
   margin-bottom:  10px;
   padding: 11px 36px 11px;
