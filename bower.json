@@ -1,0 +1,32 @@
+{
+  "name": "fries",
+  "version": "1.0.1",
+  "homepage": "https://github.com/jaunesarmiento/fries",
+  "authors": [
+    "Jaune Sarmiento <hawnecarlo@gmail.com>"
+  ],
+  "description": "Fries helps you prototype Android apps using HTML, CSS, and JavaScript",
+  "main": "dist/fries.js",
+  "keywords": [
+    "android",
+    "prototype",
+    "html",
+    "css",
+    "javascript",
+    "ui",
+    "framework",
+    "mobile"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.txt",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": "dependencies": {
+    "grunt": "0.4.1"
+  }
+}
