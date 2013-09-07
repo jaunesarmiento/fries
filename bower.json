@@ -26,7 +26,7 @@
     "test",
     "tests"
   ],
-  "devDependencies": "dependencies": {
+  "dependencies": "dependencies": {
     "grunt": "0.4.1"
   }
 }
