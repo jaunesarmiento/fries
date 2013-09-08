@@ -18,16 +18,18 @@
 }
 
 .dialog {
+  position: absolute;
+
   @include border-radius(2px);
 
   background-color: $dialog-background-color;
 
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
 
   width: 85%;
-  margin: 50% auto;
+  margin: 0 auto;
 
   // For animation purposes
   opacity: 0;
