@@ -25,10 +25,11 @@
 
     @include border-radius(2px);
 
-    padding: 5px 16px 3px;
+    padding: 3px 16px 5px;
     margin: 0 auto;
     max-width: 80%;
     height: 36px;
+    line-height: 32px;
 
     // Toasts always have a dark gray background color
     background-color: $toast-background-color;
