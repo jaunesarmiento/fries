@@ -74,17 +74,32 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 8000,
+          livereload: true,
+          keepalive: true
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'cssmin', 'copy']);
+
+  grunt.registerTask('dist-js', ['jshint', 'concat', 'uglify']);
+
+  grunt.registerTask('dist-css', ['sass', 'cssmin', 'copy']);
+
+  grunt.registerTask('server', ['jshint', 'connect']);
 
 };
