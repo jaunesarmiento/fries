@@ -140,8 +140,24 @@
       }).bind(this), false);
     },
 
+    center: function (target) {
+      var computedStyle = getComputedStyle(target),
+      width = computedStyle.width,
+      height = computedStyle.height;
+
+      width = width.slice(0, width.length - 2);
+      height = height.slice(0, height.length - 2);
+
+      var left = (window.innerWidth / 2) - (width / 2),
+          top = (window.innerHeight / 2) - (height / 2);
+
+      target.style.marginLeft = left + 'px';
+      target.style.marginTop = top + 'px';
+    },
+
     show: function () {
       var self = this._dialog;
+      this.center(self);
 
       self.parentNode.classList.add('on'); // Shows .dialogs (overlay)
       self.parentNode.removeEventListener('webkitTransitionEnd');
@@ -714,9 +730,9 @@
 
       // Set the Toast's position
       switch (this._settings.position) {
-        case 'top'    : this._toast.style.top = '64px'; break;
-        case 'center' : this._toast.style.bottom = '64px'; break;
-        default       : this._toast.style.bottom = '64px';
+        case 'top'    : this._toast.style.top = '72px'; break;
+        case 'center' : break;
+        default       : this._toast.style.bottom = '72px';
       }
 
       this._toast.appendChild(toastContent);
