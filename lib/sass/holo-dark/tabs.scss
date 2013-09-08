@@ -30,7 +30,7 @@
 
       a {
         @include box-sizing(border-box);
-        
+
         position: relative;
         display: block;
         height: $bar-height;
@@ -90,8 +90,12 @@
     width: 100%;
     top: 0;
     bottom: 0;
+
     -webkit-transition: -webkit-transform 0.1s ease-out;
             transition:         transform 0.1s ease-out;
+
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate(0, 0, 0);
 
     &.active,
     &.in-transition {

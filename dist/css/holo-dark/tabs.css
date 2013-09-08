@@ -119,6 +119,8 @@
     top: 0;
     bottom: 0;
     -webkit-transition: -webkit-transform 0.1s ease-out;
-    transition: transform 0.1s ease-out; }
+    transition: transform 0.1s ease-out;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate(0, 0, 0); }
     .tab-slider .tab-item.active, .tab-slider .tab-item.in-transition {
       display: inline-block; }
