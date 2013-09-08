@@ -1,0 +1,78 @@
+@import "variables", "utilities";
+
+.list {
+  display: block;
+  list-style: none;
+
+  > li {
+    @include box-sizing(border-box);
+
+    padding: 5px;
+    border-top: 1px solid $divider-color;
+    line-height: 38px;
+    color: $text-color;
+
+    &.list-divider {
+      border-top: none;
+      border-bottom: 2px solid $divider-color-thick;
+      line-height: 18px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 5px 5px 3px;
+      margin-top: 5px;
+      color: darken($text-color, 20%);
+
+      & + li {
+        border-top: none;
+      }
+    }
+
+    > a {
+      display: block;
+      color: inherit;
+    }
+
+    &.list-item-single-line,
+    &.list-item-two-lines h3,
+    &.list-item-two-lines p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.list-item-single-line {
+      height: $bar-height;
+      font-size: 14px;
+    }
+
+    &.list-item-two-lines {
+      height: 64px; // Might be better to include this in variables.scss
+    }
+
+    &.list-item-multi-line {
+      p {
+        margin-bottom: 15px;
+      }
+    }
+
+    &.list-item-two-lines,
+    &.list-item-multi-line {
+      h3 {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 40px;
+        height: 32px;
+        color: $text-color;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 12px;
+        text-overflow: ellipsis;
+        color: $secondary-text-color;
+      }
+    }
+
+  }
+}

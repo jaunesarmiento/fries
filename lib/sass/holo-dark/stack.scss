@@ -1,0 +1,24 @@
+@import "animations";
+
+.page {
+  &.fade {
+    z-index: 0;
+  }
+
+  &.push {
+    -webkit-animation: push 0.2s;
+       -moz-animation: push 0.2s;
+            animation: push 0.2s;
+    z-index: 1;
+  }
+
+  &.pop {
+    -webkit-animation: pop 0.2s;
+       -moz-animation: pop 0.2s;
+            animation: pop 0.2s;
+  }
+}
+
+.page.hidden {
+  display: none;
+}

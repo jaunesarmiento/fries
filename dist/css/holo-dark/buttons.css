@@ -1,0 +1,91 @@
+/**
+ * Fonts
+ */
+/**
+ * Colors
+ */
+/**
+ * Base
+ */
+/**
+ * Buttons
+ */
+/**
+ * Dividers
+ */
+/**
+ * Typography
+ */
+/**
+ * General Bars Styles
+ */
+/**
+ * Action Bars
+ */
+/**
+ * Tab Bar
+ */
+/**
+ * Spinners
+ */
+/**
+ * Forms
+ */
+/**
+ * Dialogs
+ */
+/**
+ * Toasts
+ */
+a[class*="btn"] {
+  padding: 9px 36px 8px; }
+
+[class*="btn"] {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  padding: 11px 36px 11px;
+  background: #424242;
+  border: none;
+  color: white;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 14px;
+  vertical-align: middle;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 3px rgba(0, 0, 0, 0.5); }
+  [class*="btn"]:hover, [class*="btn"].hover, [class*="btn"]:focus, [class*="btn"].focused {
+    outline: none;
+    background: #1f5366;
+    -webkit-box-shadow: inset 0 0 1px 2pt #037ea7, 0 2px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0 0 1px 2pt #037ea7, 0 2px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 1px 2pt #037ea7, 0 2px 3px rgba(0, 0, 0, 0.5); }
+  [class*="btn"]:active, [class*="btn"].active {
+    padding: 11px 36px 10px;
+    background: rgba(0, 153, 204, 0.8);
+    border: none;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 3px rgba(0, 0, 0, 0.5), 0 0 2px 2pt rgba(51, 181, 229, 0.6);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 3px rgba(0, 0, 0, 0.5), 0 0 2px 2pt rgba(51, 181, 229, 0.6);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 3px rgba(0, 0, 0, 0.5), 0 0 2px 2pt rgba(51, 181, 229, 0.6); }
+  [class*="btn"]:disabled, [class*="btn"].disabled {
+    opacity: 0.3; }
+
+.btn[disabled],
+.btn-small[disabled] {
+  opacity: 0.3; }
+
+[class*="btn"] + [class*="btn"] {
+  margin-left: 3px; }
+
+.btn-small {
+  font-size: 12px; }
+
+.btn-block {
+  width: 100%; }
+
+.btn-block + .btn-block {
+  margin-left: 0; }

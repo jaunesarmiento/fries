@@ -4,26 +4,19 @@
   <meta charset="utf-8" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-  
+
   <title>Fries</title>
 
-  <link rel="shortcut icon" href="favicon.png"/>
+  <link rel="shortcut icon" href="favicon.png" />
 
-  <link rel="stylesheet" href="../lib/css/base.css">
-  <link rel="stylesheet" href="../lib/css/action-bars.css">
-  <link rel="stylesheet" href="../lib/css/chevrons.css">
-  <link rel="stylesheet" href="../lib/css/tabs.css">
-  <link rel="stylesheet" href="../lib/css/content.css">
-  <link rel="stylesheet" href="../lib/css/buttons.css">
-  <link rel="stylesheet" href="../lib/css/forms.css">
-  <link rel="stylesheet" href="../lib/css/lists.css">
-  <link rel="stylesheet" href="../lib/css/spinners.css">
-  <link rel="stylesheet" href="../lib/css/icomoon.css">
-  <link rel="stylesheet" href="../lib/css/stack.css">
-  <link rel="stylesheet" href="../lib/css/sliders.css">
+  <link rel="stylesheet" href="../dist/themes/holo-dark/holo-dark.min.css" />
 
   <!-- For demo purposes only -->
   <style type="text/css">
+  body {
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+  }
 
   h1.intro {
     font-weight: 200;
@@ -38,43 +31,141 @@
   .center-me {
     text-align: center;
   }
+
+  .list i[class*="icon-"] {
+    float: left;
+    font-size: 36px;
+    color: #999;
+  }
+  .i-class {
+    float: left;
+    line-height: 36px;
+    margin-left: 8px;
+  }
+  .footnote {
+    display: block;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    color: #222;
+    font-size: 11px;
+  }
   </style>
 </head>
-<body ontouchstart="">
+<body>
 
   <div class="page">
     <header class="action-bar fixed-top">
-      <a href="#" class="app-icon action">
+      <a href="javascript: void(0);" class="app-icon action" data-ignore="true">
         <i class="icon-fries"></i>
       </a>
       <h1 class="title">Fries</h1>
-      <ul class="actions pull-right">
-        <li><a href="new-contact.html" class="action" title="New Contact" data-transition="push"><i class="icon-add-person"></i></a></li>
-        <li><a href="#" class="action" title="Profile" data-transition="push"><i class="icon-person"></i></a></li>
-        <li><a href="#" class="action" title="Settings" data-transition="push"><i class="icon-settings"></i></a></li>
-        <li><a href="#" class="action" title="Sign out" data-transition="push"><i class="icon-fries"></i></a></li>
-      </ul>
     </header>
 
-    <nav class="action-bar fixed-bottom">
-      <ul class="actions flex" data-overflow="false">
-        <li><a href="compose.html" class="action" title="Compose" data-transition="push"><i class="icon-new-message"></i></a></li>
-        <li><a href="contacts.html" class="action" title="Contacts" data-transition="push"><i class="icon-group"></i></a></li>
-        <li><a href="#" class="action" title="Refresh" data-ignore="true"><i class="icon-refresh"></i></a></li>
+    <div class="content">
+      <ul class="list inset">
+        <li class="list-divider">Fries Components</li>
+        <li class="list-item-single-line selectable"><a href="action-bars.html" data-transition="push">Action Bars</a></li>
+        <li class="list-item-single-line selectable"><a href="fixed-tabs-and-lists.html" data-transition="push">Fixed Tabs and Lists</a></li>
+        <li class="list-item-single-line selectable"><a href="spinners.html" data-transition="push">Spinners</a></li>
+        <li class="list-item-single-line selectable"><a href="forms-and-page-actions.html" data-transition="push">Forms and Page Actions</a></li>
+        <li class="list-item-single-line selectable"><a href="iconography.html" data-transition="push">Iconography</a></li>
+        <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true" id="open-dialog">Dialogs</a></li>
+        <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true" id="show-toast">Toast Notifications</a></li>
       </ul>
-    </nav>
 
-    <div class="content inset">
-      
-      <h1 class="intro">Fries Demo</h1>
-      <p>This demo is an example of what you can build with Fries. Try it out, check the source, and play with it.</p>
+      <div class="footnote">Copyright &copy; 2013. Jaune Sarmiento. Fries.</div>
+    </div>
 
+    <div class="dialogs">
+      <div id="my-dialog" class="dialog">
+        <header class="dialog-title-region">
+          <h1 class="title">Choose ringtone</h1>
+        </header>
+        <div class="dialog-content">
+          <ul class="list">
+            <li class="list-item-single-line">
+              <label>Default ringtone</label>
+              <label class="input-radio-wrapper pull-right">
+                <input type="radio" name="ringtone" class="input-radio" selected>
+                <div class="input-radio-inner">
+                  <div class="input-radio-button"></div>
+                </div>
+              </label>
+            </li>
+            <li class="list-item-single-line">
+              <label>Silent</label>
+              <label class="input-radio-wrapper pull-right">
+                <input type="radio" name="ringtone" class="input-radio">
+                <div class="input-radio-inner">
+                  <div class="input-radio-button"></div>
+                </div>
+              </label>
+            </li>
+            <li class="list-item-single-line">
+              <label>Aldebaran</label>
+              <label class="input-radio-wrapper pull-right">
+                <input type="radio" name="ringtone" class="input-radio">
+                <div class="input-radio-inner">
+                  <div class="input-radio-button"></div>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <ul class="dialog-actions">
+          <li><a href="javascript: void(0);" class="dialog-cancel-button">Cancel</a></li>
+          <li><a href="javascript: void(0);" class="dialog-ok-button">OK</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <script src="../lib/js/stack.js"></script>
-  <script src="../lib/js/action-bars.js"></script>
-  <script src="../lib/js/spinners.js"></script>
-  <script src="../lib/js/tabs.js"></script>
+  
+  <script src="../dist/fries.min.js"></script>
+
+  <script src="js/fingerblast.js"></script>
+
+  <script type="text/javascript">
+    var init = function () {
+      // Make sure the dialog is in the DOM
+      if (document.querySelector('#my-dialog')) {
+        var dialog = new fries.Dialog({
+          selector: '#my-dialog',
+          callbackOk: function () {
+            var toast = new fries.Toast({
+              content: "Pressed OK",
+              duration: fries.Toast.duration.SHORT
+            });
+
+            this.hide(); // this refers to the dialog
+          },
+          callbackCancel: function () {
+            var toast = new fries.Toast({
+              content: "Pressed Cancel",
+              duration: fries.Toast.duration.SHORT
+            });
+
+            this.hide(); // this refers to the dialog
+          }
+        });
+
+        document.querySelector('#open-dialog').addEventListener('touchend', function () {
+          dialog.show();
+        }, false);
+      }
+
+      document.querySelector('#show-toast').addEventListener('touchend', function () {
+        var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
+
+      }, false);
+    };
+
+    window.addEventListener('push', init, false);
+    window.addEventListener('popstate', init, false);
+
+    // To enable touch events on desktop
+    // Remove this when building in PhoneGap
+    window.onload = new FingerBlast('body');
+  </script>
 </body>
 </html>

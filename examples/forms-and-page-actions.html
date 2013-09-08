@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  
+  <title>Fries</title>
+
+  <link rel="shortcut icon" href="favicon.png" />
+</head>
+<body ontouchstart="">
+
+  <div class="page">
+    <header class="action-bar fixed-top">
+      <a href="index.html" class="action page-action" data-transition="pop">
+        <i class="icon-accept"></i>
+        <span class="action-title">Done</span>
+      </a>
+    </header>
+
+    <div class="content">
+      <div class="inset">
+        <form class="form-flex">
+
+          <label class="block-label">Name</label>
+          <div class="flex-group">
+            <input type="text" class="input-text flex1" placeholder="First Name">
+            <input type="text" class="input-text flex1" placeholder="Last Name">
+          </div>
+
+          <label class="block-label">Phone</label>
+          <div class="flex-group">
+            <input type="tel" class="input-text flex2" placeholder="Phone">
+            <div class="form-spinner">
+              <a href="javascript: void(0);" class="toggle-spinner">Mobile</a>
+              <ul class="spinner">
+                <li class="spinner-item"><a href="javascript: void(0);">Work</a></li>
+                <li class="spinner-item"><a href="javascript: void(0);">Home</a></li>
+                <li class="spinner-item"><a href="javascript: void(0);">Main</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <label class="block-label">Automatic Updates</label>
+          <div class="flex-group">
+            <label class="input-switch-wrapper">
+              <input type="checkbox" class="input-switch">
+              <div class="input-switch-outer">
+                <div class="input-switch-inner">
+                  <div class="input-switch-button"></div>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <div class="flex-group">
+            <label class="input-radio-wrapper">
+              <input type="radio" name="test" class="input-radio" disabled>
+              <div class="input-radio-inner">
+                <div class="input-radio-button"></div>
+              </div>
+            </label>
+
+            <label class="input-radio-wrapper">
+              <input type="radio" name="test" class="input-radio" id="test-radio2">
+              <div class="input-radio-inner">
+                <div class="input-radio-button"></div>
+              </div>
+            </label>
+          </div>
+
+          <div class="flex-group">
+            <label for="check1" class="input-checkbox-wrapper">
+              <input type="checkbox" class="input-checkbox" id="check1">
+              <div class="input-checkbox-outer">
+                <div class="input-checkbox-inner">
+                  <div class="input-checkbox-button"></div>
+                </div>
+              </div>
+            </label>
+
+            <label for="check2" class="input-checkbox-wrapper">
+              <input type="checkbox" class="input-checkbox" id="check2" disabled>
+              <div class="input-checkbox-outer">
+                <div class="input-checkbox-inner">
+                  <div class="input-checkbox-button"></div>
+                </div>
+              </div>
+            </label>
+
+            <label for="check3" class="input-checkbox-wrapper">
+              <input type="checkbox" class="input-checkbox" id="check3" disabled checked>
+              <div class="input-checkbox-outer">
+                <div class="input-checkbox-inner">
+                  <div class="input-checkbox-button"></div>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <div class="form-actions center-me">
+            <button type="button" class="btn">Add another field</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
