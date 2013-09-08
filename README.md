@@ -6,6 +6,8 @@ and Javascript and is inspired by [Ratchet].
 
 ## What's new in v2.0.0
 
+This version (`v2.0.0`) includes the following:
+
 * Toast notifications
 * Dialogs
 * Checkboxes
@@ -15,6 +17,12 @@ and Javascript and is inspired by [Ratchet].
 * Visual aesthetic improvements
 * Task automation using [Grunt]
 * and a whole lot of [bug fixes] and a few [breaking changes]
+
+__Wait, why `v2.0.0`?__
+
+I know that I was supposed to release `v1.0.1` but I realized that it doesn't follow
+the widely known [Semantic Versioning] so I decided to release this version as `v2.0.0`
+instead and from now on will follow the SemVer.
 
 
 ## Getting Started
@@ -107,6 +115,7 @@ By [Tobias Bieniek](https://github.com/Turbo87/Android-Action-Bar-Icon-Pack-Font
 [Download]: https://github.com/jaunesarmiento/fries/archive/master.zip
 [Ratchet]: http://maker.github.io/ratchet
 [documentation]: http://jaunesarmiento.me/fries
+[Semantic Versioning]: http://semver.org/
 [Grunt]: http://gruntjs.com/
 [Bower]: http://bower.io/
 [examples]: https://github.com/jaunesarmiento/fries/tree/master/examples
