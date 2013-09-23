@@ -165,7 +165,6 @@
       self.parentNode.addEventListener('webkitTransitionEnd', onTransitionEnd, false);
 
       setTimeout((function () {
-        console.log(this);
         this._dialog.parentNode.classList.add('fade-in'); // Sets opacity to 1
       }).bind(this), 200);
 
