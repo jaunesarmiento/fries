@@ -160,8 +160,14 @@
       this.center(self);
 
       self.parentNode.classList.add('on'); // Shows .dialogs (overlay)
+
       self.parentNode.removeEventListener('webkitTransitionEnd');
       self.parentNode.addEventListener('webkitTransitionEnd', onTransitionEnd, false);
+
+      setTimeout((function () {
+        console.log(this);
+        this._dialog.parentNode.classList.add('fade-in'); // Sets opacity to 1
+      }).bind(this), 200);
 
       function onTransitionEnd() {
         self.parentNode.removeEventListener('webkitTransitionEnd', onTransitionEnd);
@@ -182,12 +188,13 @@
       function onAnimationEnd() {
         self.removeEventListener('webkitAnimationEnd', onAnimationEnd);
         self.classList.remove('pop');
-        self.parentNode.classList.remove('on');
+        self.parentNode.classList.remove('fade-in');
         self.parentNode.addEventListener('webkitTransitionEnd', onTransitionEnd);
       }
 
       function onTransitionEnd() {
         self.parentNode.removeEventListener('webkitTransitionEnd', onTransitionEnd);
+        self.parentNode.classList.remove('on');
       }
 
       this.destroy();
@@ -628,7 +635,8 @@
   window.addEventListener('touchmove', function () { isScrolling = true; });
   window.addEventListener('touchend', handleTouch);
   window.addEventListener('popstate', handlePopState);
-}());;(function () {
+}());
+;(function () {
   var getTarget = function (target) {
     var i, tabs = document.querySelectorAll('.tab-fixed li a');
     for (; target && target !== document; target = target.parentNode) {
@@ -647,6 +655,8 @@
     var targetAnchor  = getTarget(e.target);
 
     if (!targetAnchor) return;
+    
+    e.preventDefault();
 
     e.preventDefault();
 
@@ -692,8 +702,8 @@
     }
 
   });
-
-}());;this.fries = this.fries || {};
+}());
+;this.fries = this.fries || {};
 
 (function () {
 

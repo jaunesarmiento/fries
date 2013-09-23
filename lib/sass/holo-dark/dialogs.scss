@@ -11,8 +11,14 @@
      -moz-transition: opacity 0.1s ease-out;
           transition: opacity 0.1s ease-out;
 
-  &.on {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate(0, 0, 0);
+
+  &.fade-in {
     opacity: 1;
+  }
+
+  &.on {
     visibility: visible;
   }
 }
@@ -36,6 +42,10 @@
   -webkit-transform: scale3d(0.7, 0.7, 1);
      -moz-transform: scale3d(0.7, 0.7, 1);
           transform: scale3d(0.7, 0.7, 1);
+
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate(0, 0, 0);
+
 
   .dialog-title-region {
     height: 56px;
@@ -98,7 +108,7 @@
 
   &.push {
     -webkit-animation: push 0.2s;
-       -moz-animation: push 0.2s;
+       -moz-animation: push 0.2;
             animation: push 0.2s;
   }
 
