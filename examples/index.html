@@ -134,7 +134,10 @@
       }, false);
     };
 
-    var isMobile = function () {
+    window.addEventListener('push', init, false);
+    window.addEventListener('popstate', init, false);
+
+    var detect = function () {
       if( navigator.userAgent.match(/Android/i)
         || navigator.userAgent.match(/webOS/i)
         || navigator.userAgent.match(/iPhone/i)
@@ -150,12 +153,9 @@
       }
     };
 
-    window.addEventListener('push', init, false);
-    window.addEventListener('popstate', init, false);
-
     // To enable touch events on desktop
     // Remove this when building in PhoneGap
-    if (!isMobile) {
+    if (detect) {
       window.onload = new FingerBlast('body');
     }
   </script>
