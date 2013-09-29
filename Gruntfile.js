@@ -83,6 +83,14 @@ module.exports = function(grunt) {
           keepalive: true
         }
       }
+    },
+    watch: {
+      scripts: {
+        files: [
+          'lib/**/*.scss'
+        ],
+        tasks: ['sass']
+      }
     }
   });
 
@@ -93,6 +101,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-watch')
 
   grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'cssmin', 'copy']);
 
