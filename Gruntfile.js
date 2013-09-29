@@ -79,7 +79,6 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 8000,
-          livereload: true,
           keepalive: true
         }
       }
@@ -89,7 +88,10 @@ module.exports = function(grunt) {
         files: [
           'lib/**/*.scss'
         ],
-        tasks: ['dist-css']
+        tasks: ['dist-css'],
+        options: {
+          livereload: 8000
+        }
       }
     }
   });
