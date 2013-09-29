@@ -133,11 +133,6 @@
       // Attach the event handlers
       this._dialog.querySelector('.dialog-ok-button').addEventListener('touchend', (this._settings.callbackOk).bind(this), false);
       this._dialog.querySelector('.dialog-cancel-button').addEventListener('touchend', (this._settings.callbackCancel).bind(this), false);
-      document.querySelector('.dialogs').addEventListener('touchend', (function(e) {
-        if (e.target === document.querySelector('.dialogs')) {
-          this.hide();
-        }
-      }).bind(this), false);
     },
 
     center: function (target) {
@@ -156,6 +151,7 @@
     },
 
     show: function () {
+      var that = this;
       var self = this._dialog;
       this.center(self);
 
@@ -172,6 +168,13 @@
         self.parentNode.removeEventListener('webkitTransitionEnd', onTransitionEnd);
         self.classList.add('on');
         self.classList.add('push');
+
+        document.querySelector('.dialogs').addEventListener('touchend', (function(e) {
+          if (e.target === document.querySelector('.dialogs')) {
+            console.log('Hiding the dialog');
+            this.hide();
+          }
+        }).bind(that), false);
       }
     },
 
@@ -183,6 +186,8 @@
       self.classList.add('pop');
 
       self.addEventListener('webkitAnimationEnd', onAnimationEnd, false);
+
+      document.querySelector('.dialogs').removeEventListener('touchend');
 
       function onAnimationEnd() {
         self.removeEventListener('webkitAnimationEnd', onAnimationEnd);

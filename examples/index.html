@@ -124,7 +124,7 @@
         });
 
         document.querySelector('#open-dialog').addEventListener('touchend', function (e) {
-          e.stopImmediatePropagation();
+          e.preventDefault();
           dialog.show();
         }, false);
       }
