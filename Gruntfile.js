@@ -89,7 +89,7 @@ module.exports = function(grunt) {
         files: [
           'lib/**/*.scss'
         ],
-        tasks: ['sass']
+        tasks: ['dist-css']
       }
     }
   });
