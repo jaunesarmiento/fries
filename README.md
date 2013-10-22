@@ -127,3 +127,7 @@ By [Tobias Bieniek](https://github.com/Turbo87/Android-Action-Bar-Icon-Pack-Font
 [IcoMoon]: http://icomoon.io
 [MIT License]: http://opensource.org/licenses/MIT
 [contributing guide]: https://github.com/jaunesarmiento/fries/wiki/Contributing-to-Fries
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jaunesarmiento/fries/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
