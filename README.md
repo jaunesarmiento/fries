@@ -1,12 +1,12 @@
-# Fries v2.0.0
+# Fries v2.0.1 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jaunesarmiento/fries/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Fries is an awesome mobile UI framework for Android apps using just HTML, CSS,
 and Javascript and is inspired by [Ratchet].
 
 
-## What's new in v2.0.0
+## What's new
 
-This version (`v2.0.0`) includes the following:
+This version includes the following:
 
 * Toast notifications
 * Dialogs
@@ -16,13 +16,7 @@ This version (`v2.0.0`) includes the following:
 * Theming using SASS
 * Visual aesthetic improvements
 * Task automation using [Grunt]
-* and a whole lot of [bug fixes] and a few [breaking changes]
-
-__Wait, why `v2.0.0`?__
-
-I know that I was supposed to release `v1.0.1` but I realized that it doesn't follow
-the widely known [Semantic Versioning] so I decided to release this version as `v2.0.0`
-instead and from now on will follow the SemVer.
+* and a whole lot of [bug fixes].
 
 
 ## Getting Started
@@ -127,7 +121,4 @@ By [Tobias Bieniek](https://github.com/Turbo87/Android-Action-Bar-Icon-Pack-Font
 [IcoMoon]: http://icomoon.io
 [MIT License]: http://opensource.org/licenses/MIT
 [contributing guide]: https://github.com/jaunesarmiento/fries/wiki/Contributing-to-Fries
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jaunesarmiento/fries/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
