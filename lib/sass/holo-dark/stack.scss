@@ -13,12 +13,12 @@
   }
 
   &.pop {
-    -webkit-animation: pop 0.2s;
-       -moz-animation: pop 0.2s;
-            animation: pop 0.2s;
+    -webkit-animation: pop 0.3s;
+       -moz-animation: pop 0.3s;
+            animation: pop 0.3s;
   }
-}
 
-.page.hidden {
-  display: none;
+  &.hidden {
+    display: none;
+  }
 }
