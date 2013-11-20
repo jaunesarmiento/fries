@@ -138,8 +138,10 @@
       font-weight: normal;
       color: #33b5e5;
       line-height: 56px; }
-  .dialog .dialog-content ul.list li {
-    padding: 5px 15px; }
+  .dialog .dialog-content {
+    color: white; }
+    .dialog .dialog-content ul.list li {
+      padding: 5px 15px; }
   .dialog ul.dialog-actions {
     list-style: none;
     border-top: 1px solid #424242;

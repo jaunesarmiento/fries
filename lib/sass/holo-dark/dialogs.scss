@@ -61,6 +61,8 @@
   }
 
   .dialog-content {
+    color: $dialog-text-color;
+
     ul.list li {
       padding: 5px 15px;
     }
