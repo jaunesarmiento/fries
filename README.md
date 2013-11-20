@@ -1,4 +1,4 @@
-# Fries v2.0.1 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jaunesarmiento/fries/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# Fries v2.0.2 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jaunesarmiento/fries/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Fries is an awesome mobile UI framework for Android apps using just HTML, CSS,
 and Javascript and is inspired by [Ratchet].
