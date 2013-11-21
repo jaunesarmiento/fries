@@ -1,105 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Fries</title>
-  <meta name="description" content="Fries: Prototype Android apps using HTML, CSS, and JavaScript.">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+---
+layout: default
+---
 
-  <link rel="shortcut icon" href="favicon.png">
+<div class="docs-content">
 
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" type="text/css">
-  <link rel="stylesheet" href="dist/themes/holo-dark/holo-dark.min.css">
-  <link rel="stylesheet" href="docs/css/documentation.css">
-  <link rel="stylesheet" href="docs/css/prettify.css">
+  <section class="masthead content-section">
+    <h1>Fries v2.0.2</h1>
+    <p class="subtitle">Create sexy Android-like UI<br />using HTML, CSS, and JavaScript.</p>
 
-  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <div class="downloads">
+      <a href="https://github.com/jaunesarmiento/fries/archive/master.zip" data-ignore="true" class="btn docs-button" onClick="_gaq.push(['_trackEvent', 'Download Body', 'v{{ site.version }}']);">Download Fries v{{ site.version }}</a>
+      <a href="https://github.com/jaunesarmiento/fries/" data-ignore="true" class="btn docs-button" onClick="_gaq.push(['_trackEvent', 'View on GitHub', 'v{{ site.version }}']);">View it on GitHub</a>
 
-  ga('create', 'UA-45895987-1', 'jaunesarmiento.me');
-  ga('send', 'pageview');
-  </script>
-</head>
-<body>
-  <header class="action-bar docs-header">
-    <a href="index.html" class="app-icon action" data-ignore="true">
-      <i class="icon-fries"></i>
-      <h1 class="title">Fries</h1>
-    </a>
+      <a href="examples/index.html" class="btn docs-button view-demo">View Demo</a>
 
-    <div class="tab-fixed">
-      <ul class="tab-inner">
-        <li><a href="about.html" data-ignore="true" title="About">About</a></li>
-        <li><a href="components.html" data-ignore="true" title="Components">Components</a></li>
-        <li><a href="https://github.com/jaunesarmiento/fries" data-ignore="true" title="GitHub">GitHub</a></li>
-        <li><a href="https://github.com/jaunesarmiento/fries/archive/master.zip" data-ignore="true" title="Download">Download</a></li>
-        <li><a href="credits.html" data-ignore="true" title="Credits">Credits</a></li>
+
+      <ul>
+        <li><a data-ignore="true" class="twitter-share-button" href="https://twitter.com/share" data-url="http://jaunesarmiento.me/fries/" data-text="Fries v{{ site.version }}: Create sexy #Android UI using #HTML, #CSS, and #JavaScript." data-via="getfries">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </li>
+        <li>
+          <a data-ignore="true" class="twitter-follow-button" href="https://twitter.com/getfries" data-show-count="true">Follow @getfries</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </li>
+        <li>
+          <iframe width="107" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=watch&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+        </li>
+        <li>
+          <iframe width="95" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=fork&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+        </li>
       </ul>
-    </div>
-    <ul class="actions pull-right">
-      <li class="action-overflow">
-        <a class="action action-overflow-icon toggle-spinner"><i></i></a>
-        <ol reversed="reversed" class="action-overflow-list spinner">
-          <li class="spinner-item"><a href="index.html" title="Home">Home</a></li>
-          <li class="spinner-item"><a href="about.html" data-ignore="true">About</a></li>
-          <li class="spinner-item"><a href="components.html" data-ignore="true">Components</a></li>
-          <li class="spinner-item"><a href="https://github.com/jaunesarmiento/fries" data-ignore="true">GitHub</a></li>
-          <li class="spinner-item"><a href="https://github.com/jaunesarmiento/fries/archive/master.zip" data-ignore="true">Download</a></li>
-          <li class="spinner-item"><a href="credits.html" data-ignore="true">Credits</a></li>
-        </ol>
-      </li>
-    </ul>
-
-  </header>
-
-  <div class="non-webkit-notice">
-    <p><strong>Hey there, buddy!</strong> It seems that you're not using a Webkit browser. Fries is made for Android which is Webkit-based. You might see or experience some clunks while browsing this site.</p>
-  </div>
-
-  <div class="docs-content">
-
-    <section class="masthead content-section">
-      <h1>Fries v2.0.2</h1>
-      <p class="subtitle">Create sexy Android-like UI<br />using HTML, CSS, and JavaScript.</p>
-
-      <div class="downloads">
-        <a href="https://github.com/jaunesarmiento/fries/archive/master.zip" data-ignore="true" class="btn docs-button" onClick="_gaq.push(['_trackEvent', 'Download Body', 'v2.0.2']);">Download Fries v2.0.2</a>
-        <a href="https://github.com/jaunesarmiento/fries/" data-ignore="true" class="btn docs-button" onClick="_gaq.push(['_trackEvent', 'View on GitHub', 'v2.0.2']);">View it on GitHub</a>
-
-        <a href="examples/index.html" class="btn docs-button view-demo">View Demo</a>
-
-
-        <ul>
-          <li><a data-ignore="true" class="twitter-share-button" href="https://twitter.com/share" data-url="http://jaunesarmiento.me/fries/" data-text="Fries v2.0.2: Create sexy #Android UI using #HTML, #CSS, and #JavaScript." data-via="getfries">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </li>
-          <li>
-            <a data-ignore="true" class="twitter-follow-button" href="https://twitter.com/getfries" data-show-count="true">Follow @getfries</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          </li>
-          <li>
-            <iframe width="107" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=watch&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
-          </li>
-          <li>
-            <iframe width="95" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=fork&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-  </div>
-
-  <section id="nexus">
-    <div class="nexus-overlay"></div>
-    <div class="nexus-content">
-      <iframe src="./examples/index.html"></iframe>
     </div>
   </section>
 
-  <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
-  <script src="docs/js/prettify.js"></script>
-  <script src="docs/js/documentation.js"></script>
-</body>
-</html>
+</div>
+
+<section id="nexus">
+  <div class="nexus-overlay"></div>
+  <div class="nexus-content">
+    <iframe src="./examples/index.html"></iframe>
+  </div>
+</section>

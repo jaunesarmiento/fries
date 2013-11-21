@@ -1,142 +1,85 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Fries - About Fries</title>
-  <meta name="description" content="Fries: Prototype Android apps using HTML, CSS, and JavaScript.">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+---
+layout: default
+---
 
-  <link rel="shortcut icon" href="favicon.png">
-
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" type="text/css">
-  <link rel="stylesheet" href="dist/themes/holo-dark/holo-dark.min.css">
-  <link rel="stylesheet" href="docs/css/documentation.css">
-  <link rel="stylesheet" href="docs/css/prettify.css">
-
-  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-45895987-1', 'jaunesarmiento.me');
-  ga('send', 'pageview');
-  </script>
-</head>
-<body>
-  <header class="action-bar docs-header">
-    <a href="index.html" class="app-icon action" data-ignore="true">
-      <i class="icon-fries"></i>
-      <h1 class="title">Fries</h1>
-    </a>
-    <div class="tab-fixed">
-      <ul class="tab-inner">
-        <li class="active"><a href="about.html" data-ignore="true" title="About">About</a></li>
-        <li><a href="components.html" data-ignore="true" title="Components">Components</a></li>
-        <li><a href="https://github.com/jaunesarmiento/fries" data-ignore="true" title="GitHub">GitHub</a></li>
-        <li><a href="https://github.com/jaunesarmiento/fries/archive/master.zip" data-ignore="true" title="Download">Download</a></li>
-        <li><a href="credits.html" data-ignore="true" title="Credits">Credits</a></li>
-      </ul>
-    </div>
-    <ul class="actions pull-right">
-      <li class="action-overflow">
-        <a class="action action-overflow-icon toggle-spinner"><i></i></a>
-        <ol reversed="reversed" class="action-overflow-list spinner">
-          <li class="spinner-item"><a href="index.html" data-ignore="true" title="Home">Home</a></li>
-          <li class="spinner-item"><a href="about.html" data-ignore="true">About</a></li>
-          <li class="spinner-item"><a href="components.html" data-ignore="true">Components</a></li>
-          <li class="spinner-item"><a href="https://github.com/jaunesarmiento/fries" data-ignore="true">GitHub</a></li>
-          <li class="spinner-item"><a href="https://github.com/jaunesarmiento/fries/archive/master.zip" data-ignore="true">Download</a></li>
-          <li class="spinner-item"><a href="credits.html" data-ignore="true">Credits</a></li>
-        </ol>
-      </li>
-    </ul>
-  </header>
-
-  <nav class="action-bar fixed-bottom docs-footer">
-    <ul>
-      <li><a data-ignore="true" class="twitter-share-button" href="https://twitter.com/share" data-url="http://jaunesarmiento.me/fries/" data-text="Fries v2.0.0: Create sexy #Android UI using #HTML, #CSS, and #JavaScript." data-via="getfries">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<nav class="action-bar fixed-bottom docs-footer">
+  <ul>
+    <li><a data-ignore="true" class="twitter-share-button" href="https://twitter.com/share" data-url="http://jaunesarmiento.me/fries/" data-text="Fries v{{ site.version }}: Create sexy #Android UI using #HTML, #CSS, and #JavaScript." data-via="getfries">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </li>
+    <li>
+      <a data-ignore="true" class="twitter-follow-button" href="https://twitter.com/getfries" data-show-count="true">Follow @getfries</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </li>
+    <li>
+      <iframe width="107" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=watch&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+    </li>
+    <li>
+      <iframe width="95" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=fork&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+    </li>
+  </ul>
+</nav>
+
+<div class="docs-sidebar">
+  <ul class="list inset">
+    <li class="list-divider">About Fries</li>
+    <li class="list-item-single-line selectable"><a href="#introduction" data-ignore="true">Introduction</a></li>
+    <li class="list-item-single-line selectable"><a href="#getting-started" data-ignore="true">Getting Started</a></li>
+    <li class="list-item-single-line selectable"><a href="#page-setup" data-ignore="true">Page Setup</a></li>
+  </ul>
+</div>
+
+<div class="docs-content inner-content">
+  <article id="introduction" class="content-section">
+    <header class="section-header">
+      <h2 class="section-title">Introduction</h2>
+      <p class="section-description">Getting to know Fries</p>
+    </header>
+    <p>Fries is an awesome mobile UI development framework for Android apps using just HTML, CSS, and Javascript. Fries was inspired by <a href="http://maker.github.io/ratchet/">Ratchet</a> so Fries extending its huge thanks to the Ratchet team.</p>
+  </article>
+
+  <article id="getting-started" class="content-section">
+    <header class="section-header">
+      <h2 class="section-title">Getting started</h2>
+      <p class="section-description">What to do next after downloading</p>
+    </header>
+
+    <ol class="docs">
       <li>
-        <a data-ignore="true" class="twitter-follow-button" href="https://twitter.com/getfries" data-show-count="true">Follow @getfries</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <h3>Create your pages</h3>
+        <p>Creating the markup for your pages is really easy. Just follow these docs on how to write them. You may also customize the styles to make the prototype your own.</p>
       </li>
       <li>
-        <iframe width="107" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=watch&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+        <h3>Stitch them up with stack.js</h3>
+        <p>Stack.js allows you to create interactive pages by dynamically loading HTML on the fly and inserting it to your app. Read more about stack.js to understand how this works.</p>
       </li>
       <li>
-        <iframe width="95" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=fork&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+        <h3>Deep-fry your Fries</h3>
+        <p>If you're testing on your browser, you can modify the screen resolution and emulate touches on your Chrome by going to the Developer Tools then Overrides. Change the device metrics from there and click "Emulate touch events".</p>
+        <p>To test your Fries app on your device, serve it from your local web server and load it up on your Android browser.</p>
+        <p>You can also do this by installing a web server on your Android device and serving the files from there. Or you can create a PhoneGap Android project then copy your files into its <code>/assets/www/</code> directory.</p>
       </li>
-    </ul>
-  </nav>
+    </ol>
+  </article>
 
-  <div class="docs-sidebar">
-    <ul class="list inset">
-      <li class="list-divider">About Fries</li>
-      <li class="list-item-single-line selectable"><a href="#introduction" data-ignore="true">Introduction</a></li>
-      <li class="list-item-single-line selectable"><a href="#getting-started" data-ignore="true">Getting Started</a></li>
-      <li class="list-item-single-line selectable"><a href="#page-setup" data-ignore="true">Page Setup</a></li>
-    </ul>
-  </div>
-
-  <div class="docs-content inner-content">
-    <article id="introduction" class="content-section">
-      <header class="section-header">
-        <h2 class="section-title">Introduction</h2>
-        <p class="section-description">Getting to know Fries</p>
-      </header>
-      <p>Fries is an awesome mobile UI development framework for Android apps using just HTML, CSS, and Javascript. Fries was inspired by <a href="http://maker.github.io/ratchet/">Ratchet</a> so Fries extending its huge thanks to the Ratchet team.</p>
-    </article>
-
-    <article id="getting-started" class="content-section">
-      <header class="section-header">
-        <h2 class="section-title">Getting started</h2>
-        <p class="section-description">What to do next after downloading</p>
-      </header>
-
-      <ol class="docs">
-        <li>
-          <h3>Create your pages</h3>
-          <p>Creating the markup for your pages is really easy. Just follow these docs on how to write them. You may also customize the styles to make the prototype your own.</p>
-        </li>
-        <li>
-          <h3>Stitch them up with stack.js</h3>
-          <p>Stack.js allows you to create interactive pages by dynamically loading HTML on the fly and inserting it to your app. Read more about stack.js to understand how this works.</p>
-        </li>
-        <li>
-          <h3>Deep-fry your Fries</h3>
-          <p>If you're testing on your browser, you can modify the screen resolution and emulate touches on your Chrome by going to the Developer Tools then Overrides. Change the device metrics from there and click "Emulate touch events".</p>
-          <p>To test your Fries app on your device, serve it from your local web server and load it up on your Android browser.</p>
-          <p>You can also do this by installing a web server on your Android device and serving the files from there. Or you can create a PhoneGap Android project then copy your files into its <code>/assets/www/</code> directory.</p>
-        </li>
-      </ol>
-    </article>
-
-    <article id="page-setup" class="content-section">
-      <div class="section-header">
-        <h2 class="section-title">Page setup</h2>
-        <p class="section-description">Making your Fries extra crispy</p>
-      </div>
-      <p>Here's how to setup your pages so that they're fully functional.</p>
-      <ol class="docs">
-        <li>
-          <h3>Wrap everything in a div with <code>.page</code> class</h3>
-          <p>The <code>.page</code> class is required to get the page transitions working perfectly. All fixed bars and tabs (<code>.action-bar</code>, <code>.tab-fixed</code>) should always be the first thing inside the <code>.page</code> div. This is really important!</p>
-        </li>
-        <li>
-          <h3>Everything else goes in <code>.content</code></h3>
-          <p>Anything that's not an <code>.action-bar</code> or a <code>.tab-fixed</code> should be put in a <code>div</code> with the class "content". Put this div after the bars in the <code>.page</code> div. The <code>.content</code> div is what actually scrolls in a Fries app.</p>
-        </li>
-        <li>
-          <h3>Don't forget your meta tags</h3>
-          <p>The meta tags are included in the <a href="https://github.com/jaunesarmiento/fries/blob/master/examples/template.html" target="_blank" data-ignore="true">template.html</a> that comes with your Fries. Make sure they're in your HTML so Fries works.</p>
-        </li>
-      </ol>
-    </article>
-  </div>
-
-  <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
-  <script src="docs/js/prettify.js"></script>
-  <script src="docs/js/documentation.js"></script>
-</body>
-</html>
+  <article id="page-setup" class="content-section">
+    <div class="section-header">
+      <h2 class="section-title">Page setup</h2>
+      <p class="section-description">Making your Fries extra crispy</p>
+    </div>
+    <p>Here's how to setup your pages so that they're fully functional.</p>
+    <ol class="docs">
+      <li>
+        <h3>Wrap everything in a div with <code>.page</code> class</h3>
+        <p>The <code>.page</code> class is required to get the page transitions working perfectly. All fixed bars and tabs (<code>.action-bar</code>, <code>.tab-fixed</code>) should always be the first thing inside the <code>.page</code> div. This is really important!</p>
+      </li>
+      <li>
+        <h3>Everything else goes in <code>.content</code></h3>
+        <p>Anything that's not an <code>.action-bar</code> or a <code>.tab-fixed</code> should be put in a <code>div</code> with the class "content". Put this div after the bars in the <code>.page</code> div. The <code>.content</code> div is what actually scrolls in a Fries app.</p>
+      </li>
+      <li>
+        <h3>Don't forget your meta tags</h3>
+        <p>The meta tags are included in the <a href="https://github.com/jaunesarmiento/fries/blob/master/examples/template.html" target="_blank" data-ignore="true">template.html</a> that comes with your Fries. Make sure they're in your HTML so Fries works.</p>
+      </li>
+    </ol>
+  </article>
+</div>

@@ -1,0 +1,29 @@
+<header class="action-bar docs-header">
+  <a href="index.html" class="app-icon action" data-ignore="true">
+    <i class="icon-fries"></i>
+    <h1 class="title">Fries</h1>
+  </a>
+
+  <div class="tab-fixed">
+    <ul class="tab-inner">
+      <li {% if page.url == "/about.html" %}class="active"{% endif %}><a href="about.html" data-ignore="true" title="About">About</a></li>
+      <li {% if page.url == "/components.html" %}class="active"{% endif %}><a href="components.html" data-ignore="true" title="Components">Components</a></li>
+      <li><a href="https://github.com/jaunesarmiento/fries" data-ignore="true" title="GitHub">GitHub</a></li>
+      <li><a href="https://github.com/jaunesarmiento/fries/archive/master.zip" data-ignore="true" title="Download">Download</a></li>
+      <li {% if page.url == "/credits.html" %}class="active"{% endif %}><a href="credits.html" data-ignore="true" title="Credits">Credits</a></li>
+    </ul>
+  </div>
+  <ul class="actions pull-right">
+    <li class="action-overflow">
+      <a class="action action-overflow-icon toggle-spinner"><i></i></a>
+      <ol reversed="reversed" class="action-overflow-list spinner">
+        <li class="spinner-item"><a href="index.html" title="Home">Home</a></li>
+        <li class="spinner-item"><a href="about.html" data-ignore="true">About</a></li>
+        <li class="spinner-item"><a href="components.html" data-ignore="true">Components</a></li>
+        <li class="spinner-item"><a href="https://github.com/jaunesarmiento/fries" data-ignore="true">GitHub</a></li>
+        <li class="spinner-item"><a href="https://github.com/jaunesarmiento/fries/archive/master.zip" data-ignore="true">Download</a></li>
+        <li class="spinner-item"><a href="credits.html" data-ignore="true">Credits</a></li>
+      </ol>
+    </li>
+  </ul>
+</header>
