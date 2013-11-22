@@ -74,25 +74,6 @@ module.exports = function(grunt) {
           }
         ]
       }
-    },
-    connect: {
-      server: {
-        options: {
-          port: 8000,
-          keepalive: true
-        }
-      }
-    },
-    watch: {
-      scripts: {
-        files: [
-          'lib/**/*.scss'
-        ],
-        tasks: ['dist-css'],
-        options: {
-          livereload: 8000
-        }
-      }
     }
   });
 
@@ -102,15 +83,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'cssmin', 'copy']);
 
   grunt.registerTask('dist-js', ['jshint', 'concat', 'uglify']);
 
   grunt.registerTask('dist-css', ['sass', 'cssmin', 'copy']);
-
-  grunt.registerTask('server', ['jshint', 'connect']);
 
 };
