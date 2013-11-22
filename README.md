@@ -26,7 +26,7 @@ $ bower install fries
 Fries uses [Jekyll] to run the documentation and examples.
 
 ### Running the docs and examples locally
-1.  Install Jekyll
+1.  Install [Jekyll]
 2.  From the root directory of Fries, run `jekyll serve`
 3.  Open `http://localhost:4000/` in your favorite browser to see the documentation or `http://localhost:4000/examples/` for the examples.
 
