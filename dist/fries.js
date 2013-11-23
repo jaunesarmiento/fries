@@ -428,6 +428,8 @@
       transitionFromObj = activeObj;
     }
 
+    console.log(direction);
+
     if (direction == 'back' && !transitionFromObj.id) return doXHR.id = id;
 
     transition = direction == 'back' ? 'pop' : transitionFromObj.transition;
@@ -464,7 +466,7 @@
     }
 
     xhr = new XMLHttpRequest();
-    xhr.open('GET', options.url, true);
+    xhr.open('GET', options.url, false);
     xhr.setRequestHeader('X-DOCUMENT', 'true');
 
     xhr.onreadystatechange = function () {
@@ -510,10 +512,11 @@
     if (/push/.test(transition)) {
       contents.classList.add(transition);
       container.classList.add('fade');
-      contents.addEventListener('webkitAnimationEnd', onAnimationEnd, false);
+      contents.addEventListener('webkitAnimationEnd', onPushAnimationEnd, false);
 
       // Causes a jshint warning. Use --force to ignore
       function onPushAnimationEnd() {
+        console.log(container);
         contents.removeEventListener('webkitAnimationEnd', onPushAnimationEnd, false);
         contents.classList.remove(transition);
         if (container.parentNode) container.parentNode.removeChild(container);
