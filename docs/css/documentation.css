@@ -114,7 +114,7 @@ code {
 .docs-footer ul {
   list-style: none;
   padding: 12px 0 0;
-  width: 560px;
+  width: 640px;
   margin: 0 auto;
 }
 
@@ -392,4 +392,7 @@ p.component-description {
     font-size: 18px;
   }
 
+  .component-example {
+    margin: 0 -40px;
+  }
 }

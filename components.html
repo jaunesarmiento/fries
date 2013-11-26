@@ -1,342 +1,290 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Fries - Components</title>
-  <meta name="description" content="Fries: Prototype Android apps using HTML, CSS, and JavaScript.">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+---
+layout: default
+---
 
-  <link rel="shortcut icon" href="favicon.png">
-
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" type="text/css">
-  <link rel="stylesheet" href="dist/themes/holo-dark/holo-dark.min.css">
-  <link rel="stylesheet" href="docs/css/documentation.css">
-  <link rel="stylesheet" href="docs/css/prettify.css">
-
-  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-45895987-1', 'jaunesarmiento.me');
-  ga('send', 'pageview');
-  </script>
-</head>
-<body>
-  <header class="action-bar docs-header">
-    <a href="index.html" class="app-icon action">
-      <i class="icon-fries"></i>
-      <h1 class="title">Fries</h1>
-    </a>
-    <div class="tab-fixed">
-      <ul class="tab-inner">
-        <li><a href="about.html" title="About">About</a></li>
-        <li class="active"><a href="components.html"  title="Components">Components</a></li>
-        <li><a href="https://github.com/jaunesarmiento/fries" title="GitHub">GitHub</a></li>
-        <li><a href="https://github.com/jaunesarmiento/fries/archive/master.zip" title="Download">Download</a></li>
-        <li><a href="credits.html" title="Credits">Credits</a></li>
-      </ul>
-    </div>
-    <ul class="actions pull-right">
-      <li class="action-overflow-docs">
-        <a class="action action-overflow-icon toggle-spinner"><i></i></a>
-        <ol reversed="reversed" class="action-overflow-list spinner">
-          <li class="spinner-item"><a href="index.html" title="Home">Home</a></li>
-          <li class="spinner-item"><a href="about.html" data-ignore="true">About</a></li>
-          <li class="spinner-item"><a href="components.html" data-ignore="true">Components</a></li>
-          <li class="spinner-item"><a href="https://github.com/jaunesarmiento/fries" data-ignore="true">GitHub</a></li>
-          <li class="spinner-item"><a href="https://github.com/jaunesarmiento/fries/archive/master.zip" data-ignore="true">Download</a></li>
-          <li class="spinner-item"><a href="credits.html" data-ignore="true">Credits</a></li>
-        </ol>
-      </li>
-    </ul>
-
-  </header>
-
-  <div class="non-webkit-notice inner">
-    <p><strong>Hey there, buddy!</strong> It seems that you're not using a Webkit browser. Fries is made for Android which is Webkit-based. You might see or experience some clunks while browsing this site.</p>
-  </div>
-
-  <nav class="action-bar fixed-bottom docs-footer">
-    <ul>
-      <li><a data-ignore="true" class="twitter-share-button" href="https://twitter.com/share" data-url="http://jaunesarmiento.me/fries/" data-text="Fries v2.0.0: Create sexy #Android UI using #HTML, #CSS, and #JavaScript." data-via="getfries">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<nav class="action-bar fixed-bottom docs-footer">
+  <ul>
+    <li><a data-ignore="true" class="twitter-share-button" href="https://twitter.com/share" data-url="http://jaunesarmiento.me/fries/" data-text="Fries v{{ site.version }}: Create sexy #Android UI using #HTML, #CSS, and #JavaScript." data-via="getfries">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </li>
-      <li>
-        <a data-ignore="true" class="twitter-follow-button" href="https://twitter.com/getfries" data-show-count="true">Follow @getfries</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </li>
-      <li>
-        <iframe width="107" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=watch&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
-      </li>
-      <li>
-        <iframe width="95" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=fork&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
-      </li>
-    </ul>
-  </nav>
+    <li>
+      <a data-ignore="true" class="twitter-follow-button" href="https://twitter.com/getfries" data-show-count="true">Follow @getfries</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </li>
+    <li>
+      <iframe width="107" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=watch&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+    </li>
+    <li>
+      <iframe width="95" height="20" src="http://ghbtns.com/github-btn.html?user=jaunesarmiento&repo=fries&type=fork&count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submit" class="hn-button" data-title="Fries" data-url="http://jaunesarmiento.me/fries/" data-count="horizontal" data-style="twitter">Vote on Hacker News</a>
+      <script type="text/javascript">var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+    </li>
+  </ul>
+</nav>
 
-  <div class="docs-sidebar">
-    <ul class="list inset">
-      <li class="list-divider">Components</li>
-      <li class="list-item-single-line selectable"><a href="#action-bars">Action Bars</a></li>
-      <li class="list-item-single-line selectable"><a href="#tabs">Tabs</a></li>
-      <li class="list-item-single-line selectable"><a href="#buttons">Buttons</a></li>
-      <li class="list-item-single-line selectable"><a href="#spinners" data-ignore="true">Spinners</a></li>
-      <li class="list-item-single-line selectable"><a href="#lists">Lists</a></li>
-      <li class="list-item-single-line selectable"><a href="#forms">Forms</a></li>
-      <li class="list-item-single-line selectable"><a href="#dialogs">Dialogs</a></li>
-      <li class="list-item-single-line selectable"><a href="#toasts">Toast Notifications</a></li>
-      <li class="list-item-single-line selectable"><a href="#helpers">Helpers</a></li>
-      <li class="list-item-single-line selectable"><a href="#stack-js">Stack.js</a></li>
-    </ul>
-  </div>
+<div class="docs-sidebar">
+  <ul class="list inset">
+    <li class="list-divider">Components</li>
+    <li class="list-item-single-line selectable"><a href="#action-bars">Action Bars</a></li>
+    <li class="list-item-single-line selectable"><a href="#tabs">Tabs</a></li>
+    <li class="list-item-single-line selectable"><a href="#buttons">Buttons</a></li>
+    <li class="list-item-single-line selectable"><a href="#spinners" data-ignore="true">Spinners</a></li>
+    <li class="list-item-single-line selectable"><a href="#lists">Lists</a></li>
+    <li class="list-item-single-line selectable"><a href="#forms">Forms</a></li>
+    <li class="list-item-single-line selectable"><a href="#dialogs">Dialogs</a></li>
+    <li class="list-item-single-line selectable"><a href="#toasts">Toast Notifications</a></li>
+    <li class="list-item-single-line selectable"><a href="#helpers">Helpers</a></li>
+    <li class="list-item-single-line selectable"><a href="#stack-js">Stack.js</a></li>
+  </ul>
+</div>
 
-  <div class="docs-content inner-content">
+<div class="docs-content inner-content">
 
-    <article id="components" class="content-section">
-      <div class="section-header">
-        <h2 class="section-title">Components</h2>
-        <p class="section-description">UI building blocks</p>
-      </div>
+  <article id="components" class="content-section">
+    <div class="section-header">
+      <h2 class="section-title">Components</h2>
+      <p class="section-description">UI building blocks</p>
+    </div>
 
-      <section id="action-bars" class="component">
-        <h3 class="component-title">Action bars</h3>
-        <p class="component-description">Action bars serve as your main navigation throughout your app. These hold the app icon, app title, action buttons, and can also hold tabs.</p>
-        <p class="component-description">App icons must be 32px in height. It can have any width though as long as your prototype doesn't break its layout.</p>
+    <section id="action-bars" class="component">
+      <h3 class="component-title">Action bars</h3>
+      <p class="component-description">Action bars serve as your main navigation throughout your app. These hold the app icon, app title, action buttons, and can also hold tabs.</p>
+      <p class="component-description">App icons must be 32px in height. It can have any width though as long as your prototype doesn't break its layout.</p>
 
-        <div class="component-example">
-          <header class="action-bar">
-            <a href="javascript: void(0);" class="app-icon action">
-              <i class="icon-fries"></i>
-            </a>
-            <h1 class="title">Title</h1>
-          </header>
-        </div>
-
-<pre class="prettyprint">
-&lt;header class="action-bar"&gt;
-  &lt;a href="javascript: void(0);" class="app-icon action"&gt;
-    &lt;i class="icon-fries"&gt;&lt;/i&gt;
-  &lt;/a&gt;
-  &lt;h1 class="title"&gt;Title&lt;/h1&gt;
-&lt;/header&gt;
-</pre>
-      </section>
-
-
-     <section id="action-bar-with-up-button" class="component">
-      <h3 class="component-title">Action bar with Up button</h3>
-      <p class="component-description">Adding the Up button means that the current screen is not at the top level. The data attribute <code>data-transition="pop"</code> tells Fries that when this button is pressed, the browser's history stack is popped, taking the user  back to the previous page or whatever is in the <code>href</code>.</p>
-
-        <div class="component-example">
+      <div class="component-example">
         <header class="action-bar">
-          <a href="javascript: void(0)" class="app-icon action up" data-transition="pop">
-            <i class="icon-up-button"></i>
+          <a href="javascript: void(0);" class="app-icon action">
             <i class="icon-fries"></i>
           </a>
           <h1 class="title">Title</h1>
         </header>
-        </div>
+      </div>
 
 <pre class="prettyprint">
 &lt;header class="action-bar"&gt;
-  &lt;a href="javascript: void(0);" class="app-icon action up" data-transition="pop"&gt;
-    &lt;i class="icon-up-button"&gt;&lt;/i&gt;
-    &lt;i class="icon-fries"&gt;&lt;/i&gt;
-  &lt;/a&gt;
-  &lt;h1 class="title"&gt;Title&lt;/h1&gt;
+&lt;a href="javascript: void(0);" class="app-icon action"&gt;
+  &lt;i class="icon-fries"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;h1 class="title"&gt;Title&lt;/h1&gt;
 &lt;/header&gt;
 </pre>
-      </section>
+    </section>
 
 
-      <section id="action-bar-with-subtitle" class="component">
-        <h3 class="component-title">Action bar with subtitles</h3>
-        <p class="component-description">You can also create an action bar with a title and a subtitle</p>
+   <section id="action-bar-with-up-button" class="component">
+    <h3 class="component-title">Action bar with Up button</h3>
+    <p class="component-description">Adding the Up button means that the current screen is not at the top level. The data attribute <code>data-transition="pop"</code> tells Fries that when this button is pressed, the browser's history stack is popped, taking the user  back to the previous page or whatever is in the <code>href</code>.</p>
 
-        <div class="component-example">
-          <header class="action-bar">
-            <a href="javascript: void(0);" class="app-icon action">
-              <i class="icon-fries"></i>
-            </a>
-            <h2 class="title">Title <span class="subtitle">Subtitle</span></h2>
-          </header>
-        </div>
+      <div class="component-example">
+      <header class="action-bar">
+        <a href="javascript: void(0)" class="app-icon action up" data-transition="pop">
+          <i class="icon-up-button"></i>
+          <i class="icon-fries"></i>
+        </a>
+        <h1 class="title">Title</h1>
+      </header>
+      </div>
 
 <pre class="prettyprint">
 &lt;header class="action-bar"&gt;
-  &lt;a href="javascript: void(0);" class="app-icon action"&gt;
-    &lt;i class="icon-fries"&gt;&lt;/i&gt;
-  &lt;/a&gt;
-  &lt;h2 class="title"&gt;Title &lt;span class="subtitle"&gt;Subtitle&lt;/span&gt;&lt;/h2&gt;
+&lt;a href="javascript: void(0);" class="app-icon action up" data-transition="pop"&gt;
+  &lt;i class="icon-up-button"&gt;&lt;/i&gt;
+  &lt;i class="icon-fries"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;h1 class="title"&gt;Title&lt;/h1&gt;
 &lt;/header&gt;
 </pre>
-      </section>
+    </section>
 
 
-      <section id="action-buttons" class="component">
-        <h3 class="component-title">Action buttons</h3>
-        <p class="component-description">Action bars can also have buttons in them.</p>
+    <section id="action-bar-with-subtitle" class="component">
+      <h3 class="component-title">Action bar with subtitles</h3>
+      <p class="component-description">You can also create an action bar with a title and a subtitle</p>
 
-        <div class="component-example">
-          <header class="action-bar fixed-top">
-            <a href="javascript: void(0);" class="app-icon action">
-              <i class="icon-fries"></i>
-            </a>
-            <h1 class="title">Action Buttons</h1>
-            <ul class="actions pull-right">
-              <li><a href="javascript: void(0);" class="action" title="Search"><i class="icon-search"></i></a></li>
-              <li><a href="javascript: void(0);" class="action" title="Settings"><i class="icon-settings"></i></a></li>
-            </ul>
-          </header>
-        </div>
+      <div class="component-example">
+        <header class="action-bar">
+          <a href="javascript: void(0);" class="app-icon action">
+            <i class="icon-fries"></i>
+          </a>
+          <h2 class="title">Title <span class="subtitle">Subtitle</span></h2>
+        </header>
+      </div>
+
+<pre class="prettyprint">
+&lt;header class="action-bar"&gt;
+&lt;a href="javascript: void(0);" class="app-icon action"&gt;
+  &lt;i class="icon-fries"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;h2 class="title"&gt;Title &lt;span class="subtitle"&gt;Subtitle&lt;/span&gt;&lt;/h2&gt;
+&lt;/header&gt;
+</pre>
+    </section>
+
+
+    <section id="action-buttons" class="component">
+      <h3 class="component-title">Action buttons</h3>
+      <p class="component-description">Action bars can also have buttons in them.</p>
+
+      <div class="component-example">
+        <header class="action-bar fixed-top">
+          <a href="javascript: void(0);" class="app-icon action">
+            <i class="icon-fries"></i>
+          </a>
+          <h1 class="title">Action Buttons</h1>
+          <ul class="actions pull-right">
+            <li><a href="javascript: void(0);" class="action" title="Search"><i class="icon-search"></i></a></li>
+            <li><a href="javascript: void(0);" class="action" title="Settings"><i class="icon-settings"></i></a></li>
+          </ul>
+        </header>
+      </div>
 
 <pre class="prettyprint">
 &lt;header class="action-bar fixed-top"&gt;
-  &lt;a href="javascript: void(0);" class="app-icon action"&gt;
-    &lt;i class="icon-fries"&gt;&lt;/i&gt;
-  &lt;/a&gt;
-  &lt;h1 class="title"&gt;Action Buttons&lt;/h1&gt;
-  &lt;ul class="actions pull-right"&gt;
-    &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Search"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Settings"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+&lt;a href="javascript: void(0);" class="app-icon action"&gt;
+  &lt;i class="icon-fries"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;h1 class="title"&gt;Action Buttons&lt;/h1&gt;
+&lt;ul class="actions pull-right"&gt;
+  &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Search"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Settings"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/header&gt;
 </pre>
-      </section>
+    </section>
 
-      <section id="action-overflows" class="component">
-        <h3 class="component-title">Action overflows</h3>
-        <p class="component-description">Currently, in Fries, you can only add a maximum of two (2) action buttons to the action bar when the device width is less than 480 pixels (<em>which will most likely change in future updates to follow the official Android rules for setting overflows</em>) and you have an app icon and title. This is where action overflows come in.</p>
-        <p class="component-description">Action overflows automatically convert action buttons into a <a href="#spinners" class="open-link">Spinner</a> when there are more than two buttons in your action bar. Fries will automatically use the value of the button's <code>title</code> attribute to generate a Spinner item. So make sure that you add a <code>title</code> to your action buttons.</p>
+    <section id="action-overflows" class="component">
+      <h3 class="component-title">Action overflows</h3>
+      <p class="component-description">Currently, in Fries, you can only add a maximum of two (2) action buttons to the action bar when the device width is less than 480 pixels (<em>which will most likely change in future updates to follow the official Android rules for setting overflows</em>) and you have an app icon and title. This is where action overflows come in.</p>
+      <p class="component-description">Action overflows automatically convert action buttons into a <a href="#spinners" class="open-link">Spinner</a> when there are more than two buttons in your action bar. Fries will automatically use the value of the button's <code>title</code> attribute to generate a Spinner item. So make sure that you add a <code>title</code> to your action buttons.</p>
 
-        <div class="component-example">
-          <header class="action-bar fixed-top">
-            <a href="javascript: void(0);" class="app-icon action">
-              <i class="icon-fries"></i>
-            </a>
-            <h1 class="title">Action Overflows</h1>
-            <ul class="actions pull-right">
-              <li><a href="javascript: void(0);" class="action" title="Search"><i class="icon-search"></i></a></li>
-              <li class="action-overflow-docs">
-                <a class="action action-overflow-icon toggle-spinner"><i></i></a>
-                <ol reversed="reversed" class="action-overflow-list spinner">
-                  <li class="spinner-item"><a href="javascript: void(0);" data-transition="null" data-timeout="null" data-ignore="null">Settings</a></li>
-                  <li class="spinner-item"><a href="javascript: void(0);" data-transition="null" data-timeout="null" data-ignore="null">Cut</a></li>
-                  <li class="spinner-item"><a href="javascript: void(0);" data-transition="null" data-timeout="null" data-ignore="null">Copy</a></li>
-                </ol>
-              </li>
-            </ul>
-          </header>
-        </div>
+      <div class="component-example">
+        <header class="action-bar fixed-top">
+          <a href="javascript: void(0);" class="app-icon action">
+            <i class="icon-fries"></i>
+          </a>
+          <h1 class="title">Action Overflows</h1>
+          <ul class="actions pull-right">
+            <li><a href="javascript: void(0);" class="action" title="Search"><i class="icon-search"></i></a></li>
+            <li class="action-overflow-docs">
+              <a class="action action-overflow-icon toggle-spinner"><i></i></a>
+              <ol reversed="reversed" class="action-overflow-list spinner">
+                <li class="spinner-item"><a href="javascript: void(0);" data-transition="null" data-timeout="null" data-ignore="null">Settings</a></li>
+                <li class="spinner-item"><a href="javascript: void(0);" data-transition="null" data-timeout="null" data-ignore="null">Cut</a></li>
+                <li class="spinner-item"><a href="javascript: void(0);" data-transition="null" data-timeout="null" data-ignore="null">Copy</a></li>
+              </ol>
+            </li>
+          </ul>
+        </header>
+      </div>
 
 <pre class="prettyprint">
 &lt;header class="action-bar fixed-top"&gt;
-  &lt;a href="javascript: void(0);" class="app-icon action"&gt;
-    &lt;i class="icon-fries"&gt;&lt;/i&gt;
-  &lt;/a&gt;
-  &lt;h1 class="title"&gt;Action Buttons&lt;/h1&gt;
-  &lt;ul class="actions pull-right"&gt;
-    &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Search"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Copy"&gt;&lt;i class="icon-copy"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Cut"&gt;&lt;i class="icon-cut"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Settings"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+&lt;a href="javascript: void(0);" class="app-icon action"&gt;
+  &lt;i class="icon-fries"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;h1 class="title"&gt;Action Buttons&lt;/h1&gt;
+&lt;ul class="actions pull-right"&gt;
+  &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Search"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Copy"&gt;&lt;i class="icon-copy"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Cut"&gt;&lt;i class="icon-cut"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Settings"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/header&gt;
 </pre>
-      </section>
+    </section>
 
 
-      <section id="action-bars-fixed-bottom" class="component">
-        <h3 class="component-title">Bottom-fixed action bars</h3>
-        <p class="component-description">You can also fix your action bars at the bottom of the page by adding <code>.fixed-bottom</code> class to your action bars.</p>
+    <section id="action-bars-fixed-bottom" class="component">
+      <h3 class="component-title">Bottom-fixed action bars</h3>
+      <p class="component-description">You can also fix your action bars at the bottom of the page by adding <code>.fixed-bottom</code> class to your action bars.</p>
 
 <pre class="prettyprint">
 &lt;nav class="action-bar fixed-bottom"&gt;
-  &lt;ul class="actions flex"&gt;
-    &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Map"&gt;&lt;i class="icon-location-marker"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Calendar"&gt;&lt;i class="icon-calendar"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Dial"&gt;&lt;i class="icon-dial"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Hang up"&gt;&lt;i class="icon-hang-up"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+&lt;ul class="actions flex"&gt;
+  &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Map"&gt;&lt;i class="icon-location-marker"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Calendar"&gt;&lt;i class="icon-calendar"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Dial"&gt;&lt;i class="icon-dial"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="javascript: void(0);" class="action" title="Hang up"&gt;&lt;i class="icon-hang-up"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/nav&gt;
 </pre>
-      </section>
+    </section>
 
-      <section id="tabs" class="component">
-        <h3 class="component-title">Tabs</h3>
-        <p class="component-description">Tabs are usually used to navigate between multiple screens.</p>
-        <p class="component-description">The following example is rendered by the code below it.</p>
+    <section id="tabs" class="component">
+      <h3 class="component-title">Tabs</h3>
+      <p class="component-description">Tabs are usually used to navigate between multiple screens.</p>
+      <p class="component-description">The following example is rendered by the code below it.</p>
 
-        <div class="component-example">
-          <nav class="tab-fixed">
-            <ul class="tab-inner">
-              <li class="active"><a href="#item1" data-ignore="true">Tab 1</a></li>
-              <li><a href="#item2" data-ignore="true">Tab 2</a></li>
-              <li><a href="#item3" data-ignore="true">Tab 3</a></li>
-            </ul>
-          </nav>
-        </div>
+      <div class="component-example">
+        <nav class="tab-fixed">
+          <ul class="tab-inner">
+            <li class="active"><a href="#item1" data-ignore="true">Tab 1</a></li>
+            <li><a href="#item2" data-ignore="true">Tab 2</a></li>
+            <li><a href="#item3" data-ignore="true">Tab 3</a></li>
+          </ul>
+        </nav>
+      </div>
 
 <pre class="prettyprint">
 &lt;nav class="tab-fixed"&gt;
-  &lt;ul class="tab-inner"&gt;
-    &lt;li class="active"&gt;&lt;a href="#item1" data-ignore="true"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#item2" data-ignore="true"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#item3" data-ignore="true"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+&lt;ul class="tab-inner"&gt;
+  &lt;li class="active"&gt;&lt;a href="#item1" data-ignore="true"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#item2" data-ignore="true"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#item3" data-ignore="true"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/nav&gt;
 </pre>
 
-      <p class="component-description">The content that slides when a tab is clicked should follow the following markup. Notice that the <code>href</code> attributes of the tabs above match the <code>id</code> attributes of each <code>.tab-item</code>.</p>
+    <p class="component-description">The content that slides when a tab is clicked should follow the following markup. Notice that the <code>href</code> attributes of the tabs above match the <code>id</code> attributes of each <code>.tab-item</code>.</p>
 
 <pre class="prettyprint">
 &lt;div class="content"&gt;
-  &lt;div class="slider"&gt;
-    &lt;ul&gt;
-      &lt;li id="item1" class="tab-item active"&gt;
-        &lt;!-- Any content can go here --&gt;
-        &lt;div class="inset"&gt;
-          &lt;p&gt;Item 1&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li id="item2" class="tab-item"&gt;
-        &lt;!-- Any content can go here --&gt;
-        &lt;div class="inset"&gt;
-          &lt;p&gt;Item 2&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li id="item3" class="tab-item"&gt;
-        &lt;!-- Any content can go here --&gt;
-        &lt;div class="inset"&gt;
-          &lt;p&gt;Item 3&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
+&lt;div class="slider"&gt;
+  &lt;ul&gt;
+    &lt;li id="item1" class="tab-item active"&gt;
+      &lt;!-- Any content can go here --&gt;
+      &lt;div class="inset"&gt;
+        &lt;p&gt;Item 1&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li id="item2" class="tab-item"&gt;
+      &lt;!-- Any content can go here --&gt;
+      &lt;div class="inset"&gt;
+        &lt;p&gt;Item 2&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li id="item3" class="tab-item"&gt;
+      &lt;!-- Any content can go here --&gt;
+      &lt;div class="inset"&gt;
+        &lt;p&gt;Item 3&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-      </section>
+    </section>
 
 
-      <section id="buttons" class="component">
-        <h3 class="component-title">Buttons</h3>
-        <p class="component-description">Buttons come in two sizes and supports all button states.</p>
+    <section id="buttons" class="component">
+      <h3 class="component-title">Buttons</h3>
+      <p class="component-description">Buttons come in two sizes and supports all button states.</p>
 
-        <div class="component-example">
-          <div class="black-bg inset">
-            <button class="btn">Normal</button>
-            <button class="btn-small">Small</button>
-            <button class="btn focused">Focused Normal</button>
-            <button class="btn-small focused">Focused Small</button>
-            <button class="btn active">Pressed Normal</button>
-            <button class="btn-small active">Pressed Small</button>
-            <button class="btn focused" disabled>Focused Disabled</button>
-            <button class="btn-small focused" disabled>Focused Disabled Small</button>
-            <button class="btn" disabled>Disabled</button>
-            <button class="btn-small" disabled>Disabled Small</button>
-          </div>
+      <div class="component-example">
+        <div class="black-bg inset">
+          <button class="btn">Normal</button>
+          <button class="btn-small">Small</button>
+          <button class="btn focused">Focused Normal</button>
+          <button class="btn-small focused">Focused Small</button>
+          <button class="btn active">Pressed Normal</button>
+          <button class="btn-small active">Pressed Small</button>
+          <button class="btn focused" disabled>Focused Disabled</button>
+          <button class="btn-small focused" disabled>Focused Disabled Small</button>
+          <button class="btn" disabled>Disabled</button>
+          <button class="btn-small" disabled>Disabled Small</button>
         </div>
+      </div>
 
 <pre class="prettyprint">
 &lt;button class="btn"&gt;Normal&lt;/button&gt;
@@ -351,258 +299,258 @@
 &lt;button class="btn-small" disabled&gt;Disabled Small&lt;/button&gt;
 </pre>
 
-      </section>
+    </section>
 
 
-      <section id="spinners" class="component">
-        <h3 class="component-title">Spinners</h3>
-        <p class="component-description">Spinners come in handy when you want to save up on horizontal real estate and works like a dropdown UI component. Currently, Fries does not change the value of the selected spinner item. It's up to you to do that for now.</p>
+    <section id="spinners" class="component">
+      <h3 class="component-title">Spinners</h3>
+      <p class="component-description">Spinners come in handy when you want to save up on horizontal real estate and works like a dropdown UI component. Currently, Fries does not change the value of the selected spinner item. It's up to you to do that for now.</p>
 
-        <div class="component-example">
-          <div class="black-bg">
-            <form class="form-flex inset">
-              <label class="block-label">Address</label>
-              <div class="flex-group">
-                <input type="text" placeholder="Address" class="input-text flex2">
-                <div class="form-spinner">
-                  <a href="javascript: void(0);" class="toggle-spinner">Home</a>
-                  <ul class="spinner">
-                    <li class="spinner-item"><a href="javascript: void(0);">Work</a></li>
-                    <li class="spinner-item"><a href="javascript: void(0);">Secondary</a></li>
-                  </ul>
-                </div>
+      <div class="component-example">
+        <div class="black-bg">
+          <form class="form-flex inset">
+            <label class="block-label">Address</label>
+            <div class="flex-group">
+              <input type="text" placeholder="Address" class="input-text flex2">
+              <div class="form-spinner">
+                <a href="javascript: void(0);" class="toggle-spinner">Home</a>
+                <ul class="spinner">
+                  <li class="spinner-item"><a href="javascript: void(0);">Work</a></li>
+                  <li class="spinner-item"><a href="javascript: void(0);">Secondary</a></li>
+                </ul>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
+      </div>
 
 <pre class="prettyprint">
 &lt;div class="form-spinner"&gt;
 &lt;a href="javascript: void(0);" class="toggle-spinner"&gt;Home&lt;/a&gt;
 &lt;ul class="spinner"&gt;
-  &lt;li class="spinner-item"&gt;&lt;a href="javascript: void(0);"&gt;Work&lt;/a&gt;&lt;/li&gt;
-  &lt;li class="spinner-item"&gt;&lt;a href="javascript: void(0);"&gt;Secondary&lt;/a&gt;&lt;/li&gt;
+&lt;li class="spinner-item"&gt;&lt;a href="javascript: void(0);"&gt;Work&lt;/a&gt;&lt;/li&gt;
+&lt;li class="spinner-item"&gt;&lt;a href="javascript: void(0);"&gt;Secondary&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
-        <p class="component-description">An <a href="#action-overflows" class="open-link">action overflow</a> is also an example of a spinner.</p>
-      </section>
+      <p class="component-description">An <a href="#action-overflows" class="open-link">action overflow</a> is also an example of a spinner.</p>
+    </section>
 
 
-      <section id="lists" class="component">
-        <h3 class="component-title">Lists</h3>
-        <p class="component-description">Lists can be used to organize your data.</p>
+    <section id="lists" class="component">
+      <h3 class="component-title">Lists</h3>
+      <p class="component-description">Lists can be used to organize your data.</p>
 
-        <div class="component-example">
-          <div class="black-bg">
-            <ul class="list inset">
-              <li class="list-divider">Single Line List</li>
-              <li class="list-item-single-line">List item number one</li>
-              <li class="list-item-single-line">Second list item</li>
-              <li class="list-item-single-line">This is the third item and this is a very long line.</li>
-            </ul>
-          </div>
+      <div class="component-example">
+        <div class="black-bg">
+          <ul class="list inset">
+            <li class="list-divider">Single Line List</li>
+            <li class="list-item-single-line">List item number one</li>
+            <li class="list-item-single-line">Second list item</li>
+            <li class="list-item-single-line">This is the third item and this is a very long line.</li>
+          </ul>
         </div>
+      </div>
 
 <pre class="prettyprint">
 &lt;ul class="list inset"&gt;
-  &lt;li class="list-divider"&gt;Single Line List&lt;/li&gt;
-  &lt;li class="list-item-single-line"&gt;List item number one&lt;/li&gt;
-  &lt;li class="list-item-single-line"&gt;Second list item&lt;/li&gt;
-  &lt;li class="list-item-single-line"&gt;This is the third item and this is a very long line.&lt;/li&gt;
+&lt;li class="list-divider"&gt;Single Line List&lt;/li&gt;
+&lt;li class="list-item-single-line"&gt;List item number one&lt;/li&gt;
+&lt;li class="list-item-single-line"&gt;Second list item&lt;/li&gt;
+&lt;li class="list-item-single-line"&gt;This is the third item and this is a very long line.&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
-      </section>
+    </section>
 
 
-      <section id="two-line-lists" class="component">
-        <h3 class="component-title">2-Line Lists</h3>
+    <section id="two-line-lists" class="component">
+      <h3 class="component-title">2-Line Lists</h3>
 
-        <div class="component-example">
-          <div class="black-bg">
-            <ul class="list inset">
-              <li class="list-divider">2 Line List</li>
-              <li class="list-item-two-lines">
-                <h3>First Item</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </li>
-              <li class="list-item-two-lines">
-                <h3>Second Item</h3>
-                <p>Another list item's description.</p>
-              </li>
-            </ul>
-          </div>
+      <div class="component-example">
+        <div class="black-bg">
+          <ul class="list inset">
+            <li class="list-divider">2 Line List</li>
+            <li class="list-item-two-lines">
+              <h3>First Item</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </li>
+            <li class="list-item-two-lines">
+              <h3>Second Item</h3>
+              <p>Another list item's description.</p>
+            </li>
+          </ul>
         </div>
+      </div>
 
 <pre class="prettyprint">
 &lt;ul class="list inset"&gt;
-  &lt;li class="list-divider"&gt;2 Line List&lt;/li&gt;
-  &lt;li class="list-item-two-lines"&gt;
-    &lt;h3&gt;First Item&lt;/h3&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class="list-item-two-lines"&gt;
-    &lt;h3&gt;Second Item&lt;/h3&gt;
-    &lt;p&gt;Another list item's description.&lt;/p&gt;
-  &lt;/li&gt;
+&lt;li class="list-divider"&gt;2 Line List&lt;/li&gt;
+&lt;li class="list-item-two-lines"&gt;
+  &lt;h3&gt;First Item&lt;/h3&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li class="list-item-two-lines"&gt;
+  &lt;h3&gt;Second Item&lt;/h3&gt;
+  &lt;p&gt;Another list item's description.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
-      </section>
+    </section>
 
 
 
-      <section id="multi-line-lists" class="component">
-        <h3 class="component-title">Multi Line Lists</h3>
+    <section id="multi-line-lists" class="component">
+      <h3 class="component-title">Multi Line Lists</h3>
 
-        <div class="component-example">
-          <div class="black-bg">
-            <ul class="list inset">
-              <li class="list-divider">Multi Line List</li>
-              <li class="list-item-multi-line">
-                <h3>Multi Line List Item</h3>
-                <p>Suspendisse potenti. Mauris accumsan consequat urna ut ornare. Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh. Integer congue felis et diam hendrerit imperdiet. Sed pellentesque, ipsum nec vehicula molestie.</p>
-              </li>
-              <li class="list-item-multi-line">
-                <h3>Second Multi Line List Item</h3>
-                <p>Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh.</p>
-              </li>
-            </ul>
-          </div>
+      <div class="component-example">
+        <div class="black-bg">
+          <ul class="list inset">
+            <li class="list-divider">Multi Line List</li>
+            <li class="list-item-multi-line">
+              <h3>Multi Line List Item</h3>
+              <p>Suspendisse potenti. Mauris accumsan consequat urna ut ornare. Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh. Integer congue felis et diam hendrerit imperdiet. Sed pellentesque, ipsum nec vehicula molestie.</p>
+            </li>
+            <li class="list-item-multi-line">
+              <h3>Second Multi Line List Item</h3>
+              <p>Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh.</p>
+            </li>
+          </ul>
         </div>
+      </div>
 
 <pre class="prettyprint">
 &lt;ul class="list inset"&gt;
-  &lt;li class="list-divider"&gt;Multi Line List&lt;/li&gt;
-  &lt;li class="list-item-multi-line"&gt;
-    &lt;h3&gt;Multi Line List Item&lt;/h3&gt;
-    &lt;p&gt;Suspendisse potenti. Mauris accumsan consequat urna ut ornare. Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh. Integer congue felis et diam hendrerit imperdiet. Sed pellentesque, ipsum nec vehicula molestie.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class="list-item-multi-line"&gt;
-    &lt;h3&gt;Second Multi Line List Item&lt;/h3&gt;
-    &lt;p&gt;Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh.&lt;/p&gt;
-  &lt;/li&gt;
+&lt;li class="list-divider"&gt;Multi Line List&lt;/li&gt;
+&lt;li class="list-item-multi-line"&gt;
+  &lt;h3&gt;Multi Line List Item&lt;/h3&gt;
+  &lt;p&gt;Suspendisse potenti. Mauris accumsan consequat urna ut ornare. Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh. Integer congue felis et diam hendrerit imperdiet. Sed pellentesque, ipsum nec vehicula molestie.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li class="list-item-multi-line"&gt;
+  &lt;h3&gt;Second Multi Line List Item&lt;/h3&gt;
+  &lt;p&gt;Nunc velit magna, vulputate ac faucibus eu, laoreet eget eros. Quisque tortor dui, gravida in condimentum non, tempus et nibh.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
-      </section>
+    </section>
 
 
-      <section id="forms" class="component">
-        <h3 class="component-title">Forms</h3>
-        <p class="component-description">The default style of the form component is at block level. All elements are sitting on its own line.</p>
+    <section id="forms" class="component">
+      <h3 class="component-title">Forms</h3>
+      <p class="component-description">The default style of the form component is at block level. All elements are sitting on its own line.</p>
 
-        <div class="component-example">
-          <div class="black-bg">
-            <form class="inset">
-              <label class="block-label">Email</label>
-              <input type="email" name="email" placeholder="Email" class="input-text">
+      <div class="component-example">
+        <div class="black-bg">
+          <form class="inset">
+            <label class="block-label">Email</label>
+            <input type="email" name="email" placeholder="Email" class="input-text">
 
-              <label class="block-label">Password</label>
-              <input type="password" name="password" placeholder="Password" class="input-text">
+            <label class="block-label">Password</label>
+            <input type="password" name="password" placeholder="Password" class="input-text">
 
-              <div class="form-actions">
-                <input type="submit" class="btn btn-block" value="Submit"></input>
-                <button type="button" class="btn btn-block">Cancel</button>
-              </div>
-            </form>
-          </div>
+            <div class="form-actions">
+              <input type="submit" class="btn btn-block" value="Submit"></input>
+              <button type="button" class="btn btn-block">Cancel</button>
+            </div>
+          </form>
         </div>
+      </div>
 
 <pre class="prettyprint">
 &lt;form class="inset"&gt;
-  &lt;label class="block-label"&gt;Email&lt;/label&gt;
-  &lt;input type="email" name="email" placeholder="Email" class="input-text"&gt;
-  &lt;label class="block-label"&gt;Password&lt;/label&gt;
-  &lt;input type="password" name="password" placeholder="Password" class="input-text"&gt;
-  &lt;div class="form-actions"&gt;
-    &lt;input type="submit" class="btn btn-block" value="Submit"&gt;
-    &lt;button type="button" class="btn btn-block"&gt;Cancel&lt;/button&gt;
-  &lt;/div&gt;
+&lt;label class="block-label"&gt;Email&lt;/label&gt;
+&lt;input type="email" name="email" placeholder="Email" class="input-text"&gt;
+&lt;label class="block-label"&gt;Password&lt;/label&gt;
+&lt;input type="password" name="password" placeholder="Password" class="input-text"&gt;
+&lt;div class="form-actions"&gt;
+  &lt;input type="submit" class="btn btn-block" value="Submit"&gt;
+  &lt;button type="button" class="btn btn-block"&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
 &lt;/form&gt;
 </pre>
-      </section>
+    </section>
 
-      <section id="flexible-forms" class="component">
-        <h3 class="component-title">Flexible Forms</h3>
-        <p class="component-description">Flexible forms utilize the layout mode <a href="http://www.w3.org/TR/css3-flexbox/" target="_blank" class="open-link">flexbox</a> to fill out each elements parent container either growing to fill unused space or shrinking to avoid overflowing the parent. You can use this form layout by adding the <code>form-flex</code> class to the <code>&lt;form&gt;</code> tag.</p>
-        <p class="component-description">In a Fries prototype, elements inside a <code>flex-group</code> container are flexible by default.</p>
+    <section id="flexible-forms" class="component">
+      <h3 class="component-title">Flexible Forms</h3>
+      <p class="component-description">Flexible forms utilize the layout mode <a href="http://www.w3.org/TR/css3-flexbox/" target="_blank" class="open-link">flexbox</a> to fill out each elements parent container either growing to fill unused space or shrinking to avoid overflowing the parent. You can use this form layout by adding the <code>form-flex</code> class to the <code>&lt;form&gt;</code> tag.</p>
+      <p class="component-description">In a Fries prototype, elements inside a <code>flex-group</code> container are flexible by default.</p>
 
-        <div class="component-example">
-          <div class="black-bg">
-            <form class="form-flex inset">
-              <label class="block-label">Full Name</label>
-              <div class="flex-group">
-                <input type="text" placeholder="First Name" class="input-text flex1">
-                <input type="text" placeholder="Last Name" class="input-text flex1">
+      <div class="component-example">
+        <div class="black-bg">
+          <form class="form-flex inset">
+            <label class="block-label">Full Name</label>
+            <div class="flex-group">
+              <input type="text" placeholder="First Name" class="input-text flex1">
+              <input type="text" placeholder="Last Name" class="input-text flex1">
+            </div>
+
+            <label class="block-label">Address</label>
+            <div class="flex-group">
+              <input type="text" placeholder="Address" class="input-text flex2">
+              <div class="form-spinner">
+                <a href="javascript: void(0);" class="toggle-spinner">Home</a>
+                <ul class="spinner">
+                  <li class="spinner-item"><a href="javascript: void(0);">Work</a></li>
+                  <li class="spinner-item"><a href="javascript: void(0);">Secondary</a></li>
+                </ul>
               </div>
-
-              <label class="block-label">Address</label>
-              <div class="flex-group">
-                <input type="text" placeholder="Address" class="input-text flex2">
-                <div class="form-spinner">
-                  <a href="javascript: void(0);" class="toggle-spinner">Home</a>
-                  <ul class="spinner">
-                    <li class="spinner-item"><a href="javascript: void(0);">Work</a></li>
-                    <li class="spinner-item"><a href="javascript: void(0);">Secondary</a></li>
-                  </ul>
-                </div>
-              </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
+      </div>
 
 <pre class="prettyprint">
 &lt;form class="form-flex inset"&gt;
-  &lt;label class="block-label"&gt;Full Name&lt;/label&gt;
-  &lt;div class="flex-group"&gt;
-    &lt;input type="text" placeholder="First Name" class="input-text flex1"&gt;
-    &lt;input type="text" placeholder="Last Name" class="input-text flex1"&gt;
+&lt;label class="block-label"&gt;Full Name&lt;/label&gt;
+&lt;div class="flex-group"&gt;
+  &lt;input type="text" placeholder="First Name" class="input-text flex1"&gt;
+  &lt;input type="text" placeholder="Last Name" class="input-text flex1"&gt;
+&lt;/div&gt;
+&lt;label class="block-label"&gt;Address&lt;/label&gt;
+&lt;div class="flex-group"&gt;
+  &lt;input type="text" placeholder="Address" class="input-text flex2"&gt;
+  &lt;div class="form-spinner"&gt;
+    &lt;a href="javascript: void(0);" class="toggle-spinner"&gt;Home&lt;/a&gt;
+    &lt;ul class="spinner"&gt;
+      &lt;li class="spinner-item"&gt;&lt;a href="javascript: void(0);"&gt;Work&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="spinner-item"&gt;&lt;a href="javascript: void(0);"&gt;Secondary&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/div&gt;
-  &lt;label class="block-label"&gt;Address&lt;/label&gt;
-  &lt;div class="flex-group"&gt;
-    &lt;input type="text" placeholder="Address" class="input-text flex2"&gt;
-    &lt;div class="form-spinner"&gt;
-      &lt;a href="javascript: void(0);" class="toggle-spinner"&gt;Home&lt;/a&gt;
-      &lt;ul class="spinner"&gt;
-        &lt;li class="spinner-item"&gt;&lt;a href="javascript: void(0);"&gt;Work&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="spinner-item"&gt;&lt;a href="javascript: void(0);"&gt;Secondary&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+&lt;/div&gt;
 &lt;/form&gt;
 </pre>
 
-        <p class="component-description">You can use the classes <code>flex1</code>, <code>flex2</code>, and <code>flex3</code> to tell how each form element <em>flexes</em> and just remove them if you want to fill the whole line.</p>
+      <p class="component-description">You can use the classes <code>flex1</code>, <code>flex2</code>, and <code>flex3</code> to tell how each form element <em>flexes</em> and just remove them if you want to fill the whole line.</p>
 <pre class="prettyprint informational js">
 &lt;form class="form-flex"&gt;
-  &lt;div class="flex-group"&gt;
-    &lt;input type="text" placeholder="Full Name" class="input-text"&gt;
-  &lt;/div&gt;
-  &lt;div class="flex-group"&gt;
-    &lt;input type="text" placeholder="Flex 1" class="input-text flex1"&gt;
-    &lt;input type="text" placeholder="Flex 2" class="input-text flex2"&gt;
-  &lt;/div&gt;
+&lt;div class="flex-group"&gt;
+  &lt;input type="text" placeholder="Full Name" class="input-text"&gt;
+&lt;/div&gt;
+&lt;div class="flex-group"&gt;
+  &lt;input type="text" placeholder="Flex 1" class="input-text flex1"&gt;
+  &lt;input type="text" placeholder="Flex 2" class="input-text flex2"&gt;
+&lt;/div&gt;
 &lt;/form&gt;
 </pre>
-      </section>
+    </section>
 
 
 
 
-      <section id="dialogs" class="component">
-        <h3 class="component-title">Dialogs</h3>
-        <p class="component-description">A dialog is a small window that prompts the user to make a decision or enter additional information. A dialog does not fill the screen and is normally used for modal events that require users to take an action before they can proceed.</p>
+    <section id="dialogs" class="component">
+      <h3 class="component-title">Dialogs</h3>
+      <p class="component-description">A dialog is a small window that prompts the user to make a decision or enter additional information. A dialog does not fill the screen and is normally used for modal events that require users to take an action before they can proceed.</p>
 
-        <div class="component-example">
-          <div class="black-bg inset">
-            <a href="javascript: void(0);" class="btn" id="show-dialog" data-ignore="true">Show Dialog</a>
-          </div>
+      <div class="component-example">
+        <div class="black-bg inset">
+          <a href="javascript: void(0);" class="btn" id="show-dialog" data-ignore="true">Show Dialog</a>
         </div>
+      </div>
 
-        <p class="component-description">The <code>.dialogs</code> container must be on the same level as <code>.action-bar</code> and <code>.tab-fixed</code>. This container holds all your dialogs.</p>
+      <p class="component-description">The <code>.dialogs</code> container must be on the same level as <code>.action-bar</code> and <code>.tab-fixed</code>. This container holds all your dialogs.</p>
 
 <pre class="prettyprint">
 &lt;!-- Button to show the dialog --&gt;
@@ -610,178 +558,173 @@
 
 &lt;!-- Required container for dialogs --&gt;
 &lt;div class="dialogs"&gt;
-  &lt;div id="my-dialog" class="dialog"&gt;
-    &lt;header class="dialog-title-region"&gt;
-      &lt;h1 class="title"&gt;Hello Fries&lt;/h1&gt;
-    &lt;/header&gt;
-    &lt;div class="dialog-content"&gt;
-      &lt;p&gt;Hi, I'm a dialog.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;ul class="dialog-actions"&gt;
-      &lt;li&gt;&lt;a href="javascript: void(0);" class="dialog-cancel-button"&gt;Cancel&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="javascript: void(0);" class="dialog-ok-button"&gt;OK&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;div id="my-dialog" class="dialog"&gt;
+  &lt;header class="dialog-title-region"&gt;
+    &lt;h1 class="title"&gt;Hello Fries&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class="dialog-content"&gt;
+    &lt;p&gt;Hi, I'm a dialog.&lt;/p&gt;
   &lt;/div&gt;
+  &lt;ul class="dialog-actions"&gt;
+    &lt;li&gt;&lt;a href="javascript: void(0);" class="dialog-cancel-button"&gt;Cancel&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="javascript: void(0);" class="dialog-ok-button"&gt;OK&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
 
-  &lt;!-- Other dialogs go here --&gt;
+&lt;!-- Other dialogs go here --&gt;
 &lt;/div&gt;
 </pre>
 
-        <p class="component-description">Then in your JavaScript code:</p>
+      <p class="component-description">Then in your JavaScript code:</p>
 
 <pre class="prettyprint">
 var dialog = new fries.Dialog({
-  selector: '#my-dialog',
-  callbackOk: function () {
-    // Do something here
-    this.hide(); // hide the dialog
-  },
-  callbackCancel: function () {
-    // Do nothing, the user cancelled
-    this.hide(); // hide the dialog
-  }
+selector: '#my-dialog',
+callbackOk: function () {
+  // Do something here
+  this.hide(); // hide the dialog
+},
+callbackCancel: function () {
+  // Do nothing, the user cancelled
+  this.hide(); // hide the dialog
+}
 });
 </pre>
 
-        <p class="component-description">Then show the dialog with:</p>
+      <p class="component-description">Then show the dialog with:</p>
 
 <pre class="prettyprint">
 dialog.show();
 </pre>
 
-      </section>
+    </section>
 
-      <section id="toasts" class="component">
-        <h3 class="component-title">Toast Notifications</h3>
-        <p class="component-description">A Toast notification provides a subtle feedback to the users that something happened.</p>
+    <section id="toasts" class="component">
+      <h3 class="component-title">Toast Notifications</h3>
+      <p class="component-description">A Toast notification provides a subtle feedback to the users that something happened.</p>
 
-        <div class="component-example">
-          <div class="black-bg inset">
-            <a href="javascript: void(0);" class="btn" id="show-toast" data-ignore="true">Show Toast</a>
-          </div>
+      <div class="component-example">
+        <div class="black-bg inset">
+          <a href="javascript: void(0);" class="btn" id="show-toast" data-ignore="true">Show Toast</a>
         </div>
+      </div>
 
-        <p class="component-description">The good thing about Toast notifications in Fries is that no markup is needed, just JavaScript. Check out the following code to see how to create Toast notifications:</p>
+      <p class="component-description">The good thing about Toast notifications in Fries is that no markup is needed, just JavaScript. Check out the following code to see how to create Toast notifications:</p>
 
 <pre class="prettyprint">
 // Add this to a 'click' or 'touchend' event of a button
 var toast = new fries.Toast({ content: "Message saved as draft." });
 </pre>
 
-        <p class="component-description">Pretty cool right? The code above creates a Toast notification with the message "Message saved as draft" and shows it to the user.</p>
+      <p class="component-description">Pretty cool right? The code above creates a Toast notification with the message "Message saved as draft" and shows it to the user.</p>
 
-        <p class="component-description">You can also change the duration which the Toast is show by passing the length (in milliseconds) or by using either <code>fries.Toast.duration.SHORT</code> or <code>fries.Toast.duration.LONG</code> as a parameter when creating your Toast notifications.</p>
+      <p class="component-description">You can also change the duration which the Toast is show by passing the length (in milliseconds) or by using either <code>fries.Toast.duration.SHORT</code> or <code>fries.Toast.duration.LONG</code> as a parameter when creating your Toast notifications.</p>
 
 <pre class="prettyprint">
 // A short Toast lasts 3 seconds
 var shortToast = new fries.Toast({
-  content: "I'm a short Toast.",
-  duration: fries.Toast.duraton.SHORT
+content: "I'm a short Toast.",
+duration: fries.Toast.duraton.SHORT
 });
 
 // A long one lasts 5 seconds
 var longToast = new fries.Toast({
-  content: "I'm a long Toast.",
-  duration: fries.Toast.duration.LONG
+content: "I'm a long Toast.",
+duration: fries.Toast.duration.LONG
 });
 
 // Or custom timing
 var custom = new fries.Toast({
-  content: "Custom Toast",
-  duration: 7500 // in milliseconds
+content: "Custom Toast",
+duration: 7500 // in milliseconds
 });
 </pre>
 
-      </section>
+    </section>
 
-      <section id="helpers" class="component">
-        <h3 class="component-title">Helpers</h3>
-        <p class="component-description">There are a few helpers that you might want to take note of when you're creating Fries prototypes.</p>
+    <section id="helpers" class="component">
+      <h3 class="component-title">Helpers</h3>
+      <p class="component-description">There are a few helpers that you might want to take note of when you're creating Fries prototypes.</p>
 
-        <h4>Inset</h4>
-        <p>The <code>.inset</code> class adds a 15px padding to all sides of a container.</p>
+      <h4>Inset</h4>
+      <p>The <code>.inset</code> class adds a 15px padding to all sides of a container.</p>
 
-        <h4>Selectable</h4>
-        <p>The <code>.selectable</code> class adds a highlight to an element when it's in its <code>active</code> state. This is usually added to list items so they get highlighted when clicked or touched.</p>
+      <h4>Selectable</h4>
+      <p>The <code>.selectable</code> class adds a highlight to an element when it's in its <code>active</code> state. This is usually added to list items so they get highlighted when clicked or touched.</p>
 
-        <h4>Pretty Input</h4>
-        <p>By default, Fries styles text boxes such as <code>&lt;input type="text"&gt;</code> just as how they would normally look in a native Android app. This is done by wrapping these elements in <code>&lt;span class="input-pretty"&gt;&lt;/span&gt;</code>. This span adds those small lines on the edges of the element. However, you can turn this feature off by excluding <code>forms.js</code> in your build.</p>
+      <h4>Pretty Input</h4>
+      <p>By default, Fries styles text boxes such as <code>&lt;input type="text"&gt;</code> just as how they would normally look in a native Android app. This is done by wrapping these elements in <code>&lt;span class="input-pretty"&gt;&lt;/span&gt;</code>. This span adds those small lines on the edges of the element. However, you can turn this feature off by excluding <code>forms.js</code> in your build.</p>
 
-      </section>
+    </section>
 
-      <section id="stack-js" class="component">
-        <h3 class="component-title">Stack.js</h3>
-        <p class="component-description">Stack.js is an engine adapted from Ratchet's <a href="http://maker.github.io/ratchet/#push" target="_blank" class="open-link" data-ignore="true">push.js</a> to seamlessly piece together Fries pages. It dynamically loads HTML on the fly and inserts it to your app. This works by firing an AJAX request to get the target HTML and replacing the contents of <code>.page</code> div.</p>
-        <p class="component-description">Same as push.js, stack.js uses the HTML5 History API so the Android device's back button functionality doesn't break.</p>
+    <section id="stack-js" class="component">
+      <h3 class="component-title">Stack.js</h3>
+      <p class="component-description">Stack.js is an engine adapted from Ratchet's <a href="http://maker.github.io/ratchet/#push" target="_blank" class="open-link" data-ignore="true">push.js</a> to seamlessly piece together Fries pages. It dynamically loads HTML on the fly and inserts it to your app. This works by firing an AJAX request to get the target HTML and replacing the contents of <code>.page</code> div.</p>
+      <p class="component-description">Same as push.js, stack.js uses the HTML5 History API so the Android device's back button functionality doesn't break.</p>
 
 <pre class="prettyprint informational js">
 &lt;!-- An action button that inserts map.html's .page into the current page's .page --&gt;
 &lt;a href="map.html" class="action" title="Map"&gt;&lt;i class="icon-location-marker"&gt;&lt;/i&gt;&lt;/a&gt;
 </pre>
 
-        <p class="component-description">You can also specify the transition by adding the <code>data-transition</code> attribute. You can choose from <code>push</code> and <code>pop</code> transitions when stacking pages.
+      <p class="component-description">You can also specify the transition by adding the <code>data-transition</code> attribute. You can choose from <code>push</code> and <code>pop</code> transitions when stacking pages.
 
 <pre class="prettyprint informational js">
 &lt;!-- An action button that pushes map.html --&gt;
 &lt;a href="map.html" class="action" title="Map" data-transition="push"&gt;&lt;i class="icon-location-marker"&gt;&lt;/i&gt;&lt;/a&gt;
 </pre>
 
-        <p class="component-description">Since Stack.js listens for all touches, some of your links might not work. To solve this, you can add the data attribute <code>data-ignore="true"</code> so Stack.js ignores that link.</p>
+      <p class="component-description">Since Stack.js listens for all touches, some of your links might not work. To solve this, you can add the data attribute <code>data-ignore="true"</code> so Stack.js ignores that link.</p>
 
-        <p class="component-description">You may, however, use your own paging engine for your prototypes. Just exclude Stack.js from your build and run your app normally. You'll lose the page animations this way though.</p>
-      </section>
+      <p class="component-description">You may, however, use your own paging engine for your prototypes. Just exclude Stack.js from your build and run your app normally. You'll lose the page animations this way though.</p>
+    </section>
 
-    </article>
+  </article>
 
 
-    <div class="dialogs">
-      <div id="my-dialog" class="dialog">
-        <header class="dialog-title-region">
-          <h1 class="title">Choose ringtone</h1>
-        </header>
-        <div class="dialog-content">
-          <ul class="list">
-            <li class="list-item-single-line">
-              <label>Default ringtone</label>
-              <label class="input-radio-wrapper pull-right">
-                <input type="radio" name="ringtone" class="input-radio" selected>
-                <div class="input-radio-inner">
-                  <div class="input-radio-button"></div>
-                </div>
-              </label>
-            </li>
-            <li class="list-item-single-line">
-              <label>Silent</label>
-              <label class="input-radio-wrapper pull-right">
-                <input type="radio" name="ringtone" class="input-radio">
-                <div class="input-radio-inner">
-                  <div class="input-radio-button"></div>
-                </div>
-              </label>
-            </li>
-            <li class="list-item-single-line">
-              <label>Aldebaran</label>
-              <label class="input-radio-wrapper pull-right">
-                <input type="radio" name="ringtone" class="input-radio">
-                <div class="input-radio-inner">
-                  <div class="input-radio-button"></div>
-                </div>
-              </label>
-            </li>
-          </ul>
-        </div>
-        <ul class="dialog-actions">
-          <li><a href="javascript: void(0);" class="dialog-cancel-button">Cancel</a></li>
-          <li><a href="javascript: void(0);" class="dialog-ok-button">OK</a></li>
+  <div class="dialogs">
+    <div id="my-dialog" class="dialog">
+      <header class="dialog-title-region">
+        <h1 class="title">Choose ringtone</h1>
+      </header>
+      <div class="dialog-content">
+        <ul class="list">
+          <li class="list-item-single-line">
+            <label>Default ringtone</label>
+            <label class="input-radio-wrapper pull-right">
+              <input type="radio" name="ringtone" class="input-radio" selected>
+              <div class="input-radio-inner">
+                <div class="input-radio-button"></div>
+              </div>
+            </label>
+          </li>
+          <li class="list-item-single-line">
+            <label>Silent</label>
+            <label class="input-radio-wrapper pull-right">
+              <input type="radio" name="ringtone" class="input-radio">
+              <div class="input-radio-inner">
+                <div class="input-radio-button"></div>
+              </div>
+            </label>
+          </li>
+          <li class="list-item-single-line">
+            <label>Aldebaran</label>
+            <label class="input-radio-wrapper pull-right">
+              <input type="radio" name="ringtone" class="input-radio">
+              <div class="input-radio-inner">
+                <div class="input-radio-button"></div>
+              </div>
+            </label>
+          </li>
         </ul>
       </div>
+      <ul class="dialog-actions">
+        <li><a href="javascript: void(0);" class="dialog-cancel-button">Cancel</a></li>
+        <li><a href="javascript: void(0);" class="dialog-ok-button">OK</a></li>
+      </ul>
     </div>
   </div>
+</div>
 
-  <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
-  <script src="dist/fries.min.js"></script>
-  <script src="examples/js/fingerblast.js"></script>
-  <script src="docs/js/prettify.js"></script>
-  <script src="docs/js/documentation.js"></script>
-</body>
-</html>
+<script src="examples/js/fingerblast.js"></script>
+<script src="dist/fries.min.js"></script>

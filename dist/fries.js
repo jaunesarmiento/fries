@@ -428,6 +428,8 @@
       transitionFromObj = activeObj;
     }
 
+    console.log(direction);
+
     if (direction == 'back' && !transitionFromObj.id) return doXHR.id = id;
 
     transition = direction == 'back' ? 'pop' : transitionFromObj.transition;
@@ -463,9 +465,6 @@
       xhr.abort();
     }
 
-    // Setup a synchronous XHR. Setting the async parameter to false
-    // solves the issue where xhr.responseText is empty even when the
-    // xhr.status is 0.
     xhr = new XMLHttpRequest();
     xhr.open('GET', options.url, false);
     xhr.setRequestHeader('X-DOCUMENT', 'true');
@@ -513,28 +512,31 @@
     if (/push/.test(transition)) {
       contents.classList.add(transition);
       container.classList.add('fade');
-      contents.addEventListener('webkitAnimationEnd', function () {
-        contents.removeEventListener('webkitAnimationEnd');
+      contents.addEventListener('webkitAnimationEnd', onPushAnimationEnd, false);
+
+      // Causes a jshint warning. Use --force to ignore
+      function onPushAnimationEnd() {
+        console.log(container);
+        contents.removeEventListener('webkitAnimationEnd', onPushAnimationEnd, false);
         contents.classList.remove(transition);
         if (container.parentNode) container.parentNode.removeChild(container);
         if (callback) callback();
-      });
+      }
     }
 
     if (/pop/.test(transition)) {
       contents.style.opacity = 1;
       container.classList.add('pop');
 
-      // To prevent the page from being visible after the transition
-      setTimeout(function () {
-         container.classList.add('hidden');
-      }, 190);
+      container.addEventListener('webkitAnimationEnd', onPopAnimationEnd, false);
 
-      container.addEventListener('webkitAnimationEnd', function () {
-        container.removeEventListener('webkitAnimationEnd');
+      // Causes a jshint warning. Use --force to ignore
+      function onPopAnimationEnd() {
+        container.classList.add('hidden');
+        container.removeEventListener('webkitAnimationEnd', onPopAnimationEnd, false);
         container.parentNode.removeChild(container);
         if (callback) callback();
-      });
+      }
     }
   };
 

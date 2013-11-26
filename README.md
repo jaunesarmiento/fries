@@ -1,23 +1,9 @@
-# Fries v2.0.2 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jaunesarmiento/fries/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# Fries v2.0.3 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jaunesarmiento/fries/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Fries is an awesome mobile UI framework for Android apps using just HTML, CSS,
 and Javascript and is inspired by [Ratchet].
 
-
-## What's new
-
-This version includes the following:
-
-* Toast notifications
-* Dialogs
-* Checkboxes
-* Radio buttons
-* On/off toggle switches
-* Theming using SASS
-* Visual aesthetic improvements
-* Task automation using [Grunt]
-* and a whole lot of [bug fixes].
-
+Aaaaand Fries just got its new home. Check out http://getfri.es/
 
 ## Getting Started
 
@@ -35,41 +21,17 @@ $ bower install fries
 ```
 
 
-## Running the examples
+## Documentation and examples
 
-To run the examples you need to have [Grunt] installed. To install Grunt open up
-your shell and do:
+Fries uses [Jekyll] to run the documentation and examples.
 
-```shell
-$ npm install -g grunt
-```
-
-Then `cd` to Fries' root directory and install all dependencies by running:
-
-```shell
-$ npm install
-```
-
-After installing the dependencies, fire up a web server by running:
-
-```shell
-$ grunt server
-```
-
-Then you can open your browser and go to `localhost:8000/examples` to view the
-examples.
-
-Or if you have Python installed on your system. Just run the following inside
-Fries' root directory:
-
-```shell
-$ python -m SimpleHTTPServer
-```
-
-Then go to `localhost:8000/examples`.
+### Running the docs and examples locally
+1.  Install [Jekyll]
+2.  From the root directory of Fries, run `jekyll serve`
+3.  Open `http://localhost:4000/` in your favorite browser to see the documentation or `http://localhost:4000/examples/` for the examples.
 
 __Note:__ You also might want to resize your browser's screen resolutiion and
-emulate touch events for a better experience. To do these:
+emulate touch events for a better experience while viewing the examples. To do these:
 
 1. Open Chrome Developer Tools.
 2. Go to settings by clicking the little gear icon at the bottom right of the
@@ -111,6 +73,7 @@ By [Tobias Bieniek](https://github.com/Turbo87/Android-Action-Bar-Icon-Pack-Font
 [documentation]: http://jaunesarmiento.me/fries
 [Semantic Versioning]: http://semver.org/
 [Grunt]: http://gruntjs.com/
+[Jekyll]: http://jekyllrb.com/
 [Bower]: http://bower.io/
 [examples]: https://github.com/jaunesarmiento/fries/tree/master/examples
 [bug fixes]: https://github.com/jaunesarmiento/fries/issues?labels=&page=1&state=closed
