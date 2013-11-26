@@ -27,10 +27,12 @@ $(function () {
       }, false);
     }
 
-    document.querySelector('#show-toast').addEventListener('touchend', function () {
-      var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
+    if (document.querySelector('#show-toast')) {
+      document.querySelector('#show-toast').addEventListener('touchend', function () {
+        var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
 
-    }, false);
+      }, false);
+    }
 
     prettyPrint();
 
@@ -48,7 +50,7 @@ $(function () {
 
     // To enable touch events on desktop
     // Remove this when building in PhoneGap
-    if ($('.nexus-content').length > 0) new FingerBlast('.nexus-content');
+    if ($('.nexus-content').length > 0 && $('#nexus').css('display') != 'none') new FingerBlast('.nexus-content');
 
     if ($('.inner-content').length > 0) new FingerBlast('.inner-content');
   };
