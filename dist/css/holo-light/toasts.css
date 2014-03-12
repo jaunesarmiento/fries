@@ -1,0 +1,70 @@
+/**
+ * Fonts
+ */
+/**
+ * Colors
+ */
+/**
+ * Base
+ */
+/**
+ * Buttons
+ */
+/**
+ * Dividers
+ */
+/**
+ * Typography
+ */
+/**
+ * General Bars Styles
+ */
+/**
+ * Action Bars
+ */
+/**
+ * Tab Bar
+ */
+/**
+ * Spinners
+ */
+/**
+ * Forms
+ */
+/**
+ * Dialogs
+ */
+/**
+ * Toasts
+ */
+.toast {
+  position: fixed;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-transition: opacity 0.25s ease-in;
+  -moz-transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in; }
+  .toast.on {
+    visibility: visible; }
+  .toast.fade-in {
+    opacity: 1; }
+  .toast .toast-message {
+    display: inline-block;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    padding: 3px 16px 5px;
+    margin: 0 auto;
+    max-width: 80%;
+    height: 36px;
+    line-height: 32px;
+    background-color: rgba(44, 44, 44, 0.9);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 13px;
+    text-align: center; }

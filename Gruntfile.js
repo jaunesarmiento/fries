@@ -46,7 +46,8 @@ module.exports = function(grunt) {
       },
       combine: {
         files: [
-          { src: ['dist/css/holo-dark/*.css'], dest: 'dist/themes/holo-dark/holo-dark.min.css' }
+          { src: ['dist/css/holo-dark/*.css'], dest: 'dist/themes/holo-dark/holo-dark.min.css' },
+          { src: ['dist/css/holo-light/*.css'], dest: 'dist/themes/holo-light/holo-light.min.css' }
           /* Add your other themes here */
         ]
       }
