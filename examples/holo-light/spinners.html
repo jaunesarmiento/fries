@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Fries</title>
+
+  <link rel="shortcut icon" href="favicon.png" />
+
+  <link rel="stylesheet" href="../../dist/themes/holo-light/holo-light.min.css" />
+
+  <!-- For demo purposes only -->
+  <style type="text/css">
+  body {
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  h1.intro {
+    font-weight: 200;
+    margin: 0.2em 0;
+  }
+
+  p {
+    color: #999;
+    margin-bottom: 1em;
+  }
+
+  .center-me {
+    text-align: center;
+  }
+
+  .list i[class*="icon-"] {
+    float: left;
+    font-size: 36px;
+    color: #999;
+  }
+  .i-class {
+    float: left;
+    line-height: 36px;
+    margin-left: 8px;
+  }
+  .footnote {
+    display: block;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    color: #222;
+    font-size: 11px;
+  }
+  </style>
+</head>
+<body ontouchstart="">
+
+  <div class="page">
+    <header class="action-bar fixed-top">
+      <a href="index.html" class="app-icon action up" data-transition="pop">
+        <i class="icon-up-button"></i>
+        <i class="icon-fries"></i>
+      </a>
+      <h2 class="title">Fries Components <span class="subtitle">Spinners</span></h2>
+      <ul class="actions pull-right">
+        <li><a href="javascript: void(0);" class="action" title="New Contact" data-ignore="true"><i class="icon-add-person"></i></a></li>
+        <li><a href="javascript: void(0);" class="action" title="Profile" data-ignore="true"><i class="icon-person"></i></a></li>
+        <li><a href="javascript: void(0);" class="action" title="Settings" data-ignore="true"><i class="icon-settings"></i></a></li>
+        <li><a href="javascript: void(0);" class="action" title="Sign out" data-ignore="true"><i class="icon-fries"></i></a></li>
+      </ul>
+    </header>
+
+    <div class="content inset">
+      <p>Spinners can appear on the action bar as Action Overflow.</p>
+      <p>They can also appear on a form.</p>
+    </div>
+  </div>
+
+  <script src="../../dist/fries.min.js"></script>
+
+  <!-- Use fingerblast when testing on the browser -->
+  <script src="../js/fingerblast.js"></script>
+
+  <script src="../js/example.js"></script>
+</body>
+</html>
