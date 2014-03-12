@@ -34,17 +34,8 @@
     }, false);
   };
 
-  // sometimes Android returns a width and height of zero..
-  // so we wait 10ms and try again.
-  // (Taken from Google's internal dots framework file webview.js)
-  var w = document.documentElement.clientWidth || document.body.clientWidth;
-  if ('undefined' === typeof w || w == 0) {
-    setTimeout(function() {
-      window.addEventListener('push', init, false);
-      window.addEventListener('popstate', init, false);
-    }, 10);
-    return;
-  }
+  window.addEventListener('push', init, false);
+  window.addEventListener('popstate', init, false);
 
   var detect = function () {
     if( navigator.userAgent.match(/Android/i)

@@ -43,15 +43,14 @@ $(function () {
       }, false);
     }
 
-<<<<<<< HEAD
-    document.querySelector('#show-toast') && document.querySelector('#show-toast').addEventListener('touchend', function () {
+    document.querySelector('#show-toast').addEventListener('touchend', function () {
       var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
-=======
-    if (document.querySelector('#show-toast')) {
-      document.querySelector('#show-toast').addEventListener('touchend', function () {
-        var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
->>>>>>> wip/v2.1.0-copy
 
+    }, false);
+
+    if (document.querySelector('#show-toast')) {
+        document.querySelector('#show-toast').addEventListener('touchend', function () {
+        var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
       }, false);
     }
 
@@ -71,12 +70,9 @@ $(function () {
 
     // To enable touch events on desktop
     // Remove this when building in PhoneGap
-<<<<<<< HEAD
     if (detect) {
         if ($('.nexus-content').length > 0) new FingerBlast('.nexus-content');
-=======
-    if ($('.nexus-content').length > 0 && $('#nexus').css('display') != 'none') new FingerBlast('.nexus-content');
->>>>>>> wip/v2.1.0-copy
+
 
         if ($('.inner-content').length > 0) new FingerBlast('.inner-content');
     }
@@ -92,17 +88,7 @@ $(function () {
       $('.non-webkit-notice').addClass('fade');
     });
   }
-
-  // sometimes Android returns a width and height of zero..
-  // so we wait 10ms and try again.
-  // (Taken from Google's internal dots framework file webview.js)
-  var w = document.documentElement.clientWidth || document.body.clientWidth;
-  if ('undefined' === typeof w || w == 0) {
-    setTimeout(function() {
-      init();
-    }, 10);
-    return;
-  }
+  init();
 });
 
 (function(){
