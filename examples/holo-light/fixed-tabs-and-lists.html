@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Fries</title>
+
+  <link rel="shortcut icon" href="favicon.png" />
+
+  <link rel="stylesheet" href="../../dist/themes/holo-light/holo-light.min.css" />
+
+  <!-- For demo purposes only -->
+  <style type="text/css">
+  body {
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  h1.intro {
+    font-weight: 200;
+    margin: 0.2em 0;
+  }
+
+  p {
+    color: #999;
+    margin-bottom: 1em;
+  }
+
+  .center-me {
+    text-align: center;
+  }
+
+  .list i[class*="icon-"] {
+    float: left;
+    font-size: 36px;
+    color: #999;
+  }
+  .i-class {
+    float: left;
+    line-height: 36px;
+    margin-left: 8px;
+  }
+  .footnote {
+    display: block;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    color: #222;
+    font-size: 11px;
+  }
+  </style>
+</head>
+<body ontouchstart="">
+
+  <div class="page">
+    <header class="action-bar fixed-top">
+      <a href="index.html" class="app-icon action up" data-transition="pop">
+        <i class="icon-up-button"></i>
+        <i class="icon-fries"></i>
+      </a>
+      <h2 class="title">Fries Components <span class="subtitle">Fixed Tabs and Lists</span></h2>
+    </header>
+
+    <nav class="tab-fixed">
+      <ul class="tab-inner">
+        <li class="active"><a href="#people" data-ignore="true"><i class="icon-person"></i></a></li>
+        <li><a href="#groups" data-ignore="true"><i class="icon-group"></i></a></li>
+        <li><a href="#favorites" data-ignore="true"><i class="icon-star-full"></i></a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <div class="slider tab-slider">
+        <ul>
+          <li id="people" class="tab-item active">
+            <ul class="list inset">
+              <li class="list-divider">Inspiration</li>
+              <li class="list-item-multi-line selectable">
+                <a href="javascript: void(0);" data-ignore="true">
+                  <h4>Brendan Eich</h4>
+                  <p>Brendan Eich, born 1961, is an American computer programmer and creator of the JavaScript scripting language. He is the chief technology officer at the Mozilla Corporation.</p>
+                </a>
+              </li>
+              <li class="list-item-multi-line selectable">
+                <a href="javascript: void(0);" data-ignore="true">
+                  <h4>John Resig</h4>
+                  <p>John Resig is an American computer programmer and entrepreneur, best known as the creator and lead developer of the jQuery JavaScript library.</p>
+                </a>
+              </li>
+              <li class="list-item-multi-line selectable">
+                <a href="javascript: void(0);" data-ignore="true">
+                  <h4>Douglas Crockford</h4>
+                  <p>Douglas Crockford is an American computer programmer and entrepreneur who is best known for his ongoing involvement in the development of the JavaScript language, for having popularized the data format JSON (JavaScript Object Notation), and for developing various JavaScript related tools such as JSLint and JSMin. He is currently a senior JavaScript architect at PayPal, and is also a writer and speaker on JavaScript, JSON, and related web technologies such as the Yahoo! User Interface Library (YUI).</p>
+                </a>
+              </li>
+              <li class="list-item-multi-line selectable">
+                <a href="javascript: void(0);" data-ignore="true">
+                  <h4>Paul Irish</h4>
+                  <p>Paul Irish is an American front-end web developer, and developer advocate for Google Chrome. He is also recognized as an expert in cutting edge Web Technologies like HTML5 and CSS3.</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li id="groups" class="tab-item">
+            <ul class="list inset">
+              <li class="list-divider">Groups</li>
+              <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Acquaintances</a></li>
+              <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Family</a></li>
+              <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Friends</a></li>
+              <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Work</a></li>
+            </ul>
+          </li>
+          <li id="favorites" class="tab-item">
+            <ul class="list inset">
+              <li class="list-divider">Favorites</li>
+              <li class="list-item-two-lines selectable">
+                <a href="#" data-ignore="true">
+                  <h3>Fries</h3>
+                  <p>https://github.com/jaunesarmiento/fries</p>
+                </a>
+              </li>
+              <li class="list-item-two-lines selectable">
+                <a href="#" data-ignore="true">
+                  <h3>Ratchet</h3>
+                  <p>https://github.com/maker/ratchet</p>
+                </a>
+              </li>
+              <li class="list-item-two-lines selectable">
+                <a href="#" data-ignore="true">
+                  <h3>Android Developers</h3>
+                  <p>http://developer.android.com/</p>
+                </a>
+              </li>
+              <li class="list-item-two-lines selectable">
+                <a href="#" data-ignore="true">
+                  <h3>GitHub</h3>
+                  <p>https://github.com/</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+  </div>
+
+  <script src="../../dist/fries.min.js"></script>
+
+  <!-- Use fingerblast when testing on the browser -->
+  <script src="../js/fingerblast.js"></script>
+
+  <script src="../js/example.js"></script>
+</body>
+</html>

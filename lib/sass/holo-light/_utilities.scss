@@ -1,0 +1,42 @@
+@mixin border-radius($radius: 2px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-sizing($value: border-box) {
+  -webkit-box-sizing: $value;
+     -moz-box-sizing: $value;
+          box-sizing: $value;
+}
+
+// TODO: Implement a multi box-shadow mixin
+@mixin box-shadow($top, $left, $blur, $color, $inset: "") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+     -moz-box-shadow: $top $left $blur $color #{$inset};
+          box-shadow: $top $left $blur $color #{$inset};
+}
+
+@mixin absolute-position($top: initial, $right: initial, $bottom: initial, $left: initial) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin flexbox($orientation: horizontal) {
+  display: -webkit-box;
+  display:    -moz-box;
+  display:         box;
+  -webkit-box-orient: $orientation;
+     -moz-box-orient: $orientation;
+          box-orient: $orientation;
+}
+
+@mixin box-flex($flex: 1) {
+  -webkit-box-flex: $flex;
+     -moz-box-flex: $flex;
+          box-flex: $flex;
+}

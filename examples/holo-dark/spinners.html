@@ -10,7 +10,7 @@
 
   <link rel="shortcut icon" href="favicon.png" />
 
-  <link rel="stylesheet" href="../dist/themes/holo-dark/holo-dark.min.css" />
+  <link rel="stylesheet" href="../../dist/themes/holo-dark/holo-dark.min.css" />
 
   <!-- For demo purposes only -->
   <style type="text/css">
@@ -60,22 +60,26 @@
         <i class="icon-up-button"></i>
         <i class="icon-fries"></i>
       </a>
-      <h2 class="title">Fries Components <span class="subtitle">Action Bars</span></h2>
+      <h2 class="title">Fries Components <span class="subtitle">Spinners</span></h2>
+      <ul class="actions pull-right">
+        <li><a href="javascript: void(0);" class="action" title="New Contact" data-ignore="true"><i class="icon-add-person"></i></a></li>
+        <li><a href="javascript: void(0);" class="action" title="Profile" data-ignore="true"><i class="icon-person"></i></a></li>
+        <li><a href="javascript: void(0);" class="action" title="Settings" data-ignore="true"><i class="icon-settings"></i></a></li>
+        <li><a href="javascript: void(0);" class="action" title="Sign out" data-ignore="true"><i class="icon-fries"></i></a></li>
+      </ul>
     </header>
 
     <div class="content inset">
-      <p>This is an example of Action Bars.</p>
-      <p>You can have your standard action bar on top of the page.</p>
-      <p class="center-me">
-        <a href="bottom-action-bars.html" class="btn" title="Next" data-transition="push">Next</a>
-      </p>
+      <p>Spinners can appear on the action bar as Action Overflow.</p>
+      <p>They can also appear on a form.</p>
     </div>
   </div>
 
-  <script src="../dist/fries.min.js"></script>
+  <script src="../../dist/fries.min.js"></script>
 
-  <script src="js/fingerblast.js"></script>
+  <!-- Use fingerblast when testing on the browser -->
+  <script src="../js/fingerblast.js"></script>
 
-  <script src="js/example.js"></script>
+  <script src="../js/example.js"></script>
 </body>
 </html>

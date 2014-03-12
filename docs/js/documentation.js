@@ -1,4 +1,20 @@
 $(function () {
+  var detect = function () {
+    if( navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)
+      || navigator.userAgent.match(/iPad/i)
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i)
+    ) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  };
+
   var init = function () {
     // Make sure the dialog is in the DOM
     if (document.querySelector('#my-dialog')) {
@@ -27,10 +43,14 @@ $(function () {
       }, false);
     }
 
-    if (document.querySelector('#show-toast')) {
-      document.querySelector('#show-toast').addEventListener('touchend', function () {
-        var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
+    document.querySelector('#show-toast').addEventListener('touchend', function () {
+      var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
 
+    }, false);
+
+    if (document.querySelector('#show-toast')) {
+        document.querySelector('#show-toast').addEventListener('touchend', function () {
+        var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
       }, false);
     }
 
@@ -50,9 +70,12 @@ $(function () {
 
     // To enable touch events on desktop
     // Remove this when building in PhoneGap
-    if ($('.nexus-content').length > 0 && $('#nexus').css('display') != 'none') new FingerBlast('.nexus-content');
+    if (detect) {
+        if ($('.nexus-content').length > 0) new FingerBlast('.nexus-content');
 
-    if ($('.inner-content').length > 0) new FingerBlast('.inner-content');
+
+        if ($('.inner-content').length > 0) new FingerBlast('.inner-content');
+    }
   };
 
   if (!(/WebKit/.test(navigator.userAgent))) {

@@ -1,0 +1,6 @@
+.slider {
+  width: 100%; }
+  .slider > ul {
+    list-style: none; }
+  .slider > li {
+    width: 100%; }
