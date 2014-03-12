@@ -43,10 +43,17 @@ $(function () {
       }, false);
     }
 
+<<<<<<< HEAD
     document.querySelector('#show-toast') && document.querySelector('#show-toast').addEventListener('touchend', function () {
       var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
+=======
+    if (document.querySelector('#show-toast')) {
+      document.querySelector('#show-toast').addEventListener('touchend', function () {
+        var toast = new fries.Toast({ content: "Hi, I'm a Toast notification." });
+>>>>>>> wip/v2.1.0-copy
 
-    }, false);
+      }, false);
+    }
 
     prettyPrint();
 
@@ -64,8 +71,12 @@ $(function () {
 
     // To enable touch events on desktop
     // Remove this when building in PhoneGap
+<<<<<<< HEAD
     if (detect) {
         if ($('.nexus-content').length > 0) new FingerBlast('.nexus-content');
+=======
+    if ($('.nexus-content').length > 0 && $('#nexus').css('display') != 'none') new FingerBlast('.nexus-content');
+>>>>>>> wip/v2.1.0-copy
 
         if ($('.inner-content').length > 0) new FingerBlast('.inner-content');
     }
