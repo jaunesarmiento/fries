@@ -1,0 +1,40 @@
+{
+  "name": "fries",
+  "version": "2.0.3",
+  "homepage": "https://getfri.es",
+  "authors": [
+    "Jaune Sarmiento <hawnecarlo@gmail.com>"
+  ],
+  "description": "Fries helps you prototype Android apps using HTML, CSS, and JavaScript",
+  "main": "dist/fries.js",
+  "keywords": [
+    "android",
+    "prototype",
+    "html",
+    "css",
+    "javascript",
+    "ui",
+    "framework",
+    "mobile"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.txt",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-contrib-jshint": "0.1.1",
+    "grunt-contrib-uglify": "0.2.2",
+    "grunt-contrib-concat": "0.3.0",
+    "grunt-contrib-sass": "0.3.0",
+    "grunt-contrib-cssmin": "0.6.1",
+    "grunt-contrib-copy": "0.4.1",
+    "grunt-contrib-connect": "0.5.0",
+    "grunt-contrib-watch": "0.5.3"
+  }
+}

@@ -1,0 +1,87 @@
+/**
+ * Fonts
+ */
+/**
+ * Colors
+ */
+/**
+ * Base
+ */
+/**
+ * Buttons
+ */
+/**
+ * Dividers
+ */
+/**
+ * Typography
+ */
+/**
+ * General Bars Styles
+ */
+/**
+ * Action Bars
+ */
+/**
+ * Tab Bar
+ */
+/**
+ * Spinners
+ */
+/**
+ * Forms
+ */
+/**
+ * Dialogs
+ */
+/**
+ * Toasts
+ */
+.list {
+  display: block;
+  list-style: none; }
+  .list > li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px;
+    border-top: 1px solid #424242;
+    line-height: 38px;
+    color: white; }
+    .list > li.list-divider {
+      border-top: none;
+      border-bottom: 2px solid #595959;
+      line-height: 18px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 5px 5px 3px;
+      margin-top: 5px;
+      color: #cccccc; }
+      .list > li.list-divider + li {
+        border-top: none; }
+    .list > li > a {
+      display: block;
+      color: inherit; }
+    .list > li.list-item-single-line, .list > li.list-item-two-lines h3, .list > li.list-item-two-lines p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .list > li.list-item-single-line {
+      height: 48px;
+      font-size: 14px; }
+    .list > li.list-item-two-lines {
+      height: 64px; }
+    .list > li.list-item-multi-line p {
+      margin-bottom: 15px; }
+    .list > li.list-item-two-lines h3, .list > li.list-item-multi-line h3 {
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 40px;
+      height: 32px;
+      color: white; }
+    .list > li.list-item-two-lines p, .list > li.list-item-multi-line p {
+      font-size: 12px;
+      line-height: 12px;
+      text-overflow: ellipsis;
+      color: #cccccc; }

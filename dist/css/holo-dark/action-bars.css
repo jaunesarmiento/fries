@@ -1,0 +1,185 @@
+/**
+ * Fonts
+ */
+/**
+ * Colors
+ */
+/**
+ * Base
+ */
+/**
+ * Buttons
+ */
+/**
+ * Dividers
+ */
+/**
+ * Typography
+ */
+/**
+ * General Bars Styles
+ */
+/**
+ * Action Bars
+ */
+/**
+ * Tab Bar
+ */
+/**
+ * Spinners
+ */
+/**
+ * Forms
+ */
+/**
+ * Dialogs
+ */
+/**
+ * Toasts
+ */
+.action-bar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 48px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 2px solid #151515;
+  background-color: #222222;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); }
+  .action-bar .title,
+  .action-bar .subtitle,
+  .action-bar .app-icon {
+    float: left;
+    display: inline-block; }
+  .action-bar .title {
+    margin-left: 1px;
+    font-weight: normal;
+    color: white; }
+  .action-bar h1.title {
+    font-size: 16px;
+    line-height: 48px; }
+  .action-bar h2.title {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px 0 4px; }
+  .action-bar .subtitle {
+    color: #cccccc;
+    font-size: 12px;
+    font-weight: 200; }
+  .action-bar .app-icon {
+    position: relative;
+    padding: 8px 0;
+    margin-left: 10px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center; }
+    .action-bar .app-icon img {
+      float: right; }
+  .action-bar .app-icon.up {
+    margin-left: 0; }
+  .action-bar.fixed-top {
+    top: 0; }
+  .action-bar.fixed-bottom {
+    bottom: 0; }
+
+ul.actions,
+ul.actions li {
+  display: inline-block; }
+
+ul.actions {
+  list-style: none; }
+  ul.actions li .action {
+    width: 48px;
+    height: 48px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  ul.actions.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal; }
+    ul.actions.flex > li {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: center; }
+    ul.actions.flex > li.action-overflow {
+      display: initial;
+      width: 48px; }
+
+.action {
+  display: inline-block;
+  padding: 8px; }
+  .action [class*="icon-"],
+  .action .action-title {
+    float: left;
+    display: inline-block; }
+  .action [class*="icon-"] {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 32px;
+    color: #999999;
+    text-align: center; }
+  .action .icon-up-button {
+    width: 10px;
+    font-size: 48px; }
+  .action .action-title {
+    margin: 0 25px 0 5px;
+    height: 32px;
+    color: #999999;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 32px; }
+  .action:active {
+    background-color: rgba(51, 181, 229, 0.6);
+    z-index: 1; }
+  .action.page-action {
+    position: relative; }
+    .action.page-action:after {
+      position: absolute;
+      content: '';
+      right: -1px;
+      top: 12px;
+      width: 1px;
+      height: 24px;
+      background-color: #3c3c3c; }
+
+.action-overflow {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+.action-overflow-hidden {
+  display: none !important; }
+
+.action-overflow-icon {
+  cursor: pointer;
+  padding: 21px 22px 20px 21px; }
+  .action-overflow-icon i,
+  .action-overflow-icon i:before,
+  .action-overflow-icon i:after {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #999999; }
+  .action-overflow-icon i {
+    position: relative;
+    z-index: 0; }
+    .action-overflow-icon i:before, .action-overflow-icon i:after {
+      position: absolute;
+      content: '';
+      left: 0; }
+    .action-overflow-icon i:before {
+      top: -8px; }
+    .action-overflow-icon i:after {
+      top: 8px; }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Fries</title>
+
+  <link rel="shortcut icon" href="favicon.png" />
+
+  <link rel="stylesheet" href="../dist/themes/holo-light/holo-light.min.css" />
+
+  <!-- For demo purposes only -->
+  <style type="text/css">
+  body {
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  h1.intro {
+    font-weight: 200;
+    margin: 0.2em 0;
+  }
+
+  p {
+    color: #363636;
+    margin-bottom: 1em;
+  }
+
+  .center-me {
+    text-align: center;
+  }
+
+  .list i[class*="icon-"] {
+    float: left;
+    font-size: 36px;
+    color: #999;
+  }
+  .i-class {
+    float: left;
+    line-height: 36px;
+    margin-left: 8px;
+  }
+  .footnote {
+    display: block;
+    text-align: center;
+    color: #777;
+    font-size: 11px;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+    <header class="action-bar fixed-top">
+      <a href="javascript: void(0);" class="app-icon action" data-ignore="true">
+        <i class="icon-fries"></i>
+      </a>
+      <h1 class="title">Fries</h1>
+    </header>
+
+    <div class="content">
+      <ul class="list inset">
+        <li class="list-divider">Fries Components</li>
+        <li class="list-item-single-line selectable"><a href="action-bars.html" data-transition="push">Action Bars</a></li>
+        <li class="list-item-single-line selectable"><a href="fixed-tabs-and-lists.html" data-transition="push">Fixed Tabs and Lists</a></li>
+        <li class="list-item-single-line selectable"><a href="spinners.html" data-transition="push">Spinners</a></li>
+        <li class="list-item-single-line selectable"><a href="forms-and-page-actions.html" data-transition="push">Forms and Page Actions</a></li>
+        <li class="list-item-single-line selectable"><a href="iconography.html" data-transition="push">Iconography</a></li>
+        <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true" id="open-dialog">Dialogs</a></li>
+        <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true" id="show-toast">Toast Notifications</a></li>
+      </ul>
+
+      <div class="footnote">Copyright &copy; 2013. Jaune Sarmiento. Fries.</div>
+    </div>
+
+    <div class="dialogs">
+      <div id="my-dialog" class="dialog">
+        <header class="dialog-title-region">
+          <h1 class="title">Howdy!</h1>
+        </header>
+        <div class="dialog-content">
+          <div class="inset">
+            <p>This is an example of a dialog</p>
+          </div>
+        </div>
+        <ul class="dialog-actions">
+          <li><a href="javascript: void(0);" class="dialog-cancel-button">Cancel</a></li>
+          <li><a href="javascript: void(0);" class="dialog-ok-button">OK</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../dist/fries.min.js"></script>
+
+  <script src="js/fingerblast.js"></script>
+
+  <script src="js/example.js"></script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../fonts/icomoon.eot");
+  src: url("../../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../../fonts/icomoon.woff") format("woff"), url("../../fonts/icomoon.ttf") format("truetype"), url("../../fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-back, .icon-accept, .icon-cancel, .icon-chevron-up, .icon-chevron-down, .icon-forward, .icon-chevron-right, .icon-chevron-left, .icon-refresh, .icon-information, .icon-help, .icon-search, .icon-settings, .icon-vote-down, .icon-heart, .icon-star-half, .icon-vote-up, .icon-star-full, .icon-star-empty, .icon-cloud, .icon-folder, .icon-calendar, .icon-tags, .icon-add-tag, .icon-sort-by-size, .icon-grid, .icon-view-as-list, .icon-attachment, .icon-new-image, .icon-new-event, .icon-new-attachment, .icon-new-message, .icon-new, .icon-merge, .icon-import-export, .icon-calendar-event, .icon-mail, .icon-edit, .icon-trash, .icon-cut, .icon-copy, .icon-backspace, .icon-clipboard, .icon-image, .icon-read, .icon-remove, .icon-save, .icon-select-all, .icon-split, .icon-undo, .icon-unread, .icon-add-group, .icon-add-person, .icon-cc-bcc, .icon-chat, .icon-forward-2, .icon-slideshow, .icon-rotate-right, .icon-rotate-left, .icon-globe, .icon-crop, .icon-location-marker, .icon-map, .icon-direction, .icon-share, .icon-send, .icon-reply-all, .icon-reply, .icon-person, .icon-group, .icon-add-to-queue, .icon-download, .icon-fast-forward, .icon-full-screen, .icon-pin, .icon-next, .icon-pause, .icon-pause-2, .icon-play, .icon-play-2, .icon-previous, .icon-repeat, .icon-replay, .icon-return-from-full-screen, .icon-brightness-high, .icon-brightness-auto, .icon-bluetooth-searching, .icon-bluetooth-connected, .icon-bluetooth, .icon-brightness, .icon-battery, .icon-add-alarm, .icon-alarm, .icon-key, .icon-upload, .icon-stop, .icon-shuffle, .icon-rewind, .icon-brightness-medium, .icon-call, .icon-camera, .icon-dashboard, .icon-dial, .icon-hang-up, .icon-power-auto, .icon-power-none, .icon-power, .icon-location-target, .icon-location-off, .icon-location-searching, .icon-microphone, .icon-microphone-off, .icon-clock, .icon-camera-video-rotate, .icon-camera-rotate, .icon-storage, .icon-locked, .icon-storage-sd, .icon-screen-lock-portrait, .icon-screen-rotate, .icon-screen-lock-landscape, .icon-call-volume, .icon-unlocked, .icon-new-account, .icon-signal, .icon-signal-2, .icon-usb, .icon-mouse, .icon-smartphone, .icon-fries, .icon-video, .icon-volume-off, .icon-volume-adjust, .icon-airplane, .icon-airplane-2, .icon-alert, .icon-alert-2, .icon-laptop, .icon-desktop, .icon-joystick, .icon-headphones, .icon-headphones-mic, .icon-keyboard, .icon-up-button {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-back:before {
+  content: "\e001"; }
+
+.icon-accept:before {
+  content: "\e002"; }
+
+.icon-cancel:before {
+  content: "\e003"; }
+
+.icon-chevron-up:before {
+  content: "\e004"; }
+
+.icon-chevron-down:before {
+  content: "\e005"; }
+
+.icon-forward:before {
+  content: "\e006"; }
+
+.icon-chevron-right:before {
+  content: "\e007"; }
+
+.icon-chevron-left:before {
+  content: "\e008"; }
+
+.icon-refresh:before {
+  content: "\e009"; }
+
+.icon-information:before {
+  content: "\e010"; }
+
+.icon-help:before {
+  content: "\e011"; }
+
+.icon-search:before {
+  content: "\e012"; }
+
+.icon-settings:before {
+  content: "\e013"; }
+
+.icon-vote-down:before {
+  content: "\e020"; }
+
+.icon-heart:before {
+  content: "\e021"; }
+
+.icon-star-half:before {
+  content: "\e023"; }
+
+.icon-vote-up:before {
+  content: "\e022"; }
+
+.icon-star-full:before {
+  content: "\e024"; }
+
+.icon-star-empty:before {
+  content: "\e025"; }
+
+.icon-cloud:before {
+  content: "\e030"; }
+
+.icon-folder:before {
+  content: "\e031"; }
+
+.icon-calendar:before {
+  content: "\e032"; }
+
+.icon-tags:before {
+  content: "\e033"; }
+
+.icon-add-tag:before {
+  content: "\e034"; }
+
+.icon-sort-by-size:before {
+  content: "\e035"; }
+
+.icon-grid:before {
+  content: "\e036"; }
+
+.icon-view-as-list:before {
+  content: "\e037"; }
+
+.icon-attachment:before {
+  content: "\e040"; }
+
+.icon-new-image:before {
+  content: "\e04e"; }
+
+.icon-new-event:before {
+  content: "\e04d"; }
+
+.icon-new-attachment:before {
+  content: "\e04b"; }
+
+.icon-new-message:before {
+  content: "\e04c"; }
+
+.icon-new:before {
+  content: "\e04a"; }
+
+.icon-merge:before {
+  content: "\e049"; }
+
+.icon-import-export:before {
+  content: "\e048"; }
+
+.icon-calendar-event:before {
+  content: "\e047"; }
+
+.icon-mail:before {
+  content: "\e046"; }
+
+.icon-edit:before {
+  content: "\e045"; }
+
+.icon-trash:before {
+  content: "\e044"; }
+
+.icon-cut:before {
+  content: "\e043"; }
+
+.icon-copy:before {
+  content: "\e042"; }
+
+.icon-backspace:before {
+  content: "\e041"; }
+
+.icon-clipboard:before {
+  content: "\e04f"; }
+
+.icon-image:before {
+  content: "\e050"; }
+
+.icon-read:before {
+  content: "\e051"; }
+
+.icon-remove:before {
+  content: "\e052"; }
+
+.icon-save:before {
+  content: "\e053"; }
+
+.icon-select-all:before {
+  content: "\e054"; }
+
+.icon-split:before {
+  content: "\e055"; }
+
+.icon-undo:before {
+  content: "\e056"; }
+
+.icon-unread:before {
+  content: "\e057"; }
+
+.icon-add-group:before {
+  content: "\e060"; }
+
+.icon-add-person:before {
+  content: "\e061"; }
+
+.icon-cc-bcc:before {
+  content: "\e062"; }
+
+.icon-chat:before {
+  content: "\e063"; }
+
+.icon-forward-2:before {
+  content: "\e064"; }
+
+.icon-slideshow:before {
+  content: "\e083"; }
+
+.icon-rotate-right:before {
+  content: "\e082"; }
+
+.icon-rotate-left:before {
+  content: "\e081"; }
+
+.icon-globe:before {
+  content: "\e073"; }
+
+.icon-crop:before {
+  content: "\e080"; }
+
+.icon-location-marker:before {
+  content: "\e072"; }
+
+.icon-map:before {
+  content: "\e071"; }
+
+.icon-direction:before {
+  content: "\e070"; }
+
+.icon-share:before {
+  content: "\e06a"; }
+
+.icon-send:before {
+  content: "\e069"; }
+
+.icon-reply-all:before {
+  content: "\e068"; }
+
+.icon-reply:before {
+  content: "\e067"; }
+
+.icon-person:before {
+  content: "\e066"; }
+
+.icon-group:before {
+  content: "\e065"; }
+
+.icon-add-to-queue:before {
+  content: "\e090"; }
+
+.icon-download:before {
+  content: "\e091"; }
+
+.icon-fast-forward:before {
+  content: "\e092"; }
+
+.icon-full-screen:before {
+  content: "\e093"; }
+
+.icon-pin:before {
+  content: "\e094"; }
+
+.icon-next:before {
+  content: "\e095"; }
+
+.icon-pause:before {
+  content: "\e096"; }
+
+.icon-pause-2:before {
+  content: "\e097"; }
+
+.icon-play:before {
+  content: "\e098"; }
+
+.icon-play-2:before {
+  content: "\e099"; }
+
+.icon-previous:before {
+  content: "\e09a"; }
+
+.icon-repeat:before {
+  content: "\e09b"; }
+
+.icon-replay:before {
+  content: "\e09c"; }
+
+.icon-return-from-full-screen:before {
+  content: "\e09d"; }
+
+.icon-brightness-high:before {
+  content: "\e0b9"; }
+
+.icon-brightness-auto:before {
+  content: "\e0b8"; }
+
+.icon-bluetooth-searching:before {
+  content: "\e0b7"; }
+
+.icon-bluetooth-connected:before {
+  content: "\e0b6"; }
+
+.icon-bluetooth:before {
+  content: "\e0b5"; }
+
+.icon-brightness:before {
+  content: "\e0b4"; }
+
+.icon-battery:before {
+  content: "\e0b3"; }
+
+.icon-add-alarm:before {
+  content: "\e0b1"; }
+
+.icon-alarm:before {
+  content: "\e0b2"; }
+
+.icon-key:before {
+  content: "\e0b0"; }
+
+.icon-upload:before {
+  content: "\e0a1"; }
+
+.icon-stop:before {
+  content: "\e0a0"; }
+
+.icon-shuffle:before {
+  content: "\e09f"; }
+
+.icon-rewind:before {
+  content: "\e09e"; }
+
+.icon-brightness-medium:before {
+  content: "\e0ba"; }
+
+.icon-call:before {
+  content: "\e0bb"; }
+
+.icon-camera:before {
+  content: "\e0bc"; }
+
+.icon-dashboard:before {
+  content: "\e0bd"; }
+
+.icon-dial:before {
+  content: "\e0be"; }
+
+.icon-hang-up:before {
+  content: "\e0bf"; }
+
+.icon-power-auto:before {
+  content: "\e0c0"; }
+
+.icon-power-none:before {
+  content: "\e0c1"; }
+
+.icon-power:before {
+  content: "\e0c2"; }
+
+.icon-location-target:before {
+  content: "\e0c3"; }
+
+.icon-location-off:before {
+  content: "\e0c4"; }
+
+.icon-location-searching:before {
+  content: "\e0c5"; }
+
+.icon-microphone:before {
+  content: "\e0c6"; }
+
+.icon-microphone-off:before {
+  content: "\e0c7"; }
+
+.icon-clock:before {
+  content: "\e0d5"; }
+
+.icon-camera-video-rotate:before {
+  content: "\e0d4"; }
+
+.icon-camera-rotate:before {
+  content: "\e0d3"; }
+
+.icon-storage:before {
+  content: "\e0d2"; }
+
+.icon-locked:before {
+  content: "\e0d1"; }
+
+.icon-storage-sd:before {
+  content: "\e0d0"; }
+
+.icon-screen-lock-portrait:before {
+  content: "\e0ce"; }
+
+.icon-screen-rotate:before {
+  content: "\e0cf"; }
+
+.icon-screen-lock-landscape:before {
+  content: "\e0cd"; }
+
+.icon-call-volume:before {
+  content: "\e0cc"; }
+
+.icon-unlocked:before {
+  content: "\e0cb"; }
+
+.icon-new-account:before {
+  content: "\e0ca"; }
+
+.icon-signal:before {
+  content: "\e0c9"; }
+
+.icon-signal-2:before {
+  content: "\e0c8"; }
+
+.icon-usb:before {
+  content: "\e0d6"; }
+
+.icon-mouse:before {
+  content: "\e0f6"; }
+
+.icon-smartphone:before {
+  content: "\e0f7"; }
+
+.icon-fries:before {
+  content: "\e000"; }
+
+.icon-video:before {
+  content: "\e0d7"; }
+
+.icon-volume-off:before {
+  content: "\e0d8"; }
+
+.icon-volume-adjust:before {
+  content: "\e0d9"; }
+
+.icon-airplane:before {
+  content: "\e0e0"; }
+
+.icon-airplane-2:before {
+  content: "\e0e1"; }
+
+.icon-alert:before {
+  content: "\e0e2"; }
+
+.icon-alert-2:before {
+  content: "\e0e3"; }
+
+.icon-laptop:before {
+  content: "\e0f0"; }
+
+.icon-desktop:before {
+  content: "\e0f1"; }
+
+.icon-joystick:before {
+  content: "\e0f2"; }
+
+.icon-headphones:before {
+  content: "\e0f3"; }
+
+.icon-headphones-mic:before {
+  content: "\e0f4"; }
+
+.icon-keyboard:before {
+  content: "\e0f5"; }
+
+.icon-up-button:before {
+  content: "\e00a"; }

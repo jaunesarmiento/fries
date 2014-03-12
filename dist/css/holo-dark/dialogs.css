@@ -1,0 +1,181 @@
+/**
+ * Fonts
+ */
+/**
+ * Colors
+ */
+/**
+ * Base
+ */
+/**
+ * Buttons
+ */
+/**
+ * Dividers
+ */
+/**
+ * Typography
+ */
+/**
+ * General Bars Styles
+ */
+/**
+ * Action Bars
+ */
+/**
+ * Tab Bar
+ */
+/**
+ * Spinners
+ */
+/**
+ * Forms
+ */
+/**
+ * Dialogs
+ */
+/**
+ * Toasts
+ */
+@-webkit-keyframes push {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 0.7, 1); }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1); } }
+
+@-moz-keyframes push {
+  from {
+    opacity: 0;
+    -moz-transform: scale3d(0.7, 0.7, 1); }
+
+  to {
+    opacity: 1;
+    -moz-transform: scale3d(1, 1, 1); } }
+
+@keyframes push {
+  from {
+    opacity: 0;
+    transform: scale3d(0.7, 0.7, 1); }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+
+@-webkit-keyframes pop {
+  from {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1); }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 0.7, 1); } }
+
+@-moz-keyframes pop {
+  from {
+    opacity: 1;
+    -moz-transform: scale3d(1, 1, 1); }
+
+  to {
+    opacity: 0;
+    -moz-transform: scale3d(0.7, 0.7, 1); } }
+
+@keyframes pop {
+  from {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); }
+
+  to {
+    opacity: 0;
+    transform: scale3d(0.7, 0.7, 1); } }
+
+.dialogs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  -webkit-transition: opacity 0.1s ease-out;
+  -moz-transition: opacity 0.1s ease-out;
+  transition: opacity 0.1s ease-out;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate(0, 0, 0); }
+  .dialogs.fade-in {
+    opacity: 1; }
+  .dialogs.on {
+    visibility: visible; }
+
+.dialog {
+  position: absolute;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #222222;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.6);
+  width: 85%;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transform: scale3d(0.7, 0.7, 1);
+  -moz-transform: scale3d(0.7, 0.7, 1);
+  transform: scale3d(0.7, 0.7, 1);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate(0, 0, 0); }
+  .dialog .dialog-title-region {
+    height: 56px;
+    border-bottom: solid 2px #33b5e5;
+    padding: 0 15px; }
+    .dialog .dialog-title-region .title {
+      font-size: 18px;
+      font-weight: normal;
+      color: #33b5e5;
+      line-height: 56px; }
+  .dialog .dialog-content {
+    color: white; }
+    .dialog .dialog-content ul.list li {
+      padding: 5px 15px; }
+  .dialog ul.dialog-actions {
+    list-style: none;
+    border-top: 1px solid #424242;
+    height: 48px; }
+    .dialog ul.dialog-actions li {
+      float: left;
+      display: inline-block;
+      width: 50%;
+      border-right: 1px solid #424242; }
+      .dialog ul.dialog-actions li a {
+        display: block;
+        color: white;
+        font-size: 12px;
+        height: 47px;
+        text-align: center;
+        line-height: 48px; }
+        .dialog ul.dialog-actions li a:active {
+          background-color: rgba(51, 181, 229, 0.6); }
+      .dialog ul.dialog-actions li:first-child a {
+        border-bottom-left-radius: 2px; }
+      .dialog ul.dialog-actions li:last-child {
+        border: none; }
+        .dialog ul.dialog-actions li:last-child a {
+          border-bottom-right-radius: 2px; }
+  .dialog.push {
+    -webkit-animation: push 0.2s;
+    -moz-animation: push 0.2;
+    animation: push 0.2s; }
+  .dialog.pop {
+    -webkit-animation: pop 0.2s;
+    -moz-animation: pop 0.2s;
+    animation: pop 0.2s; }
+  .dialog.on {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -moz-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
