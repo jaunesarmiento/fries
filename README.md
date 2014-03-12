@@ -68,7 +68,7 @@ __Android Action Bar Icon Pack__
 
 By [Tobias Bieniek](https://github.com/Turbo87/Android-Action-Bar-Icon-Pack-Font) also under Creative Commons 2.5 License
 
-[Download]: https://github.com/jaunesarmiento/fries/archive/master.zip
+[Download]: https://github.com/jaunesarmiento/fries/archive/2.0.3.zip
 [Ratchet]: http://maker.github.io/ratchet
 [documentation]: http://jaunesarmiento.me/fries
 [Semantic Versioning]: http://semver.org/
