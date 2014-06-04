@@ -19,7 +19,7 @@ set :ssh_options, { forward_agent: true }
 
 role :web, "106.186.25.187"
 
-# before 'deploy:update', 'deploy:update_jekyll'
+before 'deploy:update', 'deploy:update_jekyll'
 
 namespace :deploy do
   [:start, :stop, :restart, :finalize_update].each do |t|
