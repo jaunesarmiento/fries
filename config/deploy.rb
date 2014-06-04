@@ -19,7 +19,7 @@ set :ssh_options, { forward_agent: true }
 
 role :web, "106.186.25.187"
 
-before 'deploy:update', 'deploy:update_jekyll'
+# before 'deploy:update', 'deploy:update_jekyll'
 
 namespace :deploy do
   [:start, :stop, :restart, :finalize_update].each do |t|
@@ -34,4 +34,9 @@ namespace :deploy do
     # remove Capistrano stuff from build
     %x(rm -rf _site/* && jekyll build && rm _site/Capfile && rm -rf _site/config)
   end
+end
+
+after "deploy:create_symlink" do
+  run "rm -rf #{release_path}/config #{release_path}/Capfile"
+  run "cd #{release_path} && jekyll build"
 end
