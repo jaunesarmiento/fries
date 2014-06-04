@@ -1,9 +1,5 @@
 require 'bundler/capistrano'
 require 'rvm/capistrano'
-require 'capistrano-unicorn'
-
-before 'deploy:setup', 'rvm:install_rvm'
-before 'deploy:setup', 'rvm:install_ruby'
 
 set :application, "fries"
 set :repository, 'git@github.com:jaunesarmiento/fries.git'
@@ -14,13 +10,12 @@ set :deploy_via, :remote_cache
 # set :use_sudo, false
 
 set :user, "deploy"
-
+set :password, "grabekadud3"
 set :deploy_to, "/data/#{application}"
 set :branch, "capistrano"
-set :app_server, :unicorn
+
 set :default_run_options, { pty: true }
 set :ssh_options, { forward_agent: true }
-
 
 role :web, "106.186.25.187"
 
