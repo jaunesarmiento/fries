@@ -8,7 +8,6 @@ set :scm_verbose, true
 set :deploy_via, :remote_cache
 
 set :user, "deploy"
-set :password, "grabekadud3"
 set :deploy_to, "/data/#{application}"
 set :branch, "capistrano" # change this to "develop" after PR merge
 
