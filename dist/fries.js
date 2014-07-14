@@ -428,8 +428,6 @@
       transitionFromObj = activeObj;
     }
 
-    console.log(direction);
-
     if (direction == 'back' && !transitionFromObj.id) return doXHR.id = id;
 
     transition = direction == 'back' ? 'pop' : transitionFromObj.transition;
@@ -516,7 +514,6 @@
 
       // Causes a jshint warning. Use --force to ignore
       function onPushAnimationEnd() {
-        console.log(container);
         contents.removeEventListener('webkitAnimationEnd', onPushAnimationEnd, false);
         contents.classList.remove(transition);
         if (container.parentNode) container.parentNode.removeChild(container);
