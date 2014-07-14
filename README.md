@@ -56,7 +56,7 @@ The conversion of the official Android icons was done in [IcoMoon]. Also, thanks
 
 ## License
 
-Fries is licensed under the [MIT License]. Copyright &copy; Jaune Sarmiento (http://jaunesarmiento.me) 2013.
+Fries is licensed under the [MIT License]. Copyright &copy; Jaune Sarmiento (http://jaunesarmiento.me) 2014.
 
 
 ## Attribution
