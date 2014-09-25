@@ -140,7 +140,7 @@
       margin-left: -4px;
       width: 0;
       height: 0;
-      border-right: 12px solid rgba(0, 0, 0, 0);
+      border-right: 12px solid transparent;
       border-top: 12px solid #595959;
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);

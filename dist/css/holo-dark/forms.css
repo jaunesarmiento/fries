@@ -88,7 +88,7 @@ form {
   -webkit-transition: border ease-out 0.2s;
   -moz-transition: border ease-out 0.2s;
   transition: border ease-out 0.2s;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal; }
   .input-text:focus {
