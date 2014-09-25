@@ -145,7 +145,7 @@ body {
 a {
   color: #33b5e5;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   /* Removes the dark touch outlines on links */ }
 
 .selectable:active {
