@@ -2,12 +2,6 @@ GEM
   remote: https://rubygems.org/
   specs:
     blankslate (2.1.2.4)
-    capistrano (2.15.5)
-      highline
-      net-scp (>= 1.0.0)
-      net-sftp (>= 2.0.0)
-      net-ssh (>= 2.0.14)
-      net-ssh-gateway (>= 1.1.0)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     classifier (1.3.4)
@@ -20,7 +14,6 @@ GEM
     execjs (2.1.0)
     fast-stemmer (1.0.2)
     ffi (1.9.3)
-    highline (1.6.21)
     jekyll (2.0.3)
       classifier (~> 1.3)
       colorator (~> 0.1)
@@ -39,20 +32,12 @@ GEM
     jekyll-sass-converter (1.0.0)
       sass (~> 3.2)
     kramdown (1.3.3)
-    libv8 (3.16.14.3)
     liquid (2.5.5)
     listen (2.7.6)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.3)
-    net-scp (1.2.1)
-      net-ssh (>= 2.6.5)
-    net-sftp (2.1.2)
-      net-ssh (>= 2.6.5)
-    net-ssh (2.9.1)
-    net-ssh-gateway (1.2.0)
-      net-ssh (>= 2.6.5)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.8)
@@ -63,14 +48,8 @@ GEM
     rb-inotify (0.9.4)
       ffi (>= 0.5.0)
     redcarpet (3.1.2)
-    ref (1.0.5)
-    rvm-capistrano (1.5.2)
-      capistrano (~> 2.15.4)
     safe_yaml (1.0.3)
     sass (3.3.8)
-    therubyracer (0.12.1)
-      libv8 (~> 3.16.14.0)
-      ref
     timers (1.1.0)
     toml (0.1.1)
       parslet (~> 1.5.0)
@@ -80,7 +59,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano
   jekyll
-  rvm-capistrano
-  therubyracer

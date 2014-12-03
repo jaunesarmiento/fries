@@ -2,7 +2,7 @@ name: Fries
 version: 2.0.5
 authors: Jaune Sarmiento
 description: Mobile UI framework for Android apps using HTML, CSS and Javascript
-url: http://getfri.es
+url: http://jaunesarmiento.github.io
 
 pygments: true
 ignore: ['node_modules', '.sass-cache']
