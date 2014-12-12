@@ -3,7 +3,7 @@
 Fries is an awesome mobile UI framework for Android apps using just HTML, CSS,
 and Javascript and is inspired by [Ratchet].
 
-__NOTE:__ Unfortunately, Fries is no longer maintained. If you'd like to take over the maintainance, send an email to hawnecarlo[at]gmail.com
+__NOTE:__ Unfortunately, Fries is no longer maintained. If you'd like to take over the maintenance, send an email to hawnecarlo[at]gmail.com
 
 ## Special Thanks
 
